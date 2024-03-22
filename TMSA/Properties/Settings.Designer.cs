@@ -71,7 +71,7 @@ namespace TMSA.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.;Initial Catalog=nle;Integrated Security=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.;Initial Catalog=ake;Integrated Security=True")]
         public string LocalhostConnectionString {
             get {
                 return ((string)(this["LocalhostConnectionString"]));
@@ -103,24 +103,24 @@ namespace TMSA.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string TMSAConnectionString {
-            get {
-                return ((string)(this["TMSAConnectionString"]));
-            }
-            set {
-                this["TMSAConnectionString"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string CongName {
             get {
                 return ((string)(this["CongName"]));
             }
             set {
                 this["CongName"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string TMSAConnectionString {
+            get {
+                return ((string)(this["TMSAConnectionString"]));
+            }
+            set {
+                this["TMSAConnectionString"] = value;
             }
         }
     }

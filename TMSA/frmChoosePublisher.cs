@@ -21,6 +21,8 @@ namespace TMSA
 
         private void frmChoosePublisher_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'tMSADataSet.publisher' table. You can move, or remove it, as needed.
+            this.publisherTableAdapter.Fill(this.tMSADataSet.publisher);
             try
             {
                 this.tMSADataSet.EnforceConstraints = false;

@@ -27,8 +27,8 @@
     <ProductName>CSA</ProductName>
     <PublisherName>CSA</PublisherName>
     <SuiteName>CSA</SuiteName>
-    <MinimumRequiredVersion>9.0.0.5</MinimumRequiredVersion>
-    <ApplicationRevision>6</ApplicationRevision>
+    <MinimumRequiredVersion>9.0.0.20</MinimumRequiredVersion>
+    <ApplicationRevision>21</ApplicationRevision>
     <ApplicationVersion>9.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -120,6 +120,18 @@
     <Compile Include="frmFSrecords.designer.cs">
       <DependentUpon>frmFSrecords.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmNewFSrecordsImport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNewFSrecordsImport.designer.cs">
+      <DependentUpon>frmNewFSrecordsImport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNewPublisherCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNewPublisherCard.designer.cs">
+      <DependentUpon>frmNewPublisherCard.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPublishers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -192,6 +204,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmFSrecords.resx">
       <DependentUpon>frmFSrecords.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewFSrecordsImport.resx">
+      <DependentUpon>frmNewFSrecordsImport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewPublisherCard.aa.resx">
+      <DependentUpon>frmNewPublisherCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewPublisherCard.resx">
+      <DependentUpon>frmNewPublisherCard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPublishers.resx">
       <DependentUpon>frmPublishers.cs</DependentUpon>

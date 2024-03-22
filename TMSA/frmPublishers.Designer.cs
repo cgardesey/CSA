@@ -43,7 +43,8 @@
             System.Windows.Forms.Label hopeLabel;
             System.Windows.Forms.Label emergency_contactLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPublishers));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.Label label5;
             this.publisherBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.publisherBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -60,6 +61,7 @@
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.publisherBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.tsPublisherCards = new System.Windows.Forms.ToolStripButton();
+            this.tsNewPublisherCards = new System.Windows.Forms.ToolStripButton();
             this.tsDeleteAssignments = new System.Windows.Forms.ToolStripButton();
             this.publisherDataGridView = new System.Windows.Forms.DataGridView();
             this.publisher_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -114,6 +116,13 @@
             this.btnBrowse = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.publisher_field_service_report_viewDataGridView = new System.Windows.Forms.DataGridView();
+            this.publisher_field_service_report_viewBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.publisherTableAdapter = new TMSA.TMSADataSetTableAdapters.publisherTableAdapter();
+            this.tableAdapterManager = new TMSA.TMSADataSetTableAdapters.TableAdapterManager();
+            this.publisher_field_service_report_viewTableAdapter = new TMSA.TMSADataSetTableAdapters.publisher_field_service_report_viewTableAdapter();
+            this.emergency_contactTextBox = new System.Windows.Forms.TextBox();
             this._publisher_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this._publisher_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this._dob = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -137,13 +146,7 @@
             this._report_date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this._remarks = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this._hope = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.publisher_field_service_report_viewBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.publisherTableAdapter = new TMSA.TMSADataSetTableAdapters.publisherTableAdapter();
-            this.tableAdapterManager = new TMSA.TMSADataSetTableAdapters.TableAdapterManager();
-            this.publisher_field_service_report_viewTableAdapter = new TMSA.TMSADataSetTableAdapters.publisher_field_service_report_viewTableAdapter();
-            this.emergency_contactTextBox = new System.Windows.Forms.TextBox();
+            this._shared_in_ministry = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             last_nameLabel = new System.Windows.Forms.Label();
             other_namesLabel = new System.Windows.Forms.Label();
             dobLabel = new System.Windows.Forms.Label();
@@ -157,6 +160,7 @@
             groupLabel = new System.Windows.Forms.Label();
             hopeLabel = new System.Windows.Forms.Label();
             emergency_contactLabel = new System.Windows.Forms.Label();
+            label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.publisherBindingNavigator)).BeginInit();
             this.publisherBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.publisherBindingSource)).BeginInit();
@@ -306,6 +310,7 @@
             this.bindingNavigatorDeleteItem,
             this.publisherBindingNavigatorSaveItem,
             this.tsPublisherCards,
+            this.tsNewPublisherCards,
             this.tsDeleteAssignments});
             this.publisherBindingNavigator.Location = new System.Drawing.Point(0, 0);
             this.publisherBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
@@ -314,7 +319,7 @@
             this.publisherBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.publisherBindingNavigator.Name = "publisherBindingNavigator";
             this.publisherBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.publisherBindingNavigator.Size = new System.Drawing.Size(1292, 27);
+            this.publisherBindingNavigator.Size = new System.Drawing.Size(1292, 31);
             this.publisherBindingNavigator.TabIndex = 0;
             this.publisherBindingNavigator.Text = "bindingNavigator1";
             this.publisherBindingNavigator.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.publisherBindingNavigator_ItemClicked);
@@ -325,7 +330,7 @@
             this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorAddNewItem.Text = "Add new";
             this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
             // 
@@ -342,7 +347,7 @@
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 24);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 28);
             this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             this.bindingNavigatorCountItem.Click += new System.EventHandler(this.bindingNavigatorCountItem_Click);
@@ -353,7 +358,7 @@
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorMoveFirstItem.Text = "Move first";
             // 
             // bindingNavigatorMovePreviousItem
@@ -362,18 +367,19 @@
             this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorMovePreviousItem.Text = "Move previous";
             // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 27);
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 31);
             // 
             // bindingNavigatorPositionItem
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 27);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -383,7 +389,7 @@
             // bindingNavigatorSeparator1
             // 
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 27);
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 31);
             this.bindingNavigatorSeparator1.Click += new System.EventHandler(this.bindingNavigatorSeparator1_Click);
             // 
             // bindingNavigatorMoveNextItem
@@ -392,7 +398,7 @@
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorMoveNextItem.Text = "Move next";
             // 
             // bindingNavigatorMoveLastItem
@@ -401,13 +407,13 @@
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorMoveLastItem.Text = "Move last";
             // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 31);
             this.bindingNavigatorSeparator2.Click += new System.EventHandler(this.bindingNavigatorSeparator2_Click);
             // 
             // bindingNavigatorDeleteItem
@@ -416,7 +422,7 @@
             this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
             this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorDeleteItem.Text = "Delete";
             this.bindingNavigatorDeleteItem.Click += new System.EventHandler(this.bindingNavigatorDeleteItem_Click);
             this.bindingNavigatorDeleteItem.EnabledChanged += new System.EventHandler(this.bindingNavigatorDeleteItem_EnabledChanged);
@@ -426,7 +432,7 @@
             this.publisherBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.publisherBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("publisherBindingNavigatorSaveItem.Image")));
             this.publisherBindingNavigatorSaveItem.Name = "publisherBindingNavigatorSaveItem";
-            this.publisherBindingNavigatorSaveItem.Size = new System.Drawing.Size(29, 24);
+            this.publisherBindingNavigatorSaveItem.Size = new System.Drawing.Size(29, 28);
             this.publisherBindingNavigatorSaveItem.Text = "Save Data";
             this.publisherBindingNavigatorSaveItem.Click += new System.EventHandler(this.publisherBindingNavigatorSaveItem_Click);
             // 
@@ -436,9 +442,19 @@
             this.tsPublisherCards.Image = ((System.Drawing.Image)(resources.GetObject("tsPublisherCards.Image")));
             this.tsPublisherCards.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsPublisherCards.Name = "tsPublisherCards";
-            this.tsPublisherCards.Size = new System.Drawing.Size(29, 24);
+            this.tsPublisherCards.Size = new System.Drawing.Size(29, 28);
             this.tsPublisherCards.Text = "Publisher record cards";
             this.tsPublisherCards.Click += new System.EventHandler(this.tsPublisherCards_Click);
+            // 
+            // tsNewPublisherCards
+            // 
+            this.tsNewPublisherCards.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsNewPublisherCards.Image = ((System.Drawing.Image)(resources.GetObject("tsNewPublisherCards.Image")));
+            this.tsNewPublisherCards.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsNewPublisherCards.Name = "tsNewPublisherCards";
+            this.tsNewPublisherCards.Size = new System.Drawing.Size(29, 28);
+            this.tsNewPublisherCards.Text = "New publisher record cards";
+            this.tsNewPublisherCards.Click += new System.EventHandler(this.tsNewPublisherCards_Click);
             // 
             // tsDeleteAssignments
             // 
@@ -446,7 +462,7 @@
             this.tsDeleteAssignments.Image = ((System.Drawing.Image)(resources.GetObject("tsDeleteAssignments.Image")));
             this.tsDeleteAssignments.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsDeleteAssignments.Name = "tsDeleteAssignments";
-            this.tsDeleteAssignments.Size = new System.Drawing.Size(29, 24);
+            this.tsDeleteAssignments.Size = new System.Drawing.Size(29, 28);
             this.tsDeleteAssignments.Text = "Delete selected publisher\'s field service records";
             this.tsDeleteAssignments.Click += new System.EventHandler(this.tsDeleteAssignments_Click_1);
             // 
@@ -459,14 +475,14 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.publisherDataGridView.AutoGenerateColumns = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.publisherDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.publisherDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.publisherDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.publisherDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.publisher_id,
@@ -684,7 +700,6 @@
             this.activeCheckBox.Name = "activeCheckBox";
             this.activeCheckBox.Size = new System.Drawing.Size(200, 24);
             this.activeCheckBox.TabIndex = 17;
-            this.activeCheckBox.Text = "To be skipped";
             this.activeCheckBox.UseVisualStyleBackColor = true;
             // 
             // genderComboBox
@@ -706,6 +721,7 @@
             this.hour_typeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.hour_typeComboBox.FormattingEnabled = true;
             this.hour_typeComboBox.Items.AddRange(new object[] {
+            "Field Missionary",
             "Special Pioneer",
             "Regular Pioneer",
             "Auxiliary Pioneer",
@@ -852,6 +868,7 @@
             this.cmbHourType.FormattingEnabled = true;
             this.cmbHourType.Items.AddRange(new object[] {
             "",
+            "Field Missionary",
             "Special Pioneer",
             "Regular Pioneer",
             "Auxiliary Pioneer",
@@ -1144,7 +1161,8 @@
             this._bible_studies,
             this._report_date,
             this._remarks,
-            this._hope});
+            this._hope,
+            this._shared_in_ministry});
             this.publisher_field_service_report_viewDataGridView.DataSource = this.publisher_field_service_report_viewBindingSource;
             this.publisher_field_service_report_viewDataGridView.Location = new System.Drawing.Point(870, 406);
             this.publisher_field_service_report_viewDataGridView.Name = "publisher_field_service_report_viewDataGridView";
@@ -1153,6 +1171,40 @@
             this.publisher_field_service_report_viewDataGridView.Size = new System.Drawing.Size(300, 101);
             this.publisher_field_service_report_viewDataGridView.TabIndex = 201;
             this.publisher_field_service_report_viewDataGridView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.publisher_field_service_report_viewDataGridView_DataError);
+            // 
+            // publisher_field_service_report_viewBindingSource
+            // 
+            this.publisher_field_service_report_viewBindingSource.DataMember = "publisher_field_service_report_view";
+            this.publisher_field_service_report_viewBindingSource.DataSource = this.tMSADataSet;
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // publisherTableAdapter
+            // 
+            this.publisherTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.counsel_pointTableAdapter = null;
+            this.tableAdapterManager.publisher_assignmentTableAdapter = null;
+            this.tableAdapterManager.publisher_field_service_reportTableAdapter = null;
+            this.tableAdapterManager.publisherTableAdapter = this.publisherTableAdapter;
+            this.tableAdapterManager.UpdateOrder = TMSA.TMSADataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // publisher_field_service_report_viewTableAdapter
+            // 
+            this.publisher_field_service_report_viewTableAdapter.ClearBeforeFill = true;
+            // 
+            // emergency_contactTextBox
+            // 
+            this.emergency_contactTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.publisherBindingSource, "emergency_contact", true));
+            this.emergency_contactTextBox.Location = new System.Drawing.Point(170, 358);
+            this.emergency_contactTextBox.Name = "emergency_contactTextBox";
+            this.emergency_contactTextBox.Size = new System.Drawing.Size(265, 22);
+            this.emergency_contactTextBox.TabIndex = 204;
             // 
             // _publisher_id
             // 
@@ -1339,46 +1391,32 @@
             this._hope.Name = "_hope";
             this._hope.Width = 125;
             // 
-            // publisher_field_service_report_viewBindingSource
+            // _shared_in_ministry
             // 
-            this.publisher_field_service_report_viewBindingSource.DataMember = "publisher_field_service_report_view";
-            this.publisher_field_service_report_viewBindingSource.DataSource = this.tMSADataSet;
+            this._shared_in_ministry.DataPropertyName = "shared_in_ministry";
+            this._shared_in_ministry.HeaderText = "shared_in_ministry";
+            this._shared_in_ministry.MinimumWidth = 6;
+            this._shared_in_ministry.Name = "_shared_in_ministry";
+            this._shared_in_ministry.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this._shared_in_ministry.Width = 125;
             // 
-            // openFileDialog1
+            // label5
             // 
-            this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // publisherTableAdapter
-            // 
-            this.publisherTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.publisher_field_service_reportTableAdapter = null;
-            this.tableAdapterManager.publisherTableAdapter = this.publisherTableAdapter;
-            this.tableAdapterManager.UpdateOrder = TMSA.TMSADataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // publisher_field_service_report_viewTableAdapter
-            // 
-            this.publisher_field_service_report_viewTableAdapter.ClearBeforeFill = true;
-            // 
-            // emergency_contactTextBox
-            // 
-            this.emergency_contactTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.publisherBindingSource, "emergency_contact", true));
-            this.emergency_contactTextBox.Location = new System.Drawing.Point(170, 358);
-            this.emergency_contactTextBox.Name = "emergency_contactTextBox";
-            this.emergency_contactTextBox.Size = new System.Drawing.Size(265, 22);
-            this.emergency_contactTextBox.TabIndex = 204;
+            label5.AutoSize = true;
+            label5.Location = new System.Drawing.Point(64, 470);
+            label5.Name = "label5";
+            label5.Size = new System.Drawing.Size(102, 17);
+            label5.TabIndex = 14;
+            label5.Text = "To be skipped:";
             // 
             // frmPublishers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1292, 703);
+            this.Controls.Add(this.publisherDataGridView);
             this.Controls.Add(emergency_contactLabel);
             this.Controls.Add(this.emergency_contactTextBox);
-            this.Controls.Add(this.publisherDataGridView);
             this.Controls.Add(this.btnRemoveImage);
             this.Controls.Add(this.picturePictureBox);
             this.Controls.Add(this.tbBaptismDateMask);
@@ -1400,6 +1438,7 @@
             this.Controls.Add(this.baptisam_dateDateTimePicker);
             this.Controls.Add(contactLabel);
             this.Controls.Add(this.contactTextBox);
+            this.Controls.Add(label5);
             this.Controls.Add(addressLabel);
             this.Controls.Add(this.addressTextBox);
             this.Controls.Add(this.activeCheckBox);
@@ -1503,6 +1542,22 @@
         public System.Windows.Forms.DataGridView publisher_field_service_report_viewDataGridView;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn publisher_id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn last_name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn other_names;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dob;
+        private System.Windows.Forms.DataGridViewTextBoxColumn baptisam_date;
+        private System.Windows.Forms.DataGridViewTextBoxColumn contact;
+        private System.Windows.Forms.DataGridViewTextBoxColumn address;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn active;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gender;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hope;
+        private System.Windows.Forms.DataGridViewTextBoxColumn publisher_type;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hour_type;
+        private System.Windows.Forms.DataGridViewTextBoxColumn privilege;
+        private System.Windows.Forms.DataGridViewTextBoxColumn group;
+        private System.Windows.Forms.TextBox emergency_contactTextBox;
+        private System.Windows.Forms.ToolStripButton tsNewPublisherCards;
         private System.Windows.Forms.DataGridViewTextBoxColumn _publisher_id;
         private System.Windows.Forms.DataGridViewTextBoxColumn _publisher_name;
         private System.Windows.Forms.DataGridViewTextBoxColumn _dob;
@@ -1526,20 +1581,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn _report_date;
         private System.Windows.Forms.DataGridViewTextBoxColumn _remarks;
         private System.Windows.Forms.DataGridViewTextBoxColumn _hope;
-        private System.Windows.Forms.DataGridViewTextBoxColumn publisher_id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn last_name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn other_names;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dob;
-        private System.Windows.Forms.DataGridViewTextBoxColumn baptisam_date;
-        private System.Windows.Forms.DataGridViewTextBoxColumn contact;
-        private System.Windows.Forms.DataGridViewTextBoxColumn address;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn active;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gender;
-        private System.Windows.Forms.DataGridViewTextBoxColumn hope;
-        private System.Windows.Forms.DataGridViewTextBoxColumn publisher_type;
-        private System.Windows.Forms.DataGridViewTextBoxColumn hour_type;
-        private System.Windows.Forms.DataGridViewTextBoxColumn privilege;
-        private System.Windows.Forms.DataGridViewTextBoxColumn group;
-        private System.Windows.Forms.TextBox emergency_contactTextBox;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn _shared_in_ministry;
     }
 }

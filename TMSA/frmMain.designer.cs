@@ -32,12 +32,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.label1 = new System.Windows.Forms.Label();
+            this.lblCongName = new System.Windows.Forms.Label();
+            this.btnApplicationSettings = new System.Windows.Forms.Button();
             this.btnFSrecordsImport = new System.Windows.Forms.Button();
             this.btnFSreport = new System.Windows.Forms.Button();
             this.btnPublishers = new System.Windows.Forms.Button();
             this.btnFSrecord = new System.Windows.Forms.Button();
-            this.lblCongName = new System.Windows.Forms.Label();
-            this.btnApplicationSettings = new System.Windows.Forms.Button();
+            this.btnNewFSrecordsImport = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -45,13 +46,46 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(198, 18);
+            this.label1.Location = new System.Drawing.Point(198, 27);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(46, 20);
             this.label1.TabIndex = 171;
             this.label1.Text = "CSA";
             this.toolTip1.SetToolTip(this.label1, "Congregation Secretary Assistant");
+            // 
+            // lblCongName
+            // 
+            this.lblCongName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblCongName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCongName.Location = new System.Drawing.Point(27, 58);
+            this.lblCongName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCongName.Name = "lblCongName";
+            this.lblCongName.Size = new System.Drawing.Size(390, 29);
+            this.lblCongName.TabIndex = 176;
+            this.lblCongName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnApplicationSettings
+            // 
+            this.btnApplicationSettings.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnApplicationSettings.BackColor = System.Drawing.Color.LightGray;
+            this.btnApplicationSettings.FlatAppearance.BorderColor = System.Drawing.Color.Indigo;
+            this.btnApplicationSettings.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
+            this.btnApplicationSettings.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
+            this.btnApplicationSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnApplicationSettings.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnApplicationSettings.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnApplicationSettings.Image = ((System.Drawing.Image)(resources.GetObject("btnApplicationSettings.Image")));
+            this.btnApplicationSettings.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnApplicationSettings.Location = new System.Drawing.Point(27, 501);
+            this.btnApplicationSettings.Margin = new System.Windows.Forms.Padding(4);
+            this.btnApplicationSettings.Name = "btnApplicationSettings";
+            this.btnApplicationSettings.Size = new System.Drawing.Size(389, 68);
+            this.btnApplicationSettings.TabIndex = 177;
+            this.btnApplicationSettings.Text = "Application Settings";
+            this.toolTip1.SetToolTip(this.btnApplicationSettings, "Set congregation name and database connection string");
+            this.btnApplicationSettings.UseVisualStyleBackColor = false;
+            this.btnApplicationSettings.Click += new System.EventHandler(this.btnApplicationSettings_Click);
             // 
             // btnFSrecordsImport
             // 
@@ -65,7 +99,7 @@
             this.btnFSrecordsImport.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnFSrecordsImport.Image = ((System.Drawing.Image)(resources.GetObject("btnFSrecordsImport.Image")));
             this.btnFSrecordsImport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFSrecordsImport.Location = new System.Drawing.Point(27, 296);
+            this.btnFSrecordsImport.Location = new System.Drawing.Point(28, 273);
             this.btnFSrecordsImport.Margin = new System.Windows.Forms.Padding(4);
             this.btnFSrecordsImport.Name = "btnFSrecordsImport";
             this.btnFSrecordsImport.Size = new System.Drawing.Size(389, 68);
@@ -89,7 +123,7 @@
             this.btnFSreport.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnFSreport.Image = ((System.Drawing.Image)(resources.GetObject("btnFSreport.Image")));
             this.btnFSreport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFSreport.Location = new System.Drawing.Point(30, 387);
+            this.btnFSreport.Location = new System.Drawing.Point(27, 425);
             this.btnFSreport.Margin = new System.Windows.Forms.Padding(4);
             this.btnFSreport.Name = "btnFSreport";
             this.btnFSreport.Size = new System.Drawing.Size(389, 68);
@@ -113,7 +147,7 @@
             this.btnPublishers.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnPublishers.Image = ((System.Drawing.Image)(resources.GetObject("btnPublishers.Image")));
             this.btnPublishers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPublishers.Location = new System.Drawing.Point(27, 112);
+            this.btnPublishers.Location = new System.Drawing.Point(27, 121);
             this.btnPublishers.Margin = new System.Windows.Forms.Padding(4);
             this.btnPublishers.Name = "btnPublishers";
             this.btnPublishers.Size = new System.Drawing.Size(389, 68);
@@ -137,7 +171,7 @@
             this.btnFSrecord.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnFSrecord.Image = ((System.Drawing.Image)(resources.GetObject("btnFSrecord.Image")));
             this.btnFSrecord.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFSrecord.Location = new System.Drawing.Point(27, 204);
+            this.btnFSrecord.Location = new System.Drawing.Point(27, 197);
             this.btnFSrecord.Margin = new System.Windows.Forms.Padding(4);
             this.btnFSrecord.Name = "btnFSrecord";
             this.btnFSrecord.Size = new System.Drawing.Size(389, 68);
@@ -149,45 +183,37 @@
             this.btnFSrecord.MouseEnter += new System.EventHandler(this.btnFSrecord_MouseEnter);
             this.btnFSrecord.MouseLeave += new System.EventHandler(this.btnFSrecord_MouseLeave);
             // 
-            // lblCongName
+            // btnNewFSrecordsImport
             // 
-            this.lblCongName.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblCongName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCongName.Location = new System.Drawing.Point(27, 49);
-            this.lblCongName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblCongName.Name = "lblCongName";
-            this.lblCongName.Size = new System.Drawing.Size(390, 29);
-            this.lblCongName.TabIndex = 176;
-            this.lblCongName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnApplicationSettings
-            // 
-            this.btnApplicationSettings.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnApplicationSettings.BackColor = System.Drawing.Color.LightGray;
-            this.btnApplicationSettings.FlatAppearance.BorderColor = System.Drawing.Color.Indigo;
-            this.btnApplicationSettings.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
-            this.btnApplicationSettings.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
-            this.btnApplicationSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnApplicationSettings.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnApplicationSettings.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnApplicationSettings.Image = ((System.Drawing.Image)(resources.GetObject("btnApplicationSettings.Image")));
-            this.btnApplicationSettings.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnApplicationSettings.Location = new System.Drawing.Point(33, 481);
-            this.btnApplicationSettings.Margin = new System.Windows.Forms.Padding(4);
-            this.btnApplicationSettings.Name = "btnApplicationSettings";
-            this.btnApplicationSettings.Size = new System.Drawing.Size(389, 68);
-            this.btnApplicationSettings.TabIndex = 177;
-            this.btnApplicationSettings.Text = "Application Settings";
-            this.toolTip1.SetToolTip(this.btnApplicationSettings, "Set congregation name and database connection string");
-            this.btnApplicationSettings.UseVisualStyleBackColor = false;
-            this.btnApplicationSettings.Click += new System.EventHandler(this.btnApplicationSettings_Click);
+            this.btnNewFSrecordsImport.AllowDrop = true;
+            this.btnNewFSrecordsImport.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnNewFSrecordsImport.BackColor = System.Drawing.Color.LightGray;
+            this.btnNewFSrecordsImport.FlatAppearance.BorderColor = System.Drawing.Color.Indigo;
+            this.btnNewFSrecordsImport.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
+            this.btnNewFSrecordsImport.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
+            this.btnNewFSrecordsImport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNewFSrecordsImport.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNewFSrecordsImport.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnNewFSrecordsImport.Image = ((System.Drawing.Image)(resources.GetObject("btnNewFSrecordsImport.Image")));
+            this.btnNewFSrecordsImport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNewFSrecordsImport.Location = new System.Drawing.Point(27, 349);
+            this.btnNewFSrecordsImport.Margin = new System.Windows.Forms.Padding(4);
+            this.btnNewFSrecordsImport.Name = "btnNewFSrecordsImport";
+            this.btnNewFSrecordsImport.Size = new System.Drawing.Size(389, 68);
+            this.btnNewFSrecordsImport.TabIndex = 178;
+            this.btnNewFSrecordsImport.Text = "New Field Service Records Import";
+            this.btnNewFSrecordsImport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.toolTip1.SetToolTip(this.btnNewFSrecordsImport, "Bulk import field service records from excel sheet");
+            this.btnNewFSrecordsImport.UseVisualStyleBackColor = false;
+            this.btnNewFSrecordsImport.Click += new System.EventHandler(this.btnNewFSrecordsImport_Click);
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
-            this.ClientSize = new System.Drawing.Size(445, 579);
+            this.ClientSize = new System.Drawing.Size(445, 596);
+            this.Controls.Add(this.btnNewFSrecordsImport);
             this.Controls.Add(this.btnApplicationSettings);
             this.Controls.Add(this.lblCongName);
             this.Controls.Add(this.btnFSrecordsImport);
@@ -215,5 +241,6 @@
         internal System.Windows.Forms.Button btnPublishers;
         private System.Windows.Forms.Label lblCongName;
         internal System.Windows.Forms.Button btnApplicationSettings;
+        internal System.Windows.Forms.Button btnNewFSrecordsImport;
     }
 }

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <configSections>
+    <sectionGroup name="userSettings" type="System.Configuration.UserSettingsGroup, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <section name="TMSA.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" allowExeDefinition="MachineToLocalUser" requirePermission="false" />
+    </sectionGroup>
+    <!-- For more information on Entity Framework configuration, visit http://go.microsoft.com/fwlink/?LinkID=237468 -->
+    <section name="entityFramework" type="System.Data.Entity.Internal.ConfigFile.EntityFrameworkSection, EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" requirePermission="false" />
+  </configSections>
+  <connectionStrings>
+    <add name="TMSA.Properties.Settings.LocalhostConnectionString"
+      connectionString="Data Source=.;Initial Catalog=ake;Integrated Security=True" />
+    <add name="nleEntities" connectionString="metadata=res://*/nleModel.csdl|res://*/nleModel.ssdl|res://*/nleModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=den1.mssql8.gear.host;initial catalog=nle;integrated security=False;user id=nle;password=@userkey5tune;MultipleActiveResultSets=True;App=EntityFramework&quot;"
+      providerName="System.Data.EntityClient" />
+    <add name="TMSA.Properties.Settings.NLEConnectionString" connectionString="Data Source=den1.mssql7.gear.host;Initial Catalog=nle;Integrated Security=False;User ID=NLE;Password=@userkey5tune" />
+    <add name="TMSA.Properties.Settings.NLSEConnectionString" connectionString="Data Source=den1.mssql8.gear.host;Initial Catalog=nlse;Integrated Security=False;User ID=nlse;Password=@userkey5tune" />
+    <add name="TMSA.Properties.Settings.OTEConnectionString" connectionString="Data Source=den1.mssql7.gear.host;Initial Catalog=ote;Integrated Security=False;User ID=OTE;Password=@userkey5tune" />
+    <add name="TMSA.Properties.Settings.NLTConnectionString" connectionString="Data Source=den1.mssql8.gear.host;Initial Catalog=nlt;Integrated Security=False;User ID=NLT;Password=@userkey5tune" />
+    <add name="TMSA.Properties.Settings.AKEConnectionString" connectionString="Data Source=den1.mssql8.gear.host;Initial Catalog=ake;Integrated Security=False;User ID=AKE;Password=@userkey5tune" />
+  </connectionStrings>
+  <startup>
+    <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5.2" />
+  </startup>
+  <userSettings>
+    <TMSA.Properties.Settings>
+      <setting name="DATEASSIGNED" serializeAs="String">
+        <value />
+      </setting>
+      <setting name="CongName" serializeAs="String">
+        <value />
+      </setting>
+      <setting name="TMSAConnectionString" serializeAs="String">
+        <value />
+      </setting>
+    </TMSA.Properties.Settings>
+  </userSettings>
+  <entityFramework>
+    <defaultConnectionFactory type="System.Data.Entity.Infrastructure.SqlConnectionFactory, EntityFramework" />
+    <providers>
+      <provider invariantName="System.Data.SqlClient" type="System.Data.Entity.SqlServer.SqlProviderServices, EntityFramework.SqlServer" />
+    </providers>
+  </entityFramework>
+</configuration>

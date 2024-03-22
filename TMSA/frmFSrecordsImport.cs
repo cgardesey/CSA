@@ -161,6 +161,7 @@ namespace TMSA
             hour_typeColumn.HeaderText = "HOUR TYPE";
 
             List<String> hour_types = new List<string>();
+            hour_types.Add("Field Missionary");
             hour_types.Add("Special Pioneer");
             hour_types.Add("Regular Pioneer");
             hour_types.Add("Auxiliary Pioneer");
@@ -319,8 +320,14 @@ namespace TMSA
             }
             finally
             {
-                dr.Close();
-                con.Close();
+                if (dr != null)
+                {
+                    dr.Close();
+                }
+                if (con != null)
+                {
+                    con.Close();
+                }
             }
         }
 
@@ -349,7 +356,7 @@ namespace TMSA
                     }
                     con = new SqlConnection(Properties.Settings.Default.TMSAConnectionString);
                     con.Open();
-                    sqlstr = "Insert into publisher_field_service_report values (@publisher_id, @date, @report_date, @placements, @videos, @hours, @return_visits, @bible_studies, @remarks, @hour_type, @privilege, @publisher_type, @group)";
+                    sqlstr = "Insert into publisher_field_service_report values (@publisher_id, @date, @report_date, @placements, @videos, @hours, @return_visits, @bible_studies, @remarks, @hour_type, @privilege, @publisher_type, @group, @shared_in_ministry)";
 
                     cmd = new SqlCommand(sqlstr, con);
 
@@ -437,7 +444,7 @@ namespace TMSA
                     {
                         cmd.Parameters.AddWithValue("@group", dataGridView1.Rows[i].Cells[7].Value.ToString());
                     }
-
+                    cmd.Parameters.AddWithValue("@shared_in_ministry", DBNull.Value);
 
                     cmd.ExecuteNonQuery();
                     con.Close();

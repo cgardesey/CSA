@@ -70,8 +70,10 @@ namespace TMSA
         public static frmFSrecords fsrecords = null;
         public static frmFSRreport fsreport = null;
         public static frmPublisherCard publisherCard = null;
+        public static frmNewPublisherCard newPublisherCard = null;
         public static frmChoosePublisher choosepublisher = null;
         public static frmFSrecordsImport fsrecordsimport = null;
+        public static frmNewFSrecordsImport newFsrecordsimport = null;
         public static frmApplicationSettings applicationSettings = null;
 
         public static void ShowPublishers()
@@ -150,6 +152,21 @@ namespace TMSA
             }
        }
 
+        public static void ShowNewPublisherCard(frmPublishers publishers)
+        {
+
+            if (newPublisherCard != null)
+            {
+                newPublisherCard.BringToFront();
+                newPublisherCard.WindowState = FormWindowState.Normal;
+            }
+            else
+            {
+                newPublisherCard = new frmNewPublisherCard(publishers);
+                newPublisherCard.Show();
+            }
+        }
+
         public static void ShowChoosePublisher()
         {
 
@@ -176,6 +193,20 @@ namespace TMSA
             {
                 fsrecordsimport = new frmFSrecordsImport();
                 fsrecordsimport.Show();
+            }
+        }
+
+        public static void ShowNewFSRimport()
+        {
+            if (newFsrecordsimport != null)
+            {
+                newFsrecordsimport.BringToFront();
+                newFsrecordsimport.WindowState = FormWindowState.Normal;
+            }
+            else
+            {
+                newFsrecordsimport = new frmNewFSrecordsImport();
+                newFsrecordsimport.Show();
             }
         }
     }

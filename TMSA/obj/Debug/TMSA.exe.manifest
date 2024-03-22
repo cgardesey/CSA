@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="TMSA.exe" version="9.0.0.6" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+  <asmv1:assemblyIdentity name="TMSA.exe" version="9.0.0.20" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
   <application />
   <entryPoint>
     <assemblyIdentity name="TMSA" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
@@ -210,26 +210,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TMSA.exe" size="630272">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TMSA.exe" size="778752">
       <assemblyIdentity name="TMSA" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>4J/Hiu+J9Fknxk4xCSpIjlyXmaNkhyu7Ov7jhcwKyy0=</dsig:DigestValue>
+        <dsig:DigestValue>xDp/JOU4Vl/3xFkq88mf8GFWryoI440jVBil1tlChTU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="aa\TMSA.resources.dll" size="32768">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="aa\TMSA.resources.dll" size="61952">
       <assemblyIdentity name="TMSA.resources" version="1.0.0.0" language="aa" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>8kWWiXblo8iD3Z6SjJ0hCNd9Wf2QI+OWZWbdSh8IvRY=</dsig:DigestValue>
+        <dsig:DigestValue>hzu1CX+HFMWyqaf2H6gyDPQt56bqDXZyjdQTI/lZDRc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -257,7 +257,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>/vUf9C2xp73a7nWTkAPowdFl516ETeeV0j30kRJByfk=</dsig:DigestValue>
+      <dsig:DigestValue>zq6G2vhOXZuHWknH8u2GpDf4lksWvQfuNRs+vm12+xQ=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

@@ -184,6 +184,7 @@ namespace TMSA
             }
 
             List<String> hour_types = new List<string>();
+            hour_types.Add("Field Missionary");
             hour_types.Add("Special Pioneer");
             hour_types.Add("Regular Pioneer");
             hour_types.Add("Auxiliary Pioneer");
@@ -209,6 +210,23 @@ namespace TMSA
         private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
         {
             bindingNavigator_ItemClicked = false;
+
+            var lastDayLastMonth = (new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1)).AddDays(-1);
+
+            publisher_field_service_reportDataGridView.CurrentRow.Cells["date"].Value = (new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1)).AddDays(-1);
+            publisher_field_service_reportDataGridView.CurrentRow.Cells["report_date"].Value = (new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1)).AddDays(-1);
+            tbDateMask.Visible = false;
+            tbReportDateMask.Visible = false;
+
+            dateDateTimePicker.Value = (new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1)).AddDays(-1);
+            report_dateDateTimePicker.Value = (new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1)).AddDays(-1);
+
+            placementsNumericUpDown.Value = 0;
+            videosNumericUpDown.Value = 0;
+            hoursNumericUpDown.Value = 0;
+            return_visitsNumericUpDown.Value = 0;
+            bible_studiesNumericUpDown.Value = 0;
+            remarksTextBox.Clear();
         }
 
         private void btnFilter_Click(object sender, EventArgs e)

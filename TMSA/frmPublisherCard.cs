@@ -139,7 +139,7 @@ namespace TMSA
                             }
                             else if (row.Cells["hour_type"].Value.ToString().Trim() != "Regular Pioneer")
                             {
-                                if (!String.IsNullOrWhiteSpace(row.Cells["group"].Value.ToString()))
+                                    if (!String.IsNullOrWhiteSpace(row.Cells["group"].Value.ToString()))
                                 {
                                     superscript = row.Cells["group"].Value.ToString().Trim().Substring(6);
                                 }
@@ -206,8 +206,16 @@ namespace TMSA
                             foreach (DataGridViewRow row2 in this.publishers.publisher_field_service_report_viewDataGridView.Rows)
                             {
                                 if (row2.Cells[0].Value != null)
-                                {
+                                {                                   
                                     DateTime datevalue = (Convert.ToDateTime(row2.Cells["_report_date"].Value.ToString()));
+
+                                    String formatted_dob = String.Format("{0:MMMM d, yyyy}", datevalue).ToUpper();  // "January 1, 1753"
+                                    if (Convert.ToDateTime(row2.Cells["_report_date"].Value) > DateTime.Parse("September 30, 2023"))
+                                    {
+                                        continue;
+                                    }
+
+
                                     int mnt = datevalue.Month;
                                     int sub = mnt > 8 ? (mnt - 8) : (mnt + 4);
                                     String monthString = getMonthString(mnt);
@@ -308,6 +316,12 @@ namespace TMSA
                                 if (row2.Cells[0].Value != null)
                                 {
                                     DateTime datevalue = (Convert.ToDateTime(row2.Cells["_report_date"].Value.ToString()));
+
+                                    if (Convert.ToDateTime(row2.Cells["_report_date"].Value) > DateTime.Parse("September 30, 2023"))
+                                    {
+                                        continue;
+                                    }
+
                                     int mnt = datevalue.Month;
                                     int sub = mnt > 8 ? (mnt - 8) : (mnt + 4);
                                     String monthString = getMonthString(mnt);
@@ -487,6 +501,7 @@ namespace TMSA
             try
             {
                 this.getServiceYearsTableAdapter.Fill(this.tMSADataSet.GetServiceYears);
+                getServiceYearsBindingSource.Filter = "service_year <= '" + 2023 + "' ";
 
             }
             catch (Exception ex)
@@ -690,7 +705,6 @@ namespace TMSA
                                 {
                                     pdfFormFields.SetField("Remarks" + monthString + "_2", "0");
                                 }
-                                pdfFormFields.SetField("Remarks" + monthString + "_2", (Convert.ToInt32(pdfFormFields.GetField("Remarks" + monthString + "_2")) + 1).ToString());
 
                             }
                         }

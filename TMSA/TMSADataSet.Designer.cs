@@ -26,13 +26,25 @@ namespace TMSA {
         
         private publisherDataTable tablepublisher;
         
+        private counsel_pointDataTable tablecounsel_point;
+        
+        private publisher_assignmentDataTable tablepublisher_assignment;
+        
         private publisher_field_service_reportDataTable tablepublisher_field_service_report;
         
-        private publisher_field_service_report_viewDataTable tablepublisher_field_service_report_view;
+        private publisher_last_assignment_viewDataTable tablepublisher_last_assignment_view;
         
         private publisher_last_field_service_report_viewDataTable tablepublisher_last_field_service_report_view;
         
         private GetServiceYearsDataTable tableGetServiceYears;
+        
+        private publisher_field_service_report_viewDataTable tablepublisher_field_service_report_view;
+        
+        private global::System.Data.DataRelation relationRefcounsel_point31;
+        
+        private global::System.Data.DataRelation relationRefpublisher21;
+        
+        private global::System.Data.DataRelation relationRefpublisher51;
         
         private global::System.Data.DataRelation relationRefpublisher22;
         
@@ -67,17 +79,26 @@ namespace TMSA {
                 if ((ds.Tables["publisher"] != null)) {
                     base.Tables.Add(new publisherDataTable(ds.Tables["publisher"]));
                 }
+                if ((ds.Tables["counsel_point"] != null)) {
+                    base.Tables.Add(new counsel_pointDataTable(ds.Tables["counsel_point"]));
+                }
+                if ((ds.Tables["publisher_assignment"] != null)) {
+                    base.Tables.Add(new publisher_assignmentDataTable(ds.Tables["publisher_assignment"]));
+                }
                 if ((ds.Tables["publisher_field_service_report"] != null)) {
                     base.Tables.Add(new publisher_field_service_reportDataTable(ds.Tables["publisher_field_service_report"]));
                 }
-                if ((ds.Tables["publisher_field_service_report_view"] != null)) {
-                    base.Tables.Add(new publisher_field_service_report_viewDataTable(ds.Tables["publisher_field_service_report_view"]));
+                if ((ds.Tables["publisher_last_assignment_view"] != null)) {
+                    base.Tables.Add(new publisher_last_assignment_viewDataTable(ds.Tables["publisher_last_assignment_view"]));
                 }
                 if ((ds.Tables["publisher_last_field_service_report_view"] != null)) {
                     base.Tables.Add(new publisher_last_field_service_report_viewDataTable(ds.Tables["publisher_last_field_service_report_view"]));
                 }
                 if ((ds.Tables["GetServiceYears"] != null)) {
                     base.Tables.Add(new GetServiceYearsDataTable(ds.Tables["GetServiceYears"]));
+                }
+                if ((ds.Tables["publisher_field_service_report_view"] != null)) {
+                    base.Tables.Add(new publisher_field_service_report_viewDataTable(ds.Tables["publisher_field_service_report_view"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -111,6 +132,26 @@ namespace TMSA {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public counsel_pointDataTable counsel_point {
+            get {
+                return this.tablecounsel_point;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public publisher_assignmentDataTable publisher_assignment {
+            get {
+                return this.tablepublisher_assignment;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
         public publisher_field_service_reportDataTable publisher_field_service_report {
             get {
                 return this.tablepublisher_field_service_report;
@@ -121,9 +162,9 @@ namespace TMSA {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public publisher_field_service_report_viewDataTable publisher_field_service_report_view {
+        public publisher_last_assignment_viewDataTable publisher_last_assignment_view {
             get {
-                return this.tablepublisher_field_service_report_view;
+                return this.tablepublisher_last_assignment_view;
             }
         }
         
@@ -144,6 +185,16 @@ namespace TMSA {
         public GetServiceYearsDataTable GetServiceYears {
             get {
                 return this.tableGetServiceYears;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public publisher_field_service_report_viewDataTable publisher_field_service_report_view {
+            get {
+                return this.tablepublisher_field_service_report_view;
             }
         }
         
@@ -217,17 +268,26 @@ namespace TMSA {
                 if ((ds.Tables["publisher"] != null)) {
                     base.Tables.Add(new publisherDataTable(ds.Tables["publisher"]));
                 }
+                if ((ds.Tables["counsel_point"] != null)) {
+                    base.Tables.Add(new counsel_pointDataTable(ds.Tables["counsel_point"]));
+                }
+                if ((ds.Tables["publisher_assignment"] != null)) {
+                    base.Tables.Add(new publisher_assignmentDataTable(ds.Tables["publisher_assignment"]));
+                }
                 if ((ds.Tables["publisher_field_service_report"] != null)) {
                     base.Tables.Add(new publisher_field_service_reportDataTable(ds.Tables["publisher_field_service_report"]));
                 }
-                if ((ds.Tables["publisher_field_service_report_view"] != null)) {
-                    base.Tables.Add(new publisher_field_service_report_viewDataTable(ds.Tables["publisher_field_service_report_view"]));
+                if ((ds.Tables["publisher_last_assignment_view"] != null)) {
+                    base.Tables.Add(new publisher_last_assignment_viewDataTable(ds.Tables["publisher_last_assignment_view"]));
                 }
                 if ((ds.Tables["publisher_last_field_service_report_view"] != null)) {
                     base.Tables.Add(new publisher_last_field_service_report_viewDataTable(ds.Tables["publisher_last_field_service_report_view"]));
                 }
                 if ((ds.Tables["GetServiceYears"] != null)) {
                     base.Tables.Add(new GetServiceYearsDataTable(ds.Tables["GetServiceYears"]));
+                }
+                if ((ds.Tables["publisher_field_service_report_view"] != null)) {
+                    base.Tables.Add(new publisher_field_service_report_viewDataTable(ds.Tables["publisher_field_service_report_view"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -268,16 +328,28 @@ namespace TMSA {
                     this.tablepublisher.InitVars();
                 }
             }
+            this.tablecounsel_point = ((counsel_pointDataTable)(base.Tables["counsel_point"]));
+            if ((initTable == true)) {
+                if ((this.tablecounsel_point != null)) {
+                    this.tablecounsel_point.InitVars();
+                }
+            }
+            this.tablepublisher_assignment = ((publisher_assignmentDataTable)(base.Tables["publisher_assignment"]));
+            if ((initTable == true)) {
+                if ((this.tablepublisher_assignment != null)) {
+                    this.tablepublisher_assignment.InitVars();
+                }
+            }
             this.tablepublisher_field_service_report = ((publisher_field_service_reportDataTable)(base.Tables["publisher_field_service_report"]));
             if ((initTable == true)) {
                 if ((this.tablepublisher_field_service_report != null)) {
                     this.tablepublisher_field_service_report.InitVars();
                 }
             }
-            this.tablepublisher_field_service_report_view = ((publisher_field_service_report_viewDataTable)(base.Tables["publisher_field_service_report_view"]));
+            this.tablepublisher_last_assignment_view = ((publisher_last_assignment_viewDataTable)(base.Tables["publisher_last_assignment_view"]));
             if ((initTable == true)) {
-                if ((this.tablepublisher_field_service_report_view != null)) {
-                    this.tablepublisher_field_service_report_view.InitVars();
+                if ((this.tablepublisher_last_assignment_view != null)) {
+                    this.tablepublisher_last_assignment_view.InitVars();
                 }
             }
             this.tablepublisher_last_field_service_report_view = ((publisher_last_field_service_report_viewDataTable)(base.Tables["publisher_last_field_service_report_view"]));
@@ -292,6 +364,15 @@ namespace TMSA {
                     this.tableGetServiceYears.InitVars();
                 }
             }
+            this.tablepublisher_field_service_report_view = ((publisher_field_service_report_viewDataTable)(base.Tables["publisher_field_service_report_view"]));
+            if ((initTable == true)) {
+                if ((this.tablepublisher_field_service_report_view != null)) {
+                    this.tablepublisher_field_service_report_view.InitVars();
+                }
+            }
+            this.relationRefcounsel_point31 = this.Relations["Refcounsel_point31"];
+            this.relationRefpublisher21 = this.Relations["Refpublisher21"];
+            this.relationRefpublisher51 = this.Relations["Refpublisher51"];
             this.relationRefpublisher22 = this.Relations["Refpublisher22"];
         }
         
@@ -305,14 +386,32 @@ namespace TMSA {
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tablepublisher = new publisherDataTable();
             base.Tables.Add(this.tablepublisher);
+            this.tablecounsel_point = new counsel_pointDataTable();
+            base.Tables.Add(this.tablecounsel_point);
+            this.tablepublisher_assignment = new publisher_assignmentDataTable();
+            base.Tables.Add(this.tablepublisher_assignment);
             this.tablepublisher_field_service_report = new publisher_field_service_reportDataTable();
             base.Tables.Add(this.tablepublisher_field_service_report);
-            this.tablepublisher_field_service_report_view = new publisher_field_service_report_viewDataTable();
-            base.Tables.Add(this.tablepublisher_field_service_report_view);
+            this.tablepublisher_last_assignment_view = new publisher_last_assignment_viewDataTable();
+            base.Tables.Add(this.tablepublisher_last_assignment_view);
             this.tablepublisher_last_field_service_report_view = new publisher_last_field_service_report_viewDataTable();
             base.Tables.Add(this.tablepublisher_last_field_service_report_view);
             this.tableGetServiceYears = new GetServiceYearsDataTable();
             base.Tables.Add(this.tableGetServiceYears);
+            this.tablepublisher_field_service_report_view = new publisher_field_service_report_viewDataTable();
+            base.Tables.Add(this.tablepublisher_field_service_report_view);
+            this.relationRefcounsel_point31 = new global::System.Data.DataRelation("Refcounsel_point31", new global::System.Data.DataColumn[] {
+                        this.tablecounsel_point.counsel_point_idColumn}, new global::System.Data.DataColumn[] {
+                        this.tablepublisher_assignment.counsel_point_idColumn}, false);
+            this.Relations.Add(this.relationRefcounsel_point31);
+            this.relationRefpublisher21 = new global::System.Data.DataRelation("Refpublisher21", new global::System.Data.DataColumn[] {
+                        this.tablepublisher.publisher_idColumn}, new global::System.Data.DataColumn[] {
+                        this.tablepublisher_assignment.publisher_idColumn}, false);
+            this.Relations.Add(this.relationRefpublisher21);
+            this.relationRefpublisher51 = new global::System.Data.DataRelation("Refpublisher51", new global::System.Data.DataColumn[] {
+                        this.tablepublisher.publisher_idColumn}, new global::System.Data.DataColumn[] {
+                        this.tablepublisher_assignment.assistant_idColumn}, false);
+            this.Relations.Add(this.relationRefpublisher51);
             this.relationRefpublisher22 = new global::System.Data.DataRelation("Refpublisher22", new global::System.Data.DataColumn[] {
                         this.tablepublisher.publisher_idColumn}, new global::System.Data.DataColumn[] {
                         this.tablepublisher_field_service_report.publisher_idColumn}, false);
@@ -327,13 +426,25 @@ namespace TMSA {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private bool ShouldSerializecounsel_point() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private bool ShouldSerializepublisher_assignment() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private bool ShouldSerializepublisher_field_service_report() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private bool ShouldSerializepublisher_field_service_report_view() {
+        private bool ShouldSerializepublisher_last_assignment_view() {
             return false;
         }
         
@@ -346,6 +457,12 @@ namespace TMSA {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private bool ShouldSerializeGetServiceYears() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private bool ShouldSerializepublisher_field_service_report_view() {
             return false;
         }
         
@@ -408,16 +525,25 @@ namespace TMSA {
         public delegate void publisherRowChangeEventHandler(object sender, publisherRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public delegate void counsel_pointRowChangeEventHandler(object sender, counsel_pointRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public delegate void publisher_assignmentRowChangeEventHandler(object sender, publisher_assignmentRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public delegate void publisher_field_service_reportRowChangeEventHandler(object sender, publisher_field_service_reportRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public delegate void publisher_field_service_report_viewRowChangeEventHandler(object sender, publisher_field_service_report_viewRowChangeEvent e);
+        public delegate void publisher_last_assignment_viewRowChangeEventHandler(object sender, publisher_last_assignment_viewRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public delegate void publisher_last_field_service_report_viewRowChangeEventHandler(object sender, publisher_last_field_service_report_viewRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public delegate void GetServiceYearsRowChangeEventHandler(object sender, GetServiceYearsRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public delegate void publisher_field_service_report_viewRowChangeEventHandler(object sender, publisher_field_service_report_viewRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -907,6 +1033,738 @@ namespace TMSA {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class counsel_pointDataTable : global::System.Data.TypedTableBase<counsel_pointRow> {
+            
+            private global::System.Data.DataColumn columncounsel_point_id;
+            
+            private global::System.Data.DataColumn columnstudy_number;
+            
+            private global::System.Data.DataColumn columndescription;
+            
+            private global::System.Data.DataColumn columnis_reading;
+            
+            private global::System.Data.DataColumn columnis_demonstration;
+            
+            private global::System.Data.DataColumn columnis_discourse;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public counsel_pointDataTable() {
+                this.TableName = "counsel_point";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal counsel_pointDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected counsel_pointDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn counsel_point_idColumn {
+                get {
+                    return this.columncounsel_point_id;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn study_numberColumn {
+                get {
+                    return this.columnstudy_number;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn descriptionColumn {
+                get {
+                    return this.columndescription;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn is_readingColumn {
+                get {
+                    return this.columnis_reading;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn is_demonstrationColumn {
+                get {
+                    return this.columnis_demonstration;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn is_discourseColumn {
+                get {
+                    return this.columnis_discourse;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public counsel_pointRow this[int index] {
+                get {
+                    return ((counsel_pointRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event counsel_pointRowChangeEventHandler counsel_pointRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event counsel_pointRowChangeEventHandler counsel_pointRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event counsel_pointRowChangeEventHandler counsel_pointRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event counsel_pointRowChangeEventHandler counsel_pointRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Addcounsel_pointRow(counsel_pointRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public counsel_pointRow Addcounsel_pointRow(int study_number, string description, bool is_reading, bool is_demonstration, bool is_discourse) {
+                counsel_pointRow rowcounsel_pointRow = ((counsel_pointRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        null,
+                        study_number,
+                        description,
+                        is_reading,
+                        is_demonstration,
+                        is_discourse};
+                rowcounsel_pointRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowcounsel_pointRow);
+                return rowcounsel_pointRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public counsel_pointRow FindBycounsel_point_id(int counsel_point_id) {
+                return ((counsel_pointRow)(this.Rows.Find(new object[] {
+                            counsel_point_id})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                counsel_pointDataTable cln = ((counsel_pointDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new counsel_pointDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal void InitVars() {
+                this.columncounsel_point_id = base.Columns["counsel_point_id"];
+                this.columnstudy_number = base.Columns["study_number"];
+                this.columndescription = base.Columns["description"];
+                this.columnis_reading = base.Columns["is_reading"];
+                this.columnis_demonstration = base.Columns["is_demonstration"];
+                this.columnis_discourse = base.Columns["is_discourse"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            private void InitClass() {
+                this.columncounsel_point_id = new global::System.Data.DataColumn("counsel_point_id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncounsel_point_id);
+                this.columnstudy_number = new global::System.Data.DataColumn("study_number", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnstudy_number);
+                this.columndescription = new global::System.Data.DataColumn("description", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndescription);
+                this.columnis_reading = new global::System.Data.DataColumn("is_reading", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnis_reading);
+                this.columnis_demonstration = new global::System.Data.DataColumn("is_demonstration", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnis_demonstration);
+                this.columnis_discourse = new global::System.Data.DataColumn("is_discourse", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnis_discourse);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columncounsel_point_id}, true));
+                this.columncounsel_point_id.AutoIncrement = true;
+                this.columncounsel_point_id.AutoIncrementSeed = -1;
+                this.columncounsel_point_id.AutoIncrementStep = -1;
+                this.columncounsel_point_id.AllowDBNull = false;
+                this.columncounsel_point_id.ReadOnly = true;
+                this.columncounsel_point_id.Unique = true;
+                this.columndescription.MaxLength = 60;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public counsel_pointRow Newcounsel_pointRow() {
+                return ((counsel_pointRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new counsel_pointRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(counsel_pointRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.counsel_pointRowChanged != null)) {
+                    this.counsel_pointRowChanged(this, new counsel_pointRowChangeEvent(((counsel_pointRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.counsel_pointRowChanging != null)) {
+                    this.counsel_pointRowChanging(this, new counsel_pointRowChangeEvent(((counsel_pointRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.counsel_pointRowDeleted != null)) {
+                    this.counsel_pointRowDeleted(this, new counsel_pointRowChangeEvent(((counsel_pointRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.counsel_pointRowDeleting != null)) {
+                    this.counsel_pointRowDeleting(this, new counsel_pointRowChangeEvent(((counsel_pointRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Removecounsel_pointRow(counsel_pointRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                TMSADataSet ds = new TMSADataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "counsel_pointDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class publisher_assignmentDataTable : global::System.Data.TypedTableBase<publisher_assignmentRow> {
+            
+            private global::System.Data.DataColumn columnpublisher_assignment_id;
+            
+            private global::System.Data.DataColumn columnpublisher_id;
+            
+            private global::System.Data.DataColumn columnassistant_id;
+            
+            private global::System.Data.DataColumn columncounsel_point_id;
+            
+            private global::System.Data.DataColumn columnweek_start_date;
+            
+            private global::System.Data.DataColumn columnweek_end_date;
+            
+            private global::System.Data.DataColumn columndate_assigned;
+            
+            private global::System.Data.DataColumn columndate_completed;
+            
+            private global::System.Data.DataColumn columnassignment_type;
+            
+            private global::System.Data.DataColumn columnhall;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public publisher_assignmentDataTable() {
+                this.TableName = "publisher_assignment";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal publisher_assignmentDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected publisher_assignmentDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn publisher_assignment_idColumn {
+                get {
+                    return this.columnpublisher_assignment_id;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn publisher_idColumn {
+                get {
+                    return this.columnpublisher_id;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn assistant_idColumn {
+                get {
+                    return this.columnassistant_id;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn counsel_point_idColumn {
+                get {
+                    return this.columncounsel_point_id;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn week_start_dateColumn {
+                get {
+                    return this.columnweek_start_date;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn week_end_dateColumn {
+                get {
+                    return this.columnweek_end_date;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn date_assignedColumn {
+                get {
+                    return this.columndate_assigned;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn date_completedColumn {
+                get {
+                    return this.columndate_completed;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn assignment_typeColumn {
+                get {
+                    return this.columnassignment_type;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn hallColumn {
+                get {
+                    return this.columnhall;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public publisher_assignmentRow this[int index] {
+                get {
+                    return ((publisher_assignmentRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event publisher_assignmentRowChangeEventHandler publisher_assignmentRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event publisher_assignmentRowChangeEventHandler publisher_assignmentRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event publisher_assignmentRowChangeEventHandler publisher_assignmentRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event publisher_assignmentRowChangeEventHandler publisher_assignmentRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Addpublisher_assignmentRow(publisher_assignmentRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public publisher_assignmentRow Addpublisher_assignmentRow(publisherRow parentpublisherRowByRefpublisher21, publisherRow parentpublisherRowByRefpublisher51, counsel_pointRow parentcounsel_pointRowByRefcounsel_point31, System.DateTime week_start_date, System.DateTime week_end_date, System.DateTime date_assigned, System.DateTime date_completed, string assignment_type, string hall) {
+                publisher_assignmentRow rowpublisher_assignmentRow = ((publisher_assignmentRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        null,
+                        null,
+                        null,
+                        null,
+                        week_start_date,
+                        week_end_date,
+                        date_assigned,
+                        date_completed,
+                        assignment_type,
+                        hall};
+                if ((parentpublisherRowByRefpublisher21 != null)) {
+                    columnValuesArray[1] = parentpublisherRowByRefpublisher21[0];
+                }
+                if ((parentpublisherRowByRefpublisher51 != null)) {
+                    columnValuesArray[2] = parentpublisherRowByRefpublisher51[0];
+                }
+                if ((parentcounsel_pointRowByRefcounsel_point31 != null)) {
+                    columnValuesArray[3] = parentcounsel_pointRowByRefcounsel_point31[0];
+                }
+                rowpublisher_assignmentRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowpublisher_assignmentRow);
+                return rowpublisher_assignmentRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public publisher_assignmentRow FindBypublisher_assignment_id(int publisher_assignment_id) {
+                return ((publisher_assignmentRow)(this.Rows.Find(new object[] {
+                            publisher_assignment_id})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                publisher_assignmentDataTable cln = ((publisher_assignmentDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new publisher_assignmentDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal void InitVars() {
+                this.columnpublisher_assignment_id = base.Columns["publisher_assignment_id"];
+                this.columnpublisher_id = base.Columns["publisher_id"];
+                this.columnassistant_id = base.Columns["assistant_id"];
+                this.columncounsel_point_id = base.Columns["counsel_point_id"];
+                this.columnweek_start_date = base.Columns["week_start_date"];
+                this.columnweek_end_date = base.Columns["week_end_date"];
+                this.columndate_assigned = base.Columns["date_assigned"];
+                this.columndate_completed = base.Columns["date_completed"];
+                this.columnassignment_type = base.Columns["assignment_type"];
+                this.columnhall = base.Columns["hall"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            private void InitClass() {
+                this.columnpublisher_assignment_id = new global::System.Data.DataColumn("publisher_assignment_id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpublisher_assignment_id);
+                this.columnpublisher_id = new global::System.Data.DataColumn("publisher_id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpublisher_id);
+                this.columnassistant_id = new global::System.Data.DataColumn("assistant_id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnassistant_id);
+                this.columncounsel_point_id = new global::System.Data.DataColumn("counsel_point_id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncounsel_point_id);
+                this.columnweek_start_date = new global::System.Data.DataColumn("week_start_date", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnweek_start_date);
+                this.columnweek_end_date = new global::System.Data.DataColumn("week_end_date", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnweek_end_date);
+                this.columndate_assigned = new global::System.Data.DataColumn("date_assigned", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndate_assigned);
+                this.columndate_completed = new global::System.Data.DataColumn("date_completed", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndate_completed);
+                this.columnassignment_type = new global::System.Data.DataColumn("assignment_type", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnassignment_type);
+                this.columnhall = new global::System.Data.DataColumn("hall", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnhall);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnpublisher_assignment_id}, true));
+                this.columnpublisher_assignment_id.AutoIncrement = true;
+                this.columnpublisher_assignment_id.AutoIncrementSeed = -1;
+                this.columnpublisher_assignment_id.AutoIncrementStep = -1;
+                this.columnpublisher_assignment_id.AllowDBNull = false;
+                this.columnpublisher_assignment_id.ReadOnly = true;
+                this.columnpublisher_assignment_id.Unique = true;
+                this.columnassignment_type.MaxLength = 60;
+                this.columnhall.MaxLength = 60;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public publisher_assignmentRow Newpublisher_assignmentRow() {
+                return ((publisher_assignmentRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new publisher_assignmentRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(publisher_assignmentRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.publisher_assignmentRowChanged != null)) {
+                    this.publisher_assignmentRowChanged(this, new publisher_assignmentRowChangeEvent(((publisher_assignmentRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.publisher_assignmentRowChanging != null)) {
+                    this.publisher_assignmentRowChanging(this, new publisher_assignmentRowChangeEvent(((publisher_assignmentRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.publisher_assignmentRowDeleted != null)) {
+                    this.publisher_assignmentRowDeleted(this, new publisher_assignmentRowChangeEvent(((publisher_assignmentRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.publisher_assignmentRowDeleting != null)) {
+                    this.publisher_assignmentRowDeleting(this, new publisher_assignmentRowChangeEvent(((publisher_assignmentRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Removepublisher_assignmentRow(publisher_assignmentRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                TMSADataSet ds = new TMSADataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "publisher_assignmentDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class publisher_field_service_reportDataTable : global::System.Data.TypedTableBase<publisher_field_service_reportRow> {
             
             private global::System.Data.DataColumn columnpublisher_field_service_report_id;
@@ -914,6 +1772,8 @@ namespace TMSA {
             private global::System.Data.DataColumn columnpublisher_id;
             
             private global::System.Data.DataColumn columndate;
+            
+            private global::System.Data.DataColumn columnreport_date;
             
             private global::System.Data.DataColumn columnplacements;
             
@@ -925,7 +1785,7 @@ namespace TMSA {
             
             private global::System.Data.DataColumn columnbible_studies;
             
-            private global::System.Data.DataColumn columnreport_date;
+            private global::System.Data.DataColumn columnremarks;
             
             private global::System.Data.DataColumn columnhour_type;
             
@@ -935,7 +1795,7 @@ namespace TMSA {
             
             private global::System.Data.DataColumn columngroup;
             
-            private global::System.Data.DataColumn columnremarks;
+            private global::System.Data.DataColumn columnshared_in_ministry;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -996,6 +1856,14 @@ namespace TMSA {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn report_dateColumn {
+                get {
+                    return this.columnreport_date;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn placementsColumn {
                 get {
                     return this.columnplacements;
@@ -1036,9 +1904,9 @@ namespace TMSA {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn report_dateColumn {
+            public global::System.Data.DataColumn remarksColumn {
                 get {
-                    return this.columnreport_date;
+                    return this.columnremarks;
                 }
             }
             
@@ -1076,9 +1944,9 @@ namespace TMSA {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn remarksColumn {
+            public global::System.Data.DataColumn shared_in_ministryColumn {
                 get {
-                    return this.columnremarks;
+                    return this.columnshared_in_ministry;
                 }
             }
             
@@ -1119,23 +1987,24 @@ namespace TMSA {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public publisher_field_service_reportRow Addpublisher_field_service_reportRow(publisherRow parentpublisherRowByRefpublisher22, System.DateTime date, int placements, int videos, decimal hours, int return_visits, int bible_studies, System.DateTime report_date, string hour_type, string privilege, string publisher_type, string group, string remarks) {
+            public publisher_field_service_reportRow Addpublisher_field_service_reportRow(publisherRow parentpublisherRowByRefpublisher22, System.DateTime date, System.DateTime report_date, int placements, int videos, decimal hours, int return_visits, int bible_studies, string remarks, string hour_type, string privilege, string publisher_type, string group, bool shared_in_ministry) {
                 publisher_field_service_reportRow rowpublisher_field_service_reportRow = ((publisher_field_service_reportRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         null,
                         date,
+                        report_date,
                         placements,
                         videos,
                         hours,
                         return_visits,
                         bible_studies,
-                        report_date,
+                        remarks,
                         hour_type,
                         privilege,
                         publisher_type,
                         group,
-                        remarks};
+                        shared_in_ministry};
                 if ((parentpublisherRowByRefpublisher22 != null)) {
                     columnValuesArray[1] = parentpublisherRowByRefpublisher22[0];
                 }
@@ -1171,17 +2040,18 @@ namespace TMSA {
                 this.columnpublisher_field_service_report_id = base.Columns["publisher_field_service_report_id"];
                 this.columnpublisher_id = base.Columns["publisher_id"];
                 this.columndate = base.Columns["date"];
+                this.columnreport_date = base.Columns["report_date"];
                 this.columnplacements = base.Columns["placements"];
                 this.columnvideos = base.Columns["videos"];
                 this.columnhours = base.Columns["hours"];
                 this.columnreturn_visits = base.Columns["return_visits"];
                 this.columnbible_studies = base.Columns["bible_studies"];
-                this.columnreport_date = base.Columns["report_date"];
+                this.columnremarks = base.Columns["remarks"];
                 this.columnhour_type = base.Columns["hour_type"];
                 this.columnprivilege = base.Columns["privilege"];
                 this.columnpublisher_type = base.Columns["publisher_type"];
                 this.columngroup = base.Columns["group"];
-                this.columnremarks = base.Columns["remarks"];
+                this.columnshared_in_ministry = base.Columns["shared_in_ministry"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1193,6 +2063,8 @@ namespace TMSA {
                 base.Columns.Add(this.columnpublisher_id);
                 this.columndate = new global::System.Data.DataColumn("date", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndate);
+                this.columnreport_date = new global::System.Data.DataColumn("report_date", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnreport_date);
                 this.columnplacements = new global::System.Data.DataColumn("placements", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnplacements);
                 this.columnvideos = new global::System.Data.DataColumn("videos", typeof(int), null, global::System.Data.MappingType.Element);
@@ -1203,8 +2075,8 @@ namespace TMSA {
                 base.Columns.Add(this.columnreturn_visits);
                 this.columnbible_studies = new global::System.Data.DataColumn("bible_studies", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnbible_studies);
-                this.columnreport_date = new global::System.Data.DataColumn("report_date", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnreport_date);
+                this.columnremarks = new global::System.Data.DataColumn("remarks", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnremarks);
                 this.columnhour_type = new global::System.Data.DataColumn("hour_type", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnhour_type);
                 this.columnprivilege = new global::System.Data.DataColumn("privilege", typeof(string), null, global::System.Data.MappingType.Element);
@@ -1213,8 +2085,8 @@ namespace TMSA {
                 base.Columns.Add(this.columnpublisher_type);
                 this.columngroup = new global::System.Data.DataColumn("group", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columngroup);
-                this.columnremarks = new global::System.Data.DataColumn("remarks", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnremarks);
+                this.columnshared_in_ministry = new global::System.Data.DataColumn("shared_in_ministry", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnshared_in_ministry);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnpublisher_field_service_report_id}, true));
                 this.columnpublisher_field_service_report_id.AutoIncrement = true;
@@ -1223,17 +2095,11 @@ namespace TMSA {
                 this.columnpublisher_field_service_report_id.AllowDBNull = false;
                 this.columnpublisher_field_service_report_id.ReadOnly = true;
                 this.columnpublisher_field_service_report_id.Unique = true;
-                this.columnplacements.DefaultValue = ((int)(0));
-                this.columnvideos.DefaultValue = ((int)(0));
-                this.columnhours.DefaultValue = ((decimal)(0m));
-                this.columnreturn_visits.DefaultValue = ((int)(0));
-                this.columnbible_studies.DefaultValue = ((int)(0));
+                this.columnremarks.MaxLength = 100;
                 this.columnhour_type.MaxLength = 60;
                 this.columnprivilege.MaxLength = 60;
                 this.columnpublisher_type.MaxLength = 60;
                 this.columngroup.MaxLength = 60;
-                this.columnremarks.DefaultValue = ((string)(""));
-                this.columnremarks.MaxLength = 100;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1365,58 +2231,78 @@ namespace TMSA {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class publisher_field_service_report_viewDataTable : global::System.Data.TypedTableBase<publisher_field_service_report_viewRow> {
+        public partial class publisher_last_assignment_viewDataTable : global::System.Data.TypedTableBase<publisher_last_assignment_viewRow> {
+            
+            private global::System.Data.DataColumn columnweek_start_date;
+            
+            private global::System.Data.DataColumn columnlast_assignment_date;
+            
+            private global::System.Data.DataColumn columndate_assigned;
+            
+            private global::System.Data.DataColumn columnlast_completed_assignment_date;
+            
+            private global::System.Data.DataColumn columnassignment_type;
+            
+            private global::System.Data.DataColumn columnhall;
             
             private global::System.Data.DataColumn columnpublisher_id;
             
             private global::System.Data.DataColumn columnpublisher_name;
             
-            private global::System.Data.DataColumn columndob;
+            private global::System.Data.DataColumn columnpublisher_dob;
             
-            private global::System.Data.DataColumn columnbaptisam_date;
+            private global::System.Data.DataColumn columnpublisher_contact;
             
-            private global::System.Data.DataColumn columncontact;
+            private global::System.Data.DataColumn columnpublisher_address;
             
-            private global::System.Data.DataColumn columnaddress;
+            private global::System.Data.DataColumn columnpublisher_active;
             
-            private global::System.Data.DataColumn columnactive;
+            private global::System.Data.DataColumn columnpublisher_picture;
             
-            private global::System.Data.DataColumn columnpicture;
+            private global::System.Data.DataColumn columnpublisher_gender;
             
-            private global::System.Data.DataColumn columngender;
-            
-            private global::System.Data.DataColumn columnhour_type;
-            
-            private global::System.Data.DataColumn columnprivilege;
+            private global::System.Data.DataColumn columnpublisher_privilege;
             
             private global::System.Data.DataColumn columnpublisher_type;
             
-            private global::System.Data.DataColumn columngroup;
+            private global::System.Data.DataColumn columnpublisher_group;
             
-            private global::System.Data.DataColumn columnpublisher_field_service_report_id;
+            private global::System.Data.DataColumn columnassistant_id;
             
-            private global::System.Data.DataColumn columndate;
+            private global::System.Data.DataColumn columnassistant_name;
             
-            private global::System.Data.DataColumn columnplacements;
+            private global::System.Data.DataColumn columnassistant_dob;
             
-            private global::System.Data.DataColumn columnvideos;
+            private global::System.Data.DataColumn columnassistant_contact;
             
-            private global::System.Data.DataColumn columnhours;
+            private global::System.Data.DataColumn columnassistant_address;
             
-            private global::System.Data.DataColumn columnreturn_visits;
+            private global::System.Data.DataColumn columnassistant_active;
             
-            private global::System.Data.DataColumn columnbible_studies;
+            private global::System.Data.DataColumn columnassistant_picture;
             
-            private global::System.Data.DataColumn columnreport_date;
+            private global::System.Data.DataColumn columnassistant_gender;
             
-            private global::System.Data.DataColumn columnremarks;
+            private global::System.Data.DataColumn columnassistant_privilege;
             
-            private global::System.Data.DataColumn columnhope;
+            private global::System.Data.DataColumn columnassistant_type;
+            
+            private global::System.Data.DataColumn columnassistant_group;
+            
+            private global::System.Data.DataColumn columnstudy_number;
+            
+            private global::System.Data.DataColumn columndescription;
+            
+            private global::System.Data.DataColumn columnis_reading;
+            
+            private global::System.Data.DataColumn columnis_demonstration;
+            
+            private global::System.Data.DataColumn columnis_discourse;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public publisher_field_service_report_viewDataTable() {
-                this.TableName = "publisher_field_service_report_view";
+            public publisher_last_assignment_viewDataTable() {
+                this.TableName = "publisher_last_assignment_view";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -1424,7 +2310,7 @@ namespace TMSA {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal publisher_field_service_report_viewDataTable(global::System.Data.DataTable table) {
+            internal publisher_last_assignment_viewDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -1441,9 +2327,57 @@ namespace TMSA {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected publisher_field_service_report_viewDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected publisher_last_assignment_viewDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn week_start_dateColumn {
+                get {
+                    return this.columnweek_start_date;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn last_assignment_dateColumn {
+                get {
+                    return this.columnlast_assignment_date;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn date_assignedColumn {
+                get {
+                    return this.columndate_assigned;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn last_completed_assignment_dateColumn {
+                get {
+                    return this.columnlast_completed_assignment_date;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn assignment_typeColumn {
+                get {
+                    return this.columnassignment_type;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn hallColumn {
+                get {
+                    return this.columnhall;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1464,73 +2398,57 @@ namespace TMSA {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn dobColumn {
+            public global::System.Data.DataColumn publisher_dobColumn {
                 get {
-                    return this.columndob;
+                    return this.columnpublisher_dob;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn baptisam_dateColumn {
+            public global::System.Data.DataColumn publisher_contactColumn {
                 get {
-                    return this.columnbaptisam_date;
+                    return this.columnpublisher_contact;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn contactColumn {
+            public global::System.Data.DataColumn publisher_addressColumn {
                 get {
-                    return this.columncontact;
+                    return this.columnpublisher_address;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn addressColumn {
+            public global::System.Data.DataColumn publisher_activeColumn {
                 get {
-                    return this.columnaddress;
+                    return this.columnpublisher_active;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn activeColumn {
+            public global::System.Data.DataColumn publisher_pictureColumn {
                 get {
-                    return this.columnactive;
+                    return this.columnpublisher_picture;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn pictureColumn {
+            public global::System.Data.DataColumn publisher_genderColumn {
                 get {
-                    return this.columnpicture;
+                    return this.columnpublisher_gender;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn genderColumn {
+            public global::System.Data.DataColumn publisher_privilegeColumn {
                 get {
-                    return this.columngender;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn hour_typeColumn {
-                get {
-                    return this.columnhour_type;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn privilegeColumn {
-                get {
-                    return this.columnprivilege;
+                    return this.columnpublisher_privilege;
                 }
             }
             
@@ -1544,89 +2462,137 @@ namespace TMSA {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn groupColumn {
+            public global::System.Data.DataColumn publisher_groupColumn {
                 get {
-                    return this.columngroup;
+                    return this.columnpublisher_group;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn publisher_field_service_report_idColumn {
+            public global::System.Data.DataColumn assistant_idColumn {
                 get {
-                    return this.columnpublisher_field_service_report_id;
+                    return this.columnassistant_id;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn dateColumn {
+            public global::System.Data.DataColumn assistant_nameColumn {
                 get {
-                    return this.columndate;
+                    return this.columnassistant_name;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn placementsColumn {
+            public global::System.Data.DataColumn assistant_dobColumn {
                 get {
-                    return this.columnplacements;
+                    return this.columnassistant_dob;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn videosColumn {
+            public global::System.Data.DataColumn assistant_contactColumn {
                 get {
-                    return this.columnvideos;
+                    return this.columnassistant_contact;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn hoursColumn {
+            public global::System.Data.DataColumn assistant_addressColumn {
                 get {
-                    return this.columnhours;
+                    return this.columnassistant_address;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn return_visitsColumn {
+            public global::System.Data.DataColumn assistant_activeColumn {
                 get {
-                    return this.columnreturn_visits;
+                    return this.columnassistant_active;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn bible_studiesColumn {
+            public global::System.Data.DataColumn assistant_pictureColumn {
                 get {
-                    return this.columnbible_studies;
+                    return this.columnassistant_picture;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn report_dateColumn {
+            public global::System.Data.DataColumn assistant_genderColumn {
                 get {
-                    return this.columnreport_date;
+                    return this.columnassistant_gender;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn remarksColumn {
+            public global::System.Data.DataColumn assistant_privilegeColumn {
                 get {
-                    return this.columnremarks;
+                    return this.columnassistant_privilege;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn hopeColumn {
+            public global::System.Data.DataColumn assistant_typeColumn {
                 get {
-                    return this.columnhope;
+                    return this.columnassistant_type;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn assistant_groupColumn {
+                get {
+                    return this.columnassistant_group;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn study_numberColumn {
+                get {
+                    return this.columnstudy_number;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn descriptionColumn {
+                get {
+                    return this.columndescription;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn is_readingColumn {
+                get {
+                    return this.columnis_reading;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn is_demonstrationColumn {
+                get {
+                    return this.columnis_demonstration;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn is_discourseColumn {
+                get {
+                    return this.columnis_discourse;
                 }
             }
             
@@ -1641,90 +2607,110 @@ namespace TMSA {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public publisher_field_service_report_viewRow this[int index] {
+            public publisher_last_assignment_viewRow this[int index] {
                 get {
-                    return ((publisher_field_service_report_viewRow)(this.Rows[index]));
+                    return ((publisher_last_assignment_viewRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event publisher_field_service_report_viewRowChangeEventHandler publisher_field_service_report_viewRowChanging;
+            public event publisher_last_assignment_viewRowChangeEventHandler publisher_last_assignment_viewRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event publisher_field_service_report_viewRowChangeEventHandler publisher_field_service_report_viewRowChanged;
+            public event publisher_last_assignment_viewRowChangeEventHandler publisher_last_assignment_viewRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event publisher_field_service_report_viewRowChangeEventHandler publisher_field_service_report_viewRowDeleting;
+            public event publisher_last_assignment_viewRowChangeEventHandler publisher_last_assignment_viewRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event publisher_field_service_report_viewRowChangeEventHandler publisher_field_service_report_viewRowDeleted;
+            public event publisher_last_assignment_viewRowChangeEventHandler publisher_last_assignment_viewRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Addpublisher_field_service_report_viewRow(publisher_field_service_report_viewRow row) {
+            public void Addpublisher_last_assignment_viewRow(publisher_last_assignment_viewRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public publisher_field_service_report_viewRow Addpublisher_field_service_report_viewRow(
+            public publisher_last_assignment_viewRow Addpublisher_last_assignment_viewRow(
+                        System.DateTime week_start_date, 
+                        System.DateTime last_assignment_date, 
+                        System.DateTime date_assigned, 
+                        System.DateTime last_completed_assignment_date, 
+                        string assignment_type, 
+                        string hall, 
                         int publisher_id, 
                         string publisher_name, 
-                        System.DateTime dob, 
-                        System.DateTime baptisam_date, 
-                        string contact, 
-                        string address, 
-                        bool active, 
-                        byte[] picture, 
-                        string gender, 
-                        string hour_type, 
-                        string privilege, 
+                        System.DateTime publisher_dob, 
+                        string publisher_contact, 
+                        string publisher_address, 
+                        bool publisher_active, 
+                        byte[] publisher_picture, 
+                        string publisher_gender, 
+                        string publisher_privilege, 
                         string publisher_type, 
-                        string group, 
-                        int publisher_field_service_report_id, 
-                        System.DateTime date, 
-                        int placements, 
-                        int videos, 
-                        decimal hours, 
-                        int return_visits, 
-                        int bible_studies, 
-                        System.DateTime report_date, 
-                        string remarks, 
-                        string hope) {
-                publisher_field_service_report_viewRow rowpublisher_field_service_report_viewRow = ((publisher_field_service_report_viewRow)(this.NewRow()));
+                        string publisher_group, 
+                        int assistant_id, 
+                        string assistant_name, 
+                        System.DateTime assistant_dob, 
+                        string assistant_contact, 
+                        string assistant_address, 
+                        bool assistant_active, 
+                        byte[] assistant_picture, 
+                        string assistant_gender, 
+                        string assistant_privilege, 
+                        string assistant_type, 
+                        string assistant_group, 
+                        int study_number, 
+                        string description, 
+                        bool is_reading, 
+                        bool is_demonstration, 
+                        bool is_discourse) {
+                publisher_last_assignment_viewRow rowpublisher_last_assignment_viewRow = ((publisher_last_assignment_viewRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
+                        week_start_date,
+                        last_assignment_date,
+                        date_assigned,
+                        last_completed_assignment_date,
+                        assignment_type,
+                        hall,
                         publisher_id,
                         publisher_name,
-                        dob,
-                        baptisam_date,
-                        contact,
-                        address,
-                        active,
-                        picture,
-                        gender,
-                        hour_type,
-                        privilege,
+                        publisher_dob,
+                        publisher_contact,
+                        publisher_address,
+                        publisher_active,
+                        publisher_picture,
+                        publisher_gender,
+                        publisher_privilege,
                         publisher_type,
-                        group,
-                        publisher_field_service_report_id,
-                        date,
-                        placements,
-                        videos,
-                        hours,
-                        return_visits,
-                        bible_studies,
-                        report_date,
-                        remarks,
-                        hope};
-                rowpublisher_field_service_report_viewRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowpublisher_field_service_report_viewRow);
-                return rowpublisher_field_service_report_viewRow;
+                        publisher_group,
+                        assistant_id,
+                        assistant_name,
+                        assistant_dob,
+                        assistant_contact,
+                        assistant_address,
+                        assistant_active,
+                        assistant_picture,
+                        assistant_gender,
+                        assistant_privilege,
+                        assistant_type,
+                        assistant_group,
+                        study_number,
+                        description,
+                        is_reading,
+                        is_demonstration,
+                        is_discourse};
+                rowpublisher_last_assignment_viewRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowpublisher_last_assignment_viewRow);
+                return rowpublisher_last_assignment_viewRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                publisher_field_service_report_viewDataTable cln = ((publisher_field_service_report_viewDataTable)(base.Clone()));
+                publisher_last_assignment_viewDataTable cln = ((publisher_last_assignment_viewDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -1732,127 +2718,164 @@ namespace TMSA {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new publisher_field_service_report_viewDataTable();
+                return new publisher_last_assignment_viewDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
+                this.columnweek_start_date = base.Columns["week_start_date"];
+                this.columnlast_assignment_date = base.Columns["last_assignment_date"];
+                this.columndate_assigned = base.Columns["date_assigned"];
+                this.columnlast_completed_assignment_date = base.Columns["last_completed_assignment_date"];
+                this.columnassignment_type = base.Columns["assignment_type"];
+                this.columnhall = base.Columns["hall"];
                 this.columnpublisher_id = base.Columns["publisher_id"];
                 this.columnpublisher_name = base.Columns["publisher_name"];
-                this.columndob = base.Columns["dob"];
-                this.columnbaptisam_date = base.Columns["baptisam_date"];
-                this.columncontact = base.Columns["contact"];
-                this.columnaddress = base.Columns["address"];
-                this.columnactive = base.Columns["active"];
-                this.columnpicture = base.Columns["picture"];
-                this.columngender = base.Columns["gender"];
-                this.columnhour_type = base.Columns["hour_type"];
-                this.columnprivilege = base.Columns["privilege"];
+                this.columnpublisher_dob = base.Columns["publisher_dob"];
+                this.columnpublisher_contact = base.Columns["publisher_contact"];
+                this.columnpublisher_address = base.Columns["publisher_address"];
+                this.columnpublisher_active = base.Columns["publisher_active"];
+                this.columnpublisher_picture = base.Columns["publisher_picture"];
+                this.columnpublisher_gender = base.Columns["publisher_gender"];
+                this.columnpublisher_privilege = base.Columns["publisher_privilege"];
                 this.columnpublisher_type = base.Columns["publisher_type"];
-                this.columngroup = base.Columns["group"];
-                this.columnpublisher_field_service_report_id = base.Columns["publisher_field_service_report_id"];
-                this.columndate = base.Columns["date"];
-                this.columnplacements = base.Columns["placements"];
-                this.columnvideos = base.Columns["videos"];
-                this.columnhours = base.Columns["hours"];
-                this.columnreturn_visits = base.Columns["return_visits"];
-                this.columnbible_studies = base.Columns["bible_studies"];
-                this.columnreport_date = base.Columns["report_date"];
-                this.columnremarks = base.Columns["remarks"];
-                this.columnhope = base.Columns["hope"];
+                this.columnpublisher_group = base.Columns["publisher_group"];
+                this.columnassistant_id = base.Columns["assistant_id"];
+                this.columnassistant_name = base.Columns["assistant_name"];
+                this.columnassistant_dob = base.Columns["assistant_dob"];
+                this.columnassistant_contact = base.Columns["assistant_contact"];
+                this.columnassistant_address = base.Columns["assistant_address"];
+                this.columnassistant_active = base.Columns["assistant_active"];
+                this.columnassistant_picture = base.Columns["assistant_picture"];
+                this.columnassistant_gender = base.Columns["assistant_gender"];
+                this.columnassistant_privilege = base.Columns["assistant_privilege"];
+                this.columnassistant_type = base.Columns["assistant_type"];
+                this.columnassistant_group = base.Columns["assistant_group"];
+                this.columnstudy_number = base.Columns["study_number"];
+                this.columndescription = base.Columns["description"];
+                this.columnis_reading = base.Columns["is_reading"];
+                this.columnis_demonstration = base.Columns["is_demonstration"];
+                this.columnis_discourse = base.Columns["is_discourse"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
+                this.columnweek_start_date = new global::System.Data.DataColumn("week_start_date", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnweek_start_date);
+                this.columnlast_assignment_date = new global::System.Data.DataColumn("last_assignment_date", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnlast_assignment_date);
+                this.columndate_assigned = new global::System.Data.DataColumn("date_assigned", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndate_assigned);
+                this.columnlast_completed_assignment_date = new global::System.Data.DataColumn("last_completed_assignment_date", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnlast_completed_assignment_date);
+                this.columnassignment_type = new global::System.Data.DataColumn("assignment_type", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnassignment_type);
+                this.columnhall = new global::System.Data.DataColumn("hall", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnhall);
                 this.columnpublisher_id = new global::System.Data.DataColumn("publisher_id", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnpublisher_id);
                 this.columnpublisher_name = new global::System.Data.DataColumn("publisher_name", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnpublisher_name);
-                this.columndob = new global::System.Data.DataColumn("dob", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columndob);
-                this.columnbaptisam_date = new global::System.Data.DataColumn("baptisam_date", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnbaptisam_date);
-                this.columncontact = new global::System.Data.DataColumn("contact", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncontact);
-                this.columnaddress = new global::System.Data.DataColumn("address", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnaddress);
-                this.columnactive = new global::System.Data.DataColumn("active", typeof(bool), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnactive);
-                this.columnpicture = new global::System.Data.DataColumn("picture", typeof(byte[]), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnpicture);
-                this.columngender = new global::System.Data.DataColumn("gender", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columngender);
-                this.columnhour_type = new global::System.Data.DataColumn("hour_type", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnhour_type);
-                this.columnprivilege = new global::System.Data.DataColumn("privilege", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnprivilege);
+                this.columnpublisher_dob = new global::System.Data.DataColumn("publisher_dob", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpublisher_dob);
+                this.columnpublisher_contact = new global::System.Data.DataColumn("publisher_contact", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpublisher_contact);
+                this.columnpublisher_address = new global::System.Data.DataColumn("publisher_address", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpublisher_address);
+                this.columnpublisher_active = new global::System.Data.DataColumn("publisher_active", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpublisher_active);
+                this.columnpublisher_picture = new global::System.Data.DataColumn("publisher_picture", typeof(byte[]), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpublisher_picture);
+                this.columnpublisher_gender = new global::System.Data.DataColumn("publisher_gender", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpublisher_gender);
+                this.columnpublisher_privilege = new global::System.Data.DataColumn("publisher_privilege", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpublisher_privilege);
                 this.columnpublisher_type = new global::System.Data.DataColumn("publisher_type", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnpublisher_type);
-                this.columngroup = new global::System.Data.DataColumn("group", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columngroup);
-                this.columnpublisher_field_service_report_id = new global::System.Data.DataColumn("publisher_field_service_report_id", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnpublisher_field_service_report_id);
-                this.columndate = new global::System.Data.DataColumn("date", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columndate);
-                this.columnplacements = new global::System.Data.DataColumn("placements", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnplacements);
-                this.columnvideos = new global::System.Data.DataColumn("videos", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnvideos);
-                this.columnhours = new global::System.Data.DataColumn("hours", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnhours);
-                this.columnreturn_visits = new global::System.Data.DataColumn("return_visits", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnreturn_visits);
-                this.columnbible_studies = new global::System.Data.DataColumn("bible_studies", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnbible_studies);
-                this.columnreport_date = new global::System.Data.DataColumn("report_date", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnreport_date);
-                this.columnremarks = new global::System.Data.DataColumn("remarks", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnremarks);
-                this.columnhope = new global::System.Data.DataColumn("hope", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnhope);
+                this.columnpublisher_group = new global::System.Data.DataColumn("publisher_group", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpublisher_group);
+                this.columnassistant_id = new global::System.Data.DataColumn("assistant_id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnassistant_id);
+                this.columnassistant_name = new global::System.Data.DataColumn("assistant_name", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnassistant_name);
+                this.columnassistant_dob = new global::System.Data.DataColumn("assistant_dob", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnassistant_dob);
+                this.columnassistant_contact = new global::System.Data.DataColumn("assistant_contact", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnassistant_contact);
+                this.columnassistant_address = new global::System.Data.DataColumn("assistant_address", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnassistant_address);
+                this.columnassistant_active = new global::System.Data.DataColumn("assistant_active", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnassistant_active);
+                this.columnassistant_picture = new global::System.Data.DataColumn("assistant_picture", typeof(byte[]), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnassistant_picture);
+                this.columnassistant_gender = new global::System.Data.DataColumn("assistant_gender", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnassistant_gender);
+                this.columnassistant_privilege = new global::System.Data.DataColumn("assistant_privilege", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnassistant_privilege);
+                this.columnassistant_type = new global::System.Data.DataColumn("assistant_type", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnassistant_type);
+                this.columnassistant_group = new global::System.Data.DataColumn("assistant_group", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnassistant_group);
+                this.columnstudy_number = new global::System.Data.DataColumn("study_number", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnstudy_number);
+                this.columndescription = new global::System.Data.DataColumn("description", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndescription);
+                this.columnis_reading = new global::System.Data.DataColumn("is_reading", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnis_reading);
+                this.columnis_demonstration = new global::System.Data.DataColumn("is_demonstration", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnis_demonstration);
+                this.columnis_discourse = new global::System.Data.DataColumn("is_discourse", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnis_discourse);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnpublisher_id,
-                                this.columnpublisher_field_service_report_id}, false));
+                                this.columnassistant_id}, false));
+                this.columnlast_completed_assignment_date.ReadOnly = true;
+                this.columnassignment_type.MaxLength = 60;
+                this.columnhall.MaxLength = 60;
                 this.columnpublisher_id.AllowDBNull = false;
-                this.columnpublisher_name.ReadOnly = true;
                 this.columnpublisher_name.MaxLength = 122;
-                this.columncontact.MaxLength = 100;
-                this.columnaddress.MaxLength = 100;
-                this.columngender.MaxLength = 10;
-                this.columnhour_type.MaxLength = 60;
-                this.columnprivilege.MaxLength = 60;
+                this.columnpublisher_contact.MaxLength = 100;
+                this.columnpublisher_address.MaxLength = 100;
+                this.columnpublisher_gender.MaxLength = 10;
+                this.columnpublisher_privilege.MaxLength = 60;
                 this.columnpublisher_type.MaxLength = 60;
-                this.columngroup.MaxLength = 60;
-                this.columnremarks.MaxLength = 100;
-                this.columnhope.MaxLength = 60;
+                this.columnpublisher_group.MaxLength = 60;
+                this.columnassistant_name.MaxLength = 122;
+                this.columnassistant_contact.MaxLength = 100;
+                this.columnassistant_address.MaxLength = 100;
+                this.columnassistant_gender.MaxLength = 10;
+                this.columnassistant_privilege.MaxLength = 60;
+                this.columnassistant_type.MaxLength = 60;
+                this.columnassistant_group.MaxLength = 60;
+                this.columndescription.MaxLength = 60;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public publisher_field_service_report_viewRow Newpublisher_field_service_report_viewRow() {
-                return ((publisher_field_service_report_viewRow)(this.NewRow()));
+            public publisher_last_assignment_viewRow Newpublisher_last_assignment_viewRow() {
+                return ((publisher_last_assignment_viewRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new publisher_field_service_report_viewRow(builder);
+                return new publisher_last_assignment_viewRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(publisher_field_service_report_viewRow);
+                return typeof(publisher_last_assignment_viewRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.publisher_field_service_report_viewRowChanged != null)) {
-                    this.publisher_field_service_report_viewRowChanged(this, new publisher_field_service_report_viewRowChangeEvent(((publisher_field_service_report_viewRow)(e.Row)), e.Action));
+                if ((this.publisher_last_assignment_viewRowChanged != null)) {
+                    this.publisher_last_assignment_viewRowChanged(this, new publisher_last_assignment_viewRowChangeEvent(((publisher_last_assignment_viewRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1860,8 +2883,8 @@ namespace TMSA {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.publisher_field_service_report_viewRowChanging != null)) {
-                    this.publisher_field_service_report_viewRowChanging(this, new publisher_field_service_report_viewRowChangeEvent(((publisher_field_service_report_viewRow)(e.Row)), e.Action));
+                if ((this.publisher_last_assignment_viewRowChanging != null)) {
+                    this.publisher_last_assignment_viewRowChanging(this, new publisher_last_assignment_viewRowChangeEvent(((publisher_last_assignment_viewRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1869,8 +2892,8 @@ namespace TMSA {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.publisher_field_service_report_viewRowDeleted != null)) {
-                    this.publisher_field_service_report_viewRowDeleted(this, new publisher_field_service_report_viewRowChangeEvent(((publisher_field_service_report_viewRow)(e.Row)), e.Action));
+                if ((this.publisher_last_assignment_viewRowDeleted != null)) {
+                    this.publisher_last_assignment_viewRowDeleted(this, new publisher_last_assignment_viewRowChangeEvent(((publisher_last_assignment_viewRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1878,14 +2901,14 @@ namespace TMSA {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.publisher_field_service_report_viewRowDeleting != null)) {
-                    this.publisher_field_service_report_viewRowDeleting(this, new publisher_field_service_report_viewRowChangeEvent(((publisher_field_service_report_viewRow)(e.Row)), e.Action));
+                if ((this.publisher_last_assignment_viewRowDeleting != null)) {
+                    this.publisher_last_assignment_viewRowDeleting(this, new publisher_last_assignment_viewRowChangeEvent(((publisher_last_assignment_viewRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Removepublisher_field_service_report_viewRow(publisher_field_service_report_viewRow row) {
+            public void Removepublisher_last_assignment_viewRow(publisher_last_assignment_viewRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -1912,7 +2935,7 @@ namespace TMSA {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "publisher_field_service_report_viewDataTable";
+                attribute2.FixedValue = "publisher_last_assignment_viewDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -2650,6 +3673,614 @@ namespace TMSA {
         }
         
         /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class publisher_field_service_report_viewDataTable : global::System.Data.TypedTableBase<publisher_field_service_report_viewRow> {
+            
+            private global::System.Data.DataColumn columnpublisher_id;
+            
+            private global::System.Data.DataColumn columnpublisher_name;
+            
+            private global::System.Data.DataColumn columndob;
+            
+            private global::System.Data.DataColumn columnbaptisam_date;
+            
+            private global::System.Data.DataColumn columncontact;
+            
+            private global::System.Data.DataColumn columnaddress;
+            
+            private global::System.Data.DataColumn columnactive;
+            
+            private global::System.Data.DataColumn columnpicture;
+            
+            private global::System.Data.DataColumn columngender;
+            
+            private global::System.Data.DataColumn columnpublisher_field_service_report_id;
+            
+            private global::System.Data.DataColumn columndate;
+            
+            private global::System.Data.DataColumn columnreport_date;
+            
+            private global::System.Data.DataColumn columnplacements;
+            
+            private global::System.Data.DataColumn columnvideos;
+            
+            private global::System.Data.DataColumn columnhours;
+            
+            private global::System.Data.DataColumn columnreturn_visits;
+            
+            private global::System.Data.DataColumn columnbible_studies;
+            
+            private global::System.Data.DataColumn columnhour_type;
+            
+            private global::System.Data.DataColumn columnprivilege;
+            
+            private global::System.Data.DataColumn columnpublisher_type;
+            
+            private global::System.Data.DataColumn columngroup;
+            
+            private global::System.Data.DataColumn columnremarks;
+            
+            private global::System.Data.DataColumn columnhope;
+            
+            private global::System.Data.DataColumn columnshared_in_ministry;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public publisher_field_service_report_viewDataTable() {
+                this.TableName = "publisher_field_service_report_view";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal publisher_field_service_report_viewDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected publisher_field_service_report_viewDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn publisher_idColumn {
+                get {
+                    return this.columnpublisher_id;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn publisher_nameColumn {
+                get {
+                    return this.columnpublisher_name;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn dobColumn {
+                get {
+                    return this.columndob;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn baptisam_dateColumn {
+                get {
+                    return this.columnbaptisam_date;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn contactColumn {
+                get {
+                    return this.columncontact;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn addressColumn {
+                get {
+                    return this.columnaddress;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn activeColumn {
+                get {
+                    return this.columnactive;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn pictureColumn {
+                get {
+                    return this.columnpicture;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn genderColumn {
+                get {
+                    return this.columngender;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn publisher_field_service_report_idColumn {
+                get {
+                    return this.columnpublisher_field_service_report_id;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn dateColumn {
+                get {
+                    return this.columndate;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn report_dateColumn {
+                get {
+                    return this.columnreport_date;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn placementsColumn {
+                get {
+                    return this.columnplacements;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn videosColumn {
+                get {
+                    return this.columnvideos;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn hoursColumn {
+                get {
+                    return this.columnhours;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn return_visitsColumn {
+                get {
+                    return this.columnreturn_visits;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn bible_studiesColumn {
+                get {
+                    return this.columnbible_studies;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn hour_typeColumn {
+                get {
+                    return this.columnhour_type;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn privilegeColumn {
+                get {
+                    return this.columnprivilege;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn publisher_typeColumn {
+                get {
+                    return this.columnpublisher_type;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn groupColumn {
+                get {
+                    return this.columngroup;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn remarksColumn {
+                get {
+                    return this.columnremarks;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn hopeColumn {
+                get {
+                    return this.columnhope;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn shared_in_ministryColumn {
+                get {
+                    return this.columnshared_in_ministry;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public publisher_field_service_report_viewRow this[int index] {
+                get {
+                    return ((publisher_field_service_report_viewRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event publisher_field_service_report_viewRowChangeEventHandler publisher_field_service_report_viewRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event publisher_field_service_report_viewRowChangeEventHandler publisher_field_service_report_viewRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event publisher_field_service_report_viewRowChangeEventHandler publisher_field_service_report_viewRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event publisher_field_service_report_viewRowChangeEventHandler publisher_field_service_report_viewRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Addpublisher_field_service_report_viewRow(publisher_field_service_report_viewRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public publisher_field_service_report_viewRow Addpublisher_field_service_report_viewRow(
+                        int publisher_id, 
+                        string publisher_name, 
+                        System.DateTime dob, 
+                        System.DateTime baptisam_date, 
+                        string contact, 
+                        string address, 
+                        bool active, 
+                        byte[] picture, 
+                        string gender, 
+                        int publisher_field_service_report_id, 
+                        System.DateTime date, 
+                        System.DateTime report_date, 
+                        int placements, 
+                        int videos, 
+                        decimal hours, 
+                        int return_visits, 
+                        int bible_studies, 
+                        string hour_type, 
+                        string privilege, 
+                        string publisher_type, 
+                        string group, 
+                        string remarks, 
+                        string hope, 
+                        bool shared_in_ministry) {
+                publisher_field_service_report_viewRow rowpublisher_field_service_report_viewRow = ((publisher_field_service_report_viewRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        publisher_id,
+                        publisher_name,
+                        dob,
+                        baptisam_date,
+                        contact,
+                        address,
+                        active,
+                        picture,
+                        gender,
+                        publisher_field_service_report_id,
+                        date,
+                        report_date,
+                        placements,
+                        videos,
+                        hours,
+                        return_visits,
+                        bible_studies,
+                        hour_type,
+                        privilege,
+                        publisher_type,
+                        group,
+                        remarks,
+                        hope,
+                        shared_in_ministry};
+                rowpublisher_field_service_report_viewRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowpublisher_field_service_report_viewRow);
+                return rowpublisher_field_service_report_viewRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                publisher_field_service_report_viewDataTable cln = ((publisher_field_service_report_viewDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new publisher_field_service_report_viewDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal void InitVars() {
+                this.columnpublisher_id = base.Columns["publisher_id"];
+                this.columnpublisher_name = base.Columns["publisher_name"];
+                this.columndob = base.Columns["dob"];
+                this.columnbaptisam_date = base.Columns["baptisam_date"];
+                this.columncontact = base.Columns["contact"];
+                this.columnaddress = base.Columns["address"];
+                this.columnactive = base.Columns["active"];
+                this.columnpicture = base.Columns["picture"];
+                this.columngender = base.Columns["gender"];
+                this.columnpublisher_field_service_report_id = base.Columns["publisher_field_service_report_id"];
+                this.columndate = base.Columns["date"];
+                this.columnreport_date = base.Columns["report_date"];
+                this.columnplacements = base.Columns["placements"];
+                this.columnvideos = base.Columns["videos"];
+                this.columnhours = base.Columns["hours"];
+                this.columnreturn_visits = base.Columns["return_visits"];
+                this.columnbible_studies = base.Columns["bible_studies"];
+                this.columnhour_type = base.Columns["hour_type"];
+                this.columnprivilege = base.Columns["privilege"];
+                this.columnpublisher_type = base.Columns["publisher_type"];
+                this.columngroup = base.Columns["group"];
+                this.columnremarks = base.Columns["remarks"];
+                this.columnhope = base.Columns["hope"];
+                this.columnshared_in_ministry = base.Columns["shared_in_ministry"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            private void InitClass() {
+                this.columnpublisher_id = new global::System.Data.DataColumn("publisher_id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpublisher_id);
+                this.columnpublisher_name = new global::System.Data.DataColumn("publisher_name", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpublisher_name);
+                this.columndob = new global::System.Data.DataColumn("dob", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndob);
+                this.columnbaptisam_date = new global::System.Data.DataColumn("baptisam_date", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnbaptisam_date);
+                this.columncontact = new global::System.Data.DataColumn("contact", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncontact);
+                this.columnaddress = new global::System.Data.DataColumn("address", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnaddress);
+                this.columnactive = new global::System.Data.DataColumn("active", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnactive);
+                this.columnpicture = new global::System.Data.DataColumn("picture", typeof(byte[]), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpicture);
+                this.columngender = new global::System.Data.DataColumn("gender", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columngender);
+                this.columnpublisher_field_service_report_id = new global::System.Data.DataColumn("publisher_field_service_report_id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpublisher_field_service_report_id);
+                this.columndate = new global::System.Data.DataColumn("date", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndate);
+                this.columnreport_date = new global::System.Data.DataColumn("report_date", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnreport_date);
+                this.columnplacements = new global::System.Data.DataColumn("placements", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnplacements);
+                this.columnvideos = new global::System.Data.DataColumn("videos", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnvideos);
+                this.columnhours = new global::System.Data.DataColumn("hours", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnhours);
+                this.columnreturn_visits = new global::System.Data.DataColumn("return_visits", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnreturn_visits);
+                this.columnbible_studies = new global::System.Data.DataColumn("bible_studies", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnbible_studies);
+                this.columnhour_type = new global::System.Data.DataColumn("hour_type", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnhour_type);
+                this.columnprivilege = new global::System.Data.DataColumn("privilege", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnprivilege);
+                this.columnpublisher_type = new global::System.Data.DataColumn("publisher_type", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpublisher_type);
+                this.columngroup = new global::System.Data.DataColumn("group", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columngroup);
+                this.columnremarks = new global::System.Data.DataColumn("remarks", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnremarks);
+                this.columnhope = new global::System.Data.DataColumn("hope", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnhope);
+                this.columnshared_in_ministry = new global::System.Data.DataColumn("shared_in_ministry", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnshared_in_ministry);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnpublisher_id,
+                                this.columnpublisher_field_service_report_id}, false));
+                this.columnpublisher_name.ReadOnly = true;
+                this.columnpublisher_name.MaxLength = 122;
+                this.columncontact.MaxLength = 100;
+                this.columnaddress.MaxLength = 100;
+                this.columngender.MaxLength = 10;
+                this.columnpublisher_field_service_report_id.AllowDBNull = false;
+                this.columnhour_type.MaxLength = 60;
+                this.columnprivilege.MaxLength = 60;
+                this.columnpublisher_type.MaxLength = 60;
+                this.columngroup.MaxLength = 60;
+                this.columnremarks.MaxLength = 100;
+                this.columnhope.MaxLength = 60;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public publisher_field_service_report_viewRow Newpublisher_field_service_report_viewRow() {
+                return ((publisher_field_service_report_viewRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new publisher_field_service_report_viewRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(publisher_field_service_report_viewRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.publisher_field_service_report_viewRowChanged != null)) {
+                    this.publisher_field_service_report_viewRowChanged(this, new publisher_field_service_report_viewRowChangeEvent(((publisher_field_service_report_viewRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.publisher_field_service_report_viewRowChanging != null)) {
+                    this.publisher_field_service_report_viewRowChanging(this, new publisher_field_service_report_viewRowChangeEvent(((publisher_field_service_report_viewRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.publisher_field_service_report_viewRowDeleted != null)) {
+                    this.publisher_field_service_report_viewRowDeleted(this, new publisher_field_service_report_viewRowChangeEvent(((publisher_field_service_report_viewRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.publisher_field_service_report_viewRowDeleting != null)) {
+                    this.publisher_field_service_report_viewRowDeleting(this, new publisher_field_service_report_viewRowChangeEvent(((publisher_field_service_report_viewRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Removepublisher_field_service_report_viewRow(publisher_field_service_report_viewRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                TMSADataSet ds = new TMSADataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "publisher_field_service_report_viewDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         public partial class publisherRow : global::System.Data.DataRow {
@@ -3096,6 +4727,28 @@ namespace TMSA {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public publisher_assignmentRow[] Getpublisher_assignmentRowsByRefpublisher21() {
+                if ((this.Table.ChildRelations["Refpublisher21"] == null)) {
+                    return new publisher_assignmentRow[0];
+                }
+                else {
+                    return ((publisher_assignmentRow[])(base.GetChildRows(this.Table.ChildRelations["Refpublisher21"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public publisher_assignmentRow[] Getpublisher_assignmentRowsByRefpublisher51() {
+                if ((this.Table.ChildRelations["Refpublisher51"] == null)) {
+                    return new publisher_assignmentRow[0];
+                }
+                else {
+                    return ((publisher_assignmentRow[])(base.GetChildRows(this.Table.ChildRelations["Refpublisher51"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public publisher_field_service_reportRow[] Getpublisher_field_service_reportRows() {
                 if ((this.Table.ChildRelations["Refpublisher22"] == null)) {
                     return new publisher_field_service_reportRow[0];
@@ -3103,6 +4756,497 @@ namespace TMSA {
                 else {
                     return ((publisher_field_service_reportRow[])(base.GetChildRows(this.Table.ChildRelations["Refpublisher22"])));
                 }
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class counsel_pointRow : global::System.Data.DataRow {
+            
+            private counsel_pointDataTable tablecounsel_point;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal counsel_pointRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tablecounsel_point = ((counsel_pointDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int counsel_point_id {
+                get {
+                    return ((int)(this[this.tablecounsel_point.counsel_point_idColumn]));
+                }
+                set {
+                    this[this.tablecounsel_point.counsel_point_idColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int study_number {
+                get {
+                    try {
+                        return ((int)(this[this.tablecounsel_point.study_numberColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'study_number\' in table \'counsel_point\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablecounsel_point.study_numberColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string description {
+                get {
+                    try {
+                        return ((string)(this[this.tablecounsel_point.descriptionColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'description\' in table \'counsel_point\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablecounsel_point.descriptionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool is_reading {
+                get {
+                    try {
+                        return ((bool)(this[this.tablecounsel_point.is_readingColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'is_reading\' in table \'counsel_point\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablecounsel_point.is_readingColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool is_demonstration {
+                get {
+                    try {
+                        return ((bool)(this[this.tablecounsel_point.is_demonstrationColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'is_demonstration\' in table \'counsel_point\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablecounsel_point.is_demonstrationColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool is_discourse {
+                get {
+                    try {
+                        return ((bool)(this[this.tablecounsel_point.is_discourseColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'is_discourse\' in table \'counsel_point\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablecounsel_point.is_discourseColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Isstudy_numberNull() {
+                return this.IsNull(this.tablecounsel_point.study_numberColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Setstudy_numberNull() {
+                this[this.tablecounsel_point.study_numberColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsdescriptionNull() {
+                return this.IsNull(this.tablecounsel_point.descriptionColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetdescriptionNull() {
+                this[this.tablecounsel_point.descriptionColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Isis_readingNull() {
+                return this.IsNull(this.tablecounsel_point.is_readingColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Setis_readingNull() {
+                this[this.tablecounsel_point.is_readingColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Isis_demonstrationNull() {
+                return this.IsNull(this.tablecounsel_point.is_demonstrationColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Setis_demonstrationNull() {
+                this[this.tablecounsel_point.is_demonstrationColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Isis_discourseNull() {
+                return this.IsNull(this.tablecounsel_point.is_discourseColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Setis_discourseNull() {
+                this[this.tablecounsel_point.is_discourseColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public publisher_assignmentRow[] Getpublisher_assignmentRows() {
+                if ((this.Table.ChildRelations["Refcounsel_point31"] == null)) {
+                    return new publisher_assignmentRow[0];
+                }
+                else {
+                    return ((publisher_assignmentRow[])(base.GetChildRows(this.Table.ChildRelations["Refcounsel_point31"])));
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class publisher_assignmentRow : global::System.Data.DataRow {
+            
+            private publisher_assignmentDataTable tablepublisher_assignment;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal publisher_assignmentRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tablepublisher_assignment = ((publisher_assignmentDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int publisher_assignment_id {
+                get {
+                    return ((int)(this[this.tablepublisher_assignment.publisher_assignment_idColumn]));
+                }
+                set {
+                    this[this.tablepublisher_assignment.publisher_assignment_idColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int publisher_id {
+                get {
+                    try {
+                        return ((int)(this[this.tablepublisher_assignment.publisher_idColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'publisher_id\' in table \'publisher_assignment\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablepublisher_assignment.publisher_idColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int assistant_id {
+                get {
+                    try {
+                        return ((int)(this[this.tablepublisher_assignment.assistant_idColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'assistant_id\' in table \'publisher_assignment\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablepublisher_assignment.assistant_idColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int counsel_point_id {
+                get {
+                    try {
+                        return ((int)(this[this.tablepublisher_assignment.counsel_point_idColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'counsel_point_id\' in table \'publisher_assignment\' is DBNull" +
+                                ".", e);
+                    }
+                }
+                set {
+                    this[this.tablepublisher_assignment.counsel_point_idColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime week_start_date {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tablepublisher_assignment.week_start_dateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'week_start_date\' in table \'publisher_assignment\' is DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tablepublisher_assignment.week_start_dateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime week_end_date {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tablepublisher_assignment.week_end_dateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'week_end_date\' in table \'publisher_assignment\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablepublisher_assignment.week_end_dateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime date_assigned {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tablepublisher_assignment.date_assignedColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'date_assigned\' in table \'publisher_assignment\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablepublisher_assignment.date_assignedColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime date_completed {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tablepublisher_assignment.date_completedColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'date_completed\' in table \'publisher_assignment\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablepublisher_assignment.date_completedColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string assignment_type {
+                get {
+                    try {
+                        return ((string)(this[this.tablepublisher_assignment.assignment_typeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'assignment_type\' in table \'publisher_assignment\' is DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tablepublisher_assignment.assignment_typeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string hall {
+                get {
+                    try {
+                        return ((string)(this[this.tablepublisher_assignment.hallColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'hall\' in table \'publisher_assignment\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablepublisher_assignment.hallColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public counsel_pointRow counsel_pointRow {
+                get {
+                    return ((counsel_pointRow)(this.GetParentRow(this.Table.ParentRelations["Refcounsel_point31"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["Refcounsel_point31"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public publisherRow publisherRowByRefpublisher21 {
+                get {
+                    return ((publisherRow)(this.GetParentRow(this.Table.ParentRelations["Refpublisher21"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["Refpublisher21"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public publisherRow publisherRowByRefpublisher51 {
+                get {
+                    return ((publisherRow)(this.GetParentRow(this.Table.ParentRelations["Refpublisher51"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["Refpublisher51"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Ispublisher_idNull() {
+                return this.IsNull(this.tablepublisher_assignment.publisher_idColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Setpublisher_idNull() {
+                this[this.tablepublisher_assignment.publisher_idColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Isassistant_idNull() {
+                return this.IsNull(this.tablepublisher_assignment.assistant_idColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Setassistant_idNull() {
+                this[this.tablepublisher_assignment.assistant_idColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Iscounsel_point_idNull() {
+                return this.IsNull(this.tablepublisher_assignment.counsel_point_idColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Setcounsel_point_idNull() {
+                this[this.tablepublisher_assignment.counsel_point_idColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Isweek_start_dateNull() {
+                return this.IsNull(this.tablepublisher_assignment.week_start_dateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Setweek_start_dateNull() {
+                this[this.tablepublisher_assignment.week_start_dateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Isweek_end_dateNull() {
+                return this.IsNull(this.tablepublisher_assignment.week_end_dateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Setweek_end_dateNull() {
+                this[this.tablepublisher_assignment.week_end_dateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Isdate_assignedNull() {
+                return this.IsNull(this.tablepublisher_assignment.date_assignedColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Setdate_assignedNull() {
+                this[this.tablepublisher_assignment.date_assignedColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Isdate_completedNull() {
+                return this.IsNull(this.tablepublisher_assignment.date_completedColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Setdate_completedNull() {
+                this[this.tablepublisher_assignment.date_completedColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Isassignment_typeNull() {
+                return this.IsNull(this.tablepublisher_assignment.assignment_typeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Setassignment_typeNull() {
+                this[this.tablepublisher_assignment.assignment_typeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IshallNull() {
+                return this.IsNull(this.tablepublisher_assignment.hallColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SethallNull() {
+                this[this.tablepublisher_assignment.hallColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -3161,6 +5305,23 @@ namespace TMSA {
                 }
                 set {
                     this[this.tablepublisher_field_service_report.dateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime report_date {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tablepublisher_field_service_report.report_dateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'report_date\' in table \'publisher_field_service_report\' is D" +
+                                "BNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablepublisher_field_service_report.report_dateColumn] = value;
                 }
             }
             
@@ -3251,18 +5412,18 @@ namespace TMSA {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public System.DateTime report_date {
+            public string remarks {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tablepublisher_field_service_report.report_dateColumn]));
+                        return ((string)(this[this.tablepublisher_field_service_report.remarksColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'report_date\' in table \'publisher_field_service_report\' is D" +
-                                "BNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'remarks\' in table \'publisher_field_service_report\' is DBNul" +
+                                "l.", e);
                     }
                 }
                 set {
-                    this[this.tablepublisher_field_service_report.report_dateColumn] = value;
+                    this[this.tablepublisher_field_service_report.remarksColumn] = value;
                 }
             }
             
@@ -3336,18 +5497,18 @@ namespace TMSA {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string remarks {
+            public bool shared_in_ministry {
                 get {
                     try {
-                        return ((string)(this[this.tablepublisher_field_service_report.remarksColumn]));
+                        return ((bool)(this[this.tablepublisher_field_service_report.shared_in_ministryColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'remarks\' in table \'publisher_field_service_report\' is DBNul" +
-                                "l.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'shared_in_ministry\' in table \'publisher_field_service_repor" +
+                                "t\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablepublisher_field_service_report.remarksColumn] = value;
+                    this[this.tablepublisher_field_service_report.shared_in_ministryColumn] = value;
                 }
             }
             
@@ -3384,6 +5545,18 @@ namespace TMSA {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetdateNull() {
                 this[this.tablepublisher_field_service_report.dateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Isreport_dateNull() {
+                return this.IsNull(this.tablepublisher_field_service_report.report_dateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Setreport_dateNull() {
+                this[this.tablepublisher_field_service_report.report_dateColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3448,14 +5621,14 @@ namespace TMSA {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Isreport_dateNull() {
-                return this.IsNull(this.tablepublisher_field_service_report.report_dateColumn);
+            public bool IsremarksNull() {
+                return this.IsNull(this.tablepublisher_field_service_report.remarksColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Setreport_dateNull() {
-                this[this.tablepublisher_field_service_report.report_dateColumn] = global::System.Convert.DBNull;
+            public void SetremarksNull() {
+                this[this.tablepublisher_field_service_report.remarksColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3508,39 +5681,140 @@ namespace TMSA {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsremarksNull() {
-                return this.IsNull(this.tablepublisher_field_service_report.remarksColumn);
+            public bool Isshared_in_ministryNull() {
+                return this.IsNull(this.tablepublisher_field_service_report.shared_in_ministryColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetremarksNull() {
-                this[this.tablepublisher_field_service_report.remarksColumn] = global::System.Convert.DBNull;
+            public void Setshared_in_ministryNull() {
+                this[this.tablepublisher_field_service_report.shared_in_ministryColumn] = global::System.Convert.DBNull;
             }
         }
         
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class publisher_field_service_report_viewRow : global::System.Data.DataRow {
+        public partial class publisher_last_assignment_viewRow : global::System.Data.DataRow {
             
-            private publisher_field_service_report_viewDataTable tablepublisher_field_service_report_view;
+            private publisher_last_assignment_viewDataTable tablepublisher_last_assignment_view;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal publisher_field_service_report_viewRow(global::System.Data.DataRowBuilder rb) : 
+            internal publisher_last_assignment_viewRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tablepublisher_field_service_report_view = ((publisher_field_service_report_viewDataTable)(this.Table));
+                this.tablepublisher_last_assignment_view = ((publisher_last_assignment_viewDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime week_start_date {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tablepublisher_last_assignment_view.week_start_dateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'week_start_date\' in table \'publisher_last_assignment_view\' " +
+                                "is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablepublisher_last_assignment_view.week_start_dateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime last_assignment_date {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tablepublisher_last_assignment_view.last_assignment_dateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'last_assignment_date\' in table \'publisher_last_assignment_v" +
+                                "iew\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablepublisher_last_assignment_view.last_assignment_dateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime date_assigned {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tablepublisher_last_assignment_view.date_assignedColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'date_assigned\' in table \'publisher_last_assignment_view\' is" +
+                                " DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablepublisher_last_assignment_view.date_assignedColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime last_completed_assignment_date {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tablepublisher_last_assignment_view.last_completed_assignment_dateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'last_completed_assignment_date\' in table \'publisher_last_as" +
+                                "signment_view\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablepublisher_last_assignment_view.last_completed_assignment_dateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string assignment_type {
+                get {
+                    try {
+                        return ((string)(this[this.tablepublisher_last_assignment_view.assignment_typeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'assignment_type\' in table \'publisher_last_assignment_view\' " +
+                                "is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablepublisher_last_assignment_view.assignment_typeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string hall {
+                get {
+                    try {
+                        return ((string)(this[this.tablepublisher_last_assignment_view.hallColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'hall\' in table \'publisher_last_assignment_view\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablepublisher_last_assignment_view.hallColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int publisher_id {
                 get {
-                    return ((int)(this[this.tablepublisher_field_service_report_view.publisher_idColumn]));
+                    return ((int)(this[this.tablepublisher_last_assignment_view.publisher_idColumn]));
                 }
                 set {
-                    this[this.tablepublisher_field_service_report_view.publisher_idColumn] = value;
+                    this[this.tablepublisher_last_assignment_view.publisher_idColumn] = value;
                 }
             }
             
@@ -3549,168 +5823,134 @@ namespace TMSA {
             public string publisher_name {
                 get {
                     try {
-                        return ((string)(this[this.tablepublisher_field_service_report_view.publisher_nameColumn]));
+                        return ((string)(this[this.tablepublisher_last_assignment_view.publisher_nameColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'publisher_name\' in table \'publisher_field_service_report_vi" +
+                        throw new global::System.Data.StrongTypingException("The value for column \'publisher_name\' in table \'publisher_last_assignment_view\' i" +
+                                "s DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablepublisher_last_assignment_view.publisher_nameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime publisher_dob {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tablepublisher_last_assignment_view.publisher_dobColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'publisher_dob\' in table \'publisher_last_assignment_view\' is" +
+                                " DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablepublisher_last_assignment_view.publisher_dobColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string publisher_contact {
+                get {
+                    try {
+                        return ((string)(this[this.tablepublisher_last_assignment_view.publisher_contactColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'publisher_contact\' in table \'publisher_last_assignment_view" +
+                                "\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablepublisher_last_assignment_view.publisher_contactColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string publisher_address {
+                get {
+                    try {
+                        return ((string)(this[this.tablepublisher_last_assignment_view.publisher_addressColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'publisher_address\' in table \'publisher_last_assignment_view" +
+                                "\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablepublisher_last_assignment_view.publisher_addressColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool publisher_active {
+                get {
+                    try {
+                        return ((bool)(this[this.tablepublisher_last_assignment_view.publisher_activeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'publisher_active\' in table \'publisher_last_assignment_view\'" +
+                                " is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablepublisher_last_assignment_view.publisher_activeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public byte[] publisher_picture {
+                get {
+                    try {
+                        return ((byte[])(this[this.tablepublisher_last_assignment_view.publisher_pictureColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'publisher_picture\' in table \'publisher_last_assignment_view" +
+                                "\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablepublisher_last_assignment_view.publisher_pictureColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string publisher_gender {
+                get {
+                    try {
+                        return ((string)(this[this.tablepublisher_last_assignment_view.publisher_genderColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'publisher_gender\' in table \'publisher_last_assignment_view\'" +
+                                " is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablepublisher_last_assignment_view.publisher_genderColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string publisher_privilege {
+                get {
+                    try {
+                        return ((string)(this[this.tablepublisher_last_assignment_view.publisher_privilegeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'publisher_privilege\' in table \'publisher_last_assignment_vi" +
                                 "ew\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablepublisher_field_service_report_view.publisher_nameColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public System.DateTime dob {
-                get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tablepublisher_field_service_report_view.dobColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'dob\' in table \'publisher_field_service_report_view\' is DBNu" +
-                                "ll.", e);
-                    }
-                }
-                set {
-                    this[this.tablepublisher_field_service_report_view.dobColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public System.DateTime baptisam_date {
-                get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tablepublisher_field_service_report_view.baptisam_dateColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'baptisam_date\' in table \'publisher_field_service_report_vie" +
-                                "w\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablepublisher_field_service_report_view.baptisam_dateColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string contact {
-                get {
-                    try {
-                        return ((string)(this[this.tablepublisher_field_service_report_view.contactColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'contact\' in table \'publisher_field_service_report_view\' is " +
-                                "DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablepublisher_field_service_report_view.contactColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string address {
-                get {
-                    try {
-                        return ((string)(this[this.tablepublisher_field_service_report_view.addressColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'address\' in table \'publisher_field_service_report_view\' is " +
-                                "DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablepublisher_field_service_report_view.addressColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool active {
-                get {
-                    try {
-                        return ((bool)(this[this.tablepublisher_field_service_report_view.activeColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'active\' in table \'publisher_field_service_report_view\' is D" +
-                                "BNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablepublisher_field_service_report_view.activeColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public byte[] picture {
-                get {
-                    try {
-                        return ((byte[])(this[this.tablepublisher_field_service_report_view.pictureColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'picture\' in table \'publisher_field_service_report_view\' is " +
-                                "DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablepublisher_field_service_report_view.pictureColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string gender {
-                get {
-                    try {
-                        return ((string)(this[this.tablepublisher_field_service_report_view.genderColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'gender\' in table \'publisher_field_service_report_view\' is D" +
-                                "BNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablepublisher_field_service_report_view.genderColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string hour_type {
-                get {
-                    try {
-                        return ((string)(this[this.tablepublisher_field_service_report_view.hour_typeColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'hour_type\' in table \'publisher_field_service_report_view\' i" +
-                                "s DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablepublisher_field_service_report_view.hour_typeColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string privilege {
-                get {
-                    try {
-                        return ((string)(this[this.tablepublisher_field_service_report_view.privilegeColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'privilege\' in table \'publisher_field_service_report_view\' i" +
-                                "s DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablepublisher_field_service_report_view.privilegeColumn] = value;
+                    this[this.tablepublisher_last_assignment_view.publisher_privilegeColumn] = value;
                 }
             }
             
@@ -3719,467 +5959,689 @@ namespace TMSA {
             public string publisher_type {
                 get {
                     try {
-                        return ((string)(this[this.tablepublisher_field_service_report_view.publisher_typeColumn]));
+                        return ((string)(this[this.tablepublisher_last_assignment_view.publisher_typeColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'publisher_type\' in table \'publisher_field_service_report_vi" +
-                                "ew\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'publisher_type\' in table \'publisher_last_assignment_view\' i" +
+                                "s DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablepublisher_field_service_report_view.publisher_typeColumn] = value;
+                    this[this.tablepublisher_last_assignment_view.publisher_typeColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string group {
+            public string publisher_group {
                 get {
                     try {
-                        return ((string)(this[this.tablepublisher_field_service_report_view.groupColumn]));
+                        return ((string)(this[this.tablepublisher_last_assignment_view.publisher_groupColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'group\' in table \'publisher_field_service_report_view\' is DB" +
-                                "Null.", e);
-                    }
-                }
-                set {
-                    this[this.tablepublisher_field_service_report_view.groupColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int publisher_field_service_report_id {
-                get {
-                    try {
-                        return ((int)(this[this.tablepublisher_field_service_report_view.publisher_field_service_report_idColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'publisher_field_service_report_id\' in table \'publisher_fiel" +
-                                "d_service_report_view\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablepublisher_field_service_report_view.publisher_field_service_report_idColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public System.DateTime date {
-                get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tablepublisher_field_service_report_view.dateColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'date\' in table \'publisher_field_service_report_view\' is DBN" +
-                                "ull.", e);
-                    }
-                }
-                set {
-                    this[this.tablepublisher_field_service_report_view.dateColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int placements {
-                get {
-                    try {
-                        return ((int)(this[this.tablepublisher_field_service_report_view.placementsColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'placements\' in table \'publisher_field_service_report_view\' " +
+                        throw new global::System.Data.StrongTypingException("The value for column \'publisher_group\' in table \'publisher_last_assignment_view\' " +
                                 "is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablepublisher_field_service_report_view.placementsColumn] = value;
+                    this[this.tablepublisher_last_assignment_view.publisher_groupColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int videos {
+            public int assistant_id {
                 get {
                     try {
-                        return ((int)(this[this.tablepublisher_field_service_report_view.videosColumn]));
+                        return ((int)(this[this.tablepublisher_last_assignment_view.assistant_idColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'videos\' in table \'publisher_field_service_report_view\' is D" +
-                                "BNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablepublisher_field_service_report_view.videosColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public decimal hours {
-                get {
-                    try {
-                        return ((decimal)(this[this.tablepublisher_field_service_report_view.hoursColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'hours\' in table \'publisher_field_service_report_view\' is DB" +
-                                "Null.", e);
-                    }
-                }
-                set {
-                    this[this.tablepublisher_field_service_report_view.hoursColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int return_visits {
-                get {
-                    try {
-                        return ((int)(this[this.tablepublisher_field_service_report_view.return_visitsColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'return_visits\' in table \'publisher_field_service_report_vie" +
-                                "w\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablepublisher_field_service_report_view.return_visitsColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int bible_studies {
-                get {
-                    try {
-                        return ((int)(this[this.tablepublisher_field_service_report_view.bible_studiesColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'bible_studies\' in table \'publisher_field_service_report_vie" +
-                                "w\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablepublisher_field_service_report_view.bible_studiesColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public System.DateTime report_date {
-                get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tablepublisher_field_service_report_view.report_dateColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'report_date\' in table \'publisher_field_service_report_view\'" +
-                                " is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablepublisher_field_service_report_view.report_dateColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string remarks {
-                get {
-                    try {
-                        return ((string)(this[this.tablepublisher_field_service_report_view.remarksColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'remarks\' in table \'publisher_field_service_report_view\' is " +
+                        throw new global::System.Data.StrongTypingException("The value for column \'assistant_id\' in table \'publisher_last_assignment_view\' is " +
                                 "DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablepublisher_field_service_report_view.remarksColumn] = value;
+                    this[this.tablepublisher_last_assignment_view.assistant_idColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string hope {
+            public string assistant_name {
                 get {
                     try {
-                        return ((string)(this[this.tablepublisher_field_service_report_view.hopeColumn]));
+                        return ((string)(this[this.tablepublisher_last_assignment_view.assistant_nameColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'hope\' in table \'publisher_field_service_report_view\' is DBN" +
-                                "ull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'assistant_name\' in table \'publisher_last_assignment_view\' i" +
+                                "s DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablepublisher_field_service_report_view.hopeColumn] = value;
+                    this[this.tablepublisher_last_assignment_view.assistant_nameColumn] = value;
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime assistant_dob {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tablepublisher_last_assignment_view.assistant_dobColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'assistant_dob\' in table \'publisher_last_assignment_view\' is" +
+                                " DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablepublisher_last_assignment_view.assistant_dobColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string assistant_contact {
+                get {
+                    try {
+                        return ((string)(this[this.tablepublisher_last_assignment_view.assistant_contactColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'assistant_contact\' in table \'publisher_last_assignment_view" +
+                                "\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablepublisher_last_assignment_view.assistant_contactColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string assistant_address {
+                get {
+                    try {
+                        return ((string)(this[this.tablepublisher_last_assignment_view.assistant_addressColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'assistant_address\' in table \'publisher_last_assignment_view" +
+                                "\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablepublisher_last_assignment_view.assistant_addressColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool assistant_active {
+                get {
+                    try {
+                        return ((bool)(this[this.tablepublisher_last_assignment_view.assistant_activeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'assistant_active\' in table \'publisher_last_assignment_view\'" +
+                                " is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablepublisher_last_assignment_view.assistant_activeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public byte[] assistant_picture {
+                get {
+                    try {
+                        return ((byte[])(this[this.tablepublisher_last_assignment_view.assistant_pictureColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'assistant_picture\' in table \'publisher_last_assignment_view" +
+                                "\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablepublisher_last_assignment_view.assistant_pictureColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string assistant_gender {
+                get {
+                    try {
+                        return ((string)(this[this.tablepublisher_last_assignment_view.assistant_genderColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'assistant_gender\' in table \'publisher_last_assignment_view\'" +
+                                " is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablepublisher_last_assignment_view.assistant_genderColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string assistant_privilege {
+                get {
+                    try {
+                        return ((string)(this[this.tablepublisher_last_assignment_view.assistant_privilegeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'assistant_privilege\' in table \'publisher_last_assignment_vi" +
+                                "ew\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablepublisher_last_assignment_view.assistant_privilegeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string assistant_type {
+                get {
+                    try {
+                        return ((string)(this[this.tablepublisher_last_assignment_view.assistant_typeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'assistant_type\' in table \'publisher_last_assignment_view\' i" +
+                                "s DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablepublisher_last_assignment_view.assistant_typeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string assistant_group {
+                get {
+                    try {
+                        return ((string)(this[this.tablepublisher_last_assignment_view.assistant_groupColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'assistant_group\' in table \'publisher_last_assignment_view\' " +
+                                "is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablepublisher_last_assignment_view.assistant_groupColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int study_number {
+                get {
+                    try {
+                        return ((int)(this[this.tablepublisher_last_assignment_view.study_numberColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'study_number\' in table \'publisher_last_assignment_view\' is " +
+                                "DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablepublisher_last_assignment_view.study_numberColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string description {
+                get {
+                    try {
+                        return ((string)(this[this.tablepublisher_last_assignment_view.descriptionColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'description\' in table \'publisher_last_assignment_view\' is D" +
+                                "BNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablepublisher_last_assignment_view.descriptionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool is_reading {
+                get {
+                    try {
+                        return ((bool)(this[this.tablepublisher_last_assignment_view.is_readingColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'is_reading\' in table \'publisher_last_assignment_view\' is DB" +
+                                "Null.", e);
+                    }
+                }
+                set {
+                    this[this.tablepublisher_last_assignment_view.is_readingColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool is_demonstration {
+                get {
+                    try {
+                        return ((bool)(this[this.tablepublisher_last_assignment_view.is_demonstrationColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'is_demonstration\' in table \'publisher_last_assignment_view\'" +
+                                " is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablepublisher_last_assignment_view.is_demonstrationColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool is_discourse {
+                get {
+                    try {
+                        return ((bool)(this[this.tablepublisher_last_assignment_view.is_discourseColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'is_discourse\' in table \'publisher_last_assignment_view\' is " +
+                                "DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablepublisher_last_assignment_view.is_discourseColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Isweek_start_dateNull() {
+                return this.IsNull(this.tablepublisher_last_assignment_view.week_start_dateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Setweek_start_dateNull() {
+                this[this.tablepublisher_last_assignment_view.week_start_dateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Islast_assignment_dateNull() {
+                return this.IsNull(this.tablepublisher_last_assignment_view.last_assignment_dateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Setlast_assignment_dateNull() {
+                this[this.tablepublisher_last_assignment_view.last_assignment_dateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Isdate_assignedNull() {
+                return this.IsNull(this.tablepublisher_last_assignment_view.date_assignedColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Setdate_assignedNull() {
+                this[this.tablepublisher_last_assignment_view.date_assignedColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Islast_completed_assignment_dateNull() {
+                return this.IsNull(this.tablepublisher_last_assignment_view.last_completed_assignment_dateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Setlast_completed_assignment_dateNull() {
+                this[this.tablepublisher_last_assignment_view.last_completed_assignment_dateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Isassignment_typeNull() {
+                return this.IsNull(this.tablepublisher_last_assignment_view.assignment_typeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Setassignment_typeNull() {
+                this[this.tablepublisher_last_assignment_view.assignment_typeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IshallNull() {
+                return this.IsNull(this.tablepublisher_last_assignment_view.hallColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SethallNull() {
+                this[this.tablepublisher_last_assignment_view.hallColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool Ispublisher_nameNull() {
-                return this.IsNull(this.tablepublisher_field_service_report_view.publisher_nameColumn);
+                return this.IsNull(this.tablepublisher_last_assignment_view.publisher_nameColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void Setpublisher_nameNull() {
-                this[this.tablepublisher_field_service_report_view.publisher_nameColumn] = global::System.Convert.DBNull;
+                this[this.tablepublisher_last_assignment_view.publisher_nameColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsdobNull() {
-                return this.IsNull(this.tablepublisher_field_service_report_view.dobColumn);
+            public bool Ispublisher_dobNull() {
+                return this.IsNull(this.tablepublisher_last_assignment_view.publisher_dobColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetdobNull() {
-                this[this.tablepublisher_field_service_report_view.dobColumn] = global::System.Convert.DBNull;
+            public void Setpublisher_dobNull() {
+                this[this.tablepublisher_last_assignment_view.publisher_dobColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Isbaptisam_dateNull() {
-                return this.IsNull(this.tablepublisher_field_service_report_view.baptisam_dateColumn);
+            public bool Ispublisher_contactNull() {
+                return this.IsNull(this.tablepublisher_last_assignment_view.publisher_contactColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Setbaptisam_dateNull() {
-                this[this.tablepublisher_field_service_report_view.baptisam_dateColumn] = global::System.Convert.DBNull;
+            public void Setpublisher_contactNull() {
+                this[this.tablepublisher_last_assignment_view.publisher_contactColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IscontactNull() {
-                return this.IsNull(this.tablepublisher_field_service_report_view.contactColumn);
+            public bool Ispublisher_addressNull() {
+                return this.IsNull(this.tablepublisher_last_assignment_view.publisher_addressColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetcontactNull() {
-                this[this.tablepublisher_field_service_report_view.contactColumn] = global::System.Convert.DBNull;
+            public void Setpublisher_addressNull() {
+                this[this.tablepublisher_last_assignment_view.publisher_addressColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsaddressNull() {
-                return this.IsNull(this.tablepublisher_field_service_report_view.addressColumn);
+            public bool Ispublisher_activeNull() {
+                return this.IsNull(this.tablepublisher_last_assignment_view.publisher_activeColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetaddressNull() {
-                this[this.tablepublisher_field_service_report_view.addressColumn] = global::System.Convert.DBNull;
+            public void Setpublisher_activeNull() {
+                this[this.tablepublisher_last_assignment_view.publisher_activeColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsactiveNull() {
-                return this.IsNull(this.tablepublisher_field_service_report_view.activeColumn);
+            public bool Ispublisher_pictureNull() {
+                return this.IsNull(this.tablepublisher_last_assignment_view.publisher_pictureColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetactiveNull() {
-                this[this.tablepublisher_field_service_report_view.activeColumn] = global::System.Convert.DBNull;
+            public void Setpublisher_pictureNull() {
+                this[this.tablepublisher_last_assignment_view.publisher_pictureColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IspictureNull() {
-                return this.IsNull(this.tablepublisher_field_service_report_view.pictureColumn);
+            public bool Ispublisher_genderNull() {
+                return this.IsNull(this.tablepublisher_last_assignment_view.publisher_genderColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetpictureNull() {
-                this[this.tablepublisher_field_service_report_view.pictureColumn] = global::System.Convert.DBNull;
+            public void Setpublisher_genderNull() {
+                this[this.tablepublisher_last_assignment_view.publisher_genderColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsgenderNull() {
-                return this.IsNull(this.tablepublisher_field_service_report_view.genderColumn);
+            public bool Ispublisher_privilegeNull() {
+                return this.IsNull(this.tablepublisher_last_assignment_view.publisher_privilegeColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetgenderNull() {
-                this[this.tablepublisher_field_service_report_view.genderColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Ishour_typeNull() {
-                return this.IsNull(this.tablepublisher_field_service_report_view.hour_typeColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Sethour_typeNull() {
-                this[this.tablepublisher_field_service_report_view.hour_typeColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsprivilegeNull() {
-                return this.IsNull(this.tablepublisher_field_service_report_view.privilegeColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetprivilegeNull() {
-                this[this.tablepublisher_field_service_report_view.privilegeColumn] = global::System.Convert.DBNull;
+            public void Setpublisher_privilegeNull() {
+                this[this.tablepublisher_last_assignment_view.publisher_privilegeColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool Ispublisher_typeNull() {
-                return this.IsNull(this.tablepublisher_field_service_report_view.publisher_typeColumn);
+                return this.IsNull(this.tablepublisher_last_assignment_view.publisher_typeColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void Setpublisher_typeNull() {
-                this[this.tablepublisher_field_service_report_view.publisher_typeColumn] = global::System.Convert.DBNull;
+                this[this.tablepublisher_last_assignment_view.publisher_typeColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsgroupNull() {
-                return this.IsNull(this.tablepublisher_field_service_report_view.groupColumn);
+            public bool Ispublisher_groupNull() {
+                return this.IsNull(this.tablepublisher_last_assignment_view.publisher_groupColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetgroupNull() {
-                this[this.tablepublisher_field_service_report_view.groupColumn] = global::System.Convert.DBNull;
+            public void Setpublisher_groupNull() {
+                this[this.tablepublisher_last_assignment_view.publisher_groupColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Ispublisher_field_service_report_idNull() {
-                return this.IsNull(this.tablepublisher_field_service_report_view.publisher_field_service_report_idColumn);
+            public bool Isassistant_idNull() {
+                return this.IsNull(this.tablepublisher_last_assignment_view.assistant_idColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Setpublisher_field_service_report_idNull() {
-                this[this.tablepublisher_field_service_report_view.publisher_field_service_report_idColumn] = global::System.Convert.DBNull;
+            public void Setassistant_idNull() {
+                this[this.tablepublisher_last_assignment_view.assistant_idColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsdateNull() {
-                return this.IsNull(this.tablepublisher_field_service_report_view.dateColumn);
+            public bool Isassistant_nameNull() {
+                return this.IsNull(this.tablepublisher_last_assignment_view.assistant_nameColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetdateNull() {
-                this[this.tablepublisher_field_service_report_view.dateColumn] = global::System.Convert.DBNull;
+            public void Setassistant_nameNull() {
+                this[this.tablepublisher_last_assignment_view.assistant_nameColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsplacementsNull() {
-                return this.IsNull(this.tablepublisher_field_service_report_view.placementsColumn);
+            public bool Isassistant_dobNull() {
+                return this.IsNull(this.tablepublisher_last_assignment_view.assistant_dobColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetplacementsNull() {
-                this[this.tablepublisher_field_service_report_view.placementsColumn] = global::System.Convert.DBNull;
+            public void Setassistant_dobNull() {
+                this[this.tablepublisher_last_assignment_view.assistant_dobColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsvideosNull() {
-                return this.IsNull(this.tablepublisher_field_service_report_view.videosColumn);
+            public bool Isassistant_contactNull() {
+                return this.IsNull(this.tablepublisher_last_assignment_view.assistant_contactColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetvideosNull() {
-                this[this.tablepublisher_field_service_report_view.videosColumn] = global::System.Convert.DBNull;
+            public void Setassistant_contactNull() {
+                this[this.tablepublisher_last_assignment_view.assistant_contactColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IshoursNull() {
-                return this.IsNull(this.tablepublisher_field_service_report_view.hoursColumn);
+            public bool Isassistant_addressNull() {
+                return this.IsNull(this.tablepublisher_last_assignment_view.assistant_addressColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SethoursNull() {
-                this[this.tablepublisher_field_service_report_view.hoursColumn] = global::System.Convert.DBNull;
+            public void Setassistant_addressNull() {
+                this[this.tablepublisher_last_assignment_view.assistant_addressColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Isreturn_visitsNull() {
-                return this.IsNull(this.tablepublisher_field_service_report_view.return_visitsColumn);
+            public bool Isassistant_activeNull() {
+                return this.IsNull(this.tablepublisher_last_assignment_view.assistant_activeColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Setreturn_visitsNull() {
-                this[this.tablepublisher_field_service_report_view.return_visitsColumn] = global::System.Convert.DBNull;
+            public void Setassistant_activeNull() {
+                this[this.tablepublisher_last_assignment_view.assistant_activeColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Isbible_studiesNull() {
-                return this.IsNull(this.tablepublisher_field_service_report_view.bible_studiesColumn);
+            public bool Isassistant_pictureNull() {
+                return this.IsNull(this.tablepublisher_last_assignment_view.assistant_pictureColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Setbible_studiesNull() {
-                this[this.tablepublisher_field_service_report_view.bible_studiesColumn] = global::System.Convert.DBNull;
+            public void Setassistant_pictureNull() {
+                this[this.tablepublisher_last_assignment_view.assistant_pictureColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Isreport_dateNull() {
-                return this.IsNull(this.tablepublisher_field_service_report_view.report_dateColumn);
+            public bool Isassistant_genderNull() {
+                return this.IsNull(this.tablepublisher_last_assignment_view.assistant_genderColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Setreport_dateNull() {
-                this[this.tablepublisher_field_service_report_view.report_dateColumn] = global::System.Convert.DBNull;
+            public void Setassistant_genderNull() {
+                this[this.tablepublisher_last_assignment_view.assistant_genderColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsremarksNull() {
-                return this.IsNull(this.tablepublisher_field_service_report_view.remarksColumn);
+            public bool Isassistant_privilegeNull() {
+                return this.IsNull(this.tablepublisher_last_assignment_view.assistant_privilegeColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetremarksNull() {
-                this[this.tablepublisher_field_service_report_view.remarksColumn] = global::System.Convert.DBNull;
+            public void Setassistant_privilegeNull() {
+                this[this.tablepublisher_last_assignment_view.assistant_privilegeColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IshopeNull() {
-                return this.IsNull(this.tablepublisher_field_service_report_view.hopeColumn);
+            public bool Isassistant_typeNull() {
+                return this.IsNull(this.tablepublisher_last_assignment_view.assistant_typeColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SethopeNull() {
-                this[this.tablepublisher_field_service_report_view.hopeColumn] = global::System.Convert.DBNull;
+            public void Setassistant_typeNull() {
+                this[this.tablepublisher_last_assignment_view.assistant_typeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Isassistant_groupNull() {
+                return this.IsNull(this.tablepublisher_last_assignment_view.assistant_groupColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Setassistant_groupNull() {
+                this[this.tablepublisher_last_assignment_view.assistant_groupColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Isstudy_numberNull() {
+                return this.IsNull(this.tablepublisher_last_assignment_view.study_numberColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Setstudy_numberNull() {
+                this[this.tablepublisher_last_assignment_view.study_numberColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsdescriptionNull() {
+                return this.IsNull(this.tablepublisher_last_assignment_view.descriptionColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetdescriptionNull() {
+                this[this.tablepublisher_last_assignment_view.descriptionColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Isis_readingNull() {
+                return this.IsNull(this.tablepublisher_last_assignment_view.is_readingColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Setis_readingNull() {
+                this[this.tablepublisher_last_assignment_view.is_readingColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Isis_demonstrationNull() {
+                return this.IsNull(this.tablepublisher_last_assignment_view.is_demonstrationColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Setis_demonstrationNull() {
+                this[this.tablepublisher_last_assignment_view.is_demonstrationColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Isis_discourseNull() {
+                return this.IsNull(this.tablepublisher_last_assignment_view.is_discourseColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Setis_discourseNull() {
+                this[this.tablepublisher_last_assignment_view.is_discourseColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -4630,6 +7092,699 @@ namespace TMSA {
         }
         
         /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class publisher_field_service_report_viewRow : global::System.Data.DataRow {
+            
+            private publisher_field_service_report_viewDataTable tablepublisher_field_service_report_view;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal publisher_field_service_report_viewRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tablepublisher_field_service_report_view = ((publisher_field_service_report_viewDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int publisher_id {
+                get {
+                    try {
+                        return ((int)(this[this.tablepublisher_field_service_report_view.publisher_idColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'publisher_id\' in table \'publisher_field_service_report_view" +
+                                "\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablepublisher_field_service_report_view.publisher_idColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string publisher_name {
+                get {
+                    try {
+                        return ((string)(this[this.tablepublisher_field_service_report_view.publisher_nameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'publisher_name\' in table \'publisher_field_service_report_vi" +
+                                "ew\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablepublisher_field_service_report_view.publisher_nameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime dob {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tablepublisher_field_service_report_view.dobColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'dob\' in table \'publisher_field_service_report_view\' is DBNu" +
+                                "ll.", e);
+                    }
+                }
+                set {
+                    this[this.tablepublisher_field_service_report_view.dobColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime baptisam_date {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tablepublisher_field_service_report_view.baptisam_dateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'baptisam_date\' in table \'publisher_field_service_report_vie" +
+                                "w\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablepublisher_field_service_report_view.baptisam_dateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string contact {
+                get {
+                    try {
+                        return ((string)(this[this.tablepublisher_field_service_report_view.contactColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'contact\' in table \'publisher_field_service_report_view\' is " +
+                                "DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablepublisher_field_service_report_view.contactColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string address {
+                get {
+                    try {
+                        return ((string)(this[this.tablepublisher_field_service_report_view.addressColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'address\' in table \'publisher_field_service_report_view\' is " +
+                                "DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablepublisher_field_service_report_view.addressColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool active {
+                get {
+                    try {
+                        return ((bool)(this[this.tablepublisher_field_service_report_view.activeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'active\' in table \'publisher_field_service_report_view\' is D" +
+                                "BNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablepublisher_field_service_report_view.activeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public byte[] picture {
+                get {
+                    try {
+                        return ((byte[])(this[this.tablepublisher_field_service_report_view.pictureColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'picture\' in table \'publisher_field_service_report_view\' is " +
+                                "DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablepublisher_field_service_report_view.pictureColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string gender {
+                get {
+                    try {
+                        return ((string)(this[this.tablepublisher_field_service_report_view.genderColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'gender\' in table \'publisher_field_service_report_view\' is D" +
+                                "BNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablepublisher_field_service_report_view.genderColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int publisher_field_service_report_id {
+                get {
+                    return ((int)(this[this.tablepublisher_field_service_report_view.publisher_field_service_report_idColumn]));
+                }
+                set {
+                    this[this.tablepublisher_field_service_report_view.publisher_field_service_report_idColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime date {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tablepublisher_field_service_report_view.dateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'date\' in table \'publisher_field_service_report_view\' is DBN" +
+                                "ull.", e);
+                    }
+                }
+                set {
+                    this[this.tablepublisher_field_service_report_view.dateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime report_date {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tablepublisher_field_service_report_view.report_dateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'report_date\' in table \'publisher_field_service_report_view\'" +
+                                " is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablepublisher_field_service_report_view.report_dateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int placements {
+                get {
+                    try {
+                        return ((int)(this[this.tablepublisher_field_service_report_view.placementsColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'placements\' in table \'publisher_field_service_report_view\' " +
+                                "is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablepublisher_field_service_report_view.placementsColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int videos {
+                get {
+                    try {
+                        return ((int)(this[this.tablepublisher_field_service_report_view.videosColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'videos\' in table \'publisher_field_service_report_view\' is D" +
+                                "BNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablepublisher_field_service_report_view.videosColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public decimal hours {
+                get {
+                    try {
+                        return ((decimal)(this[this.tablepublisher_field_service_report_view.hoursColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'hours\' in table \'publisher_field_service_report_view\' is DB" +
+                                "Null.", e);
+                    }
+                }
+                set {
+                    this[this.tablepublisher_field_service_report_view.hoursColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int return_visits {
+                get {
+                    try {
+                        return ((int)(this[this.tablepublisher_field_service_report_view.return_visitsColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'return_visits\' in table \'publisher_field_service_report_vie" +
+                                "w\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablepublisher_field_service_report_view.return_visitsColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int bible_studies {
+                get {
+                    try {
+                        return ((int)(this[this.tablepublisher_field_service_report_view.bible_studiesColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'bible_studies\' in table \'publisher_field_service_report_vie" +
+                                "w\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablepublisher_field_service_report_view.bible_studiesColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string hour_type {
+                get {
+                    try {
+                        return ((string)(this[this.tablepublisher_field_service_report_view.hour_typeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'hour_type\' in table \'publisher_field_service_report_view\' i" +
+                                "s DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablepublisher_field_service_report_view.hour_typeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string privilege {
+                get {
+                    try {
+                        return ((string)(this[this.tablepublisher_field_service_report_view.privilegeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'privilege\' in table \'publisher_field_service_report_view\' i" +
+                                "s DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablepublisher_field_service_report_view.privilegeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string publisher_type {
+                get {
+                    try {
+                        return ((string)(this[this.tablepublisher_field_service_report_view.publisher_typeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'publisher_type\' in table \'publisher_field_service_report_vi" +
+                                "ew\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablepublisher_field_service_report_view.publisher_typeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string group {
+                get {
+                    try {
+                        return ((string)(this[this.tablepublisher_field_service_report_view.groupColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'group\' in table \'publisher_field_service_report_view\' is DB" +
+                                "Null.", e);
+                    }
+                }
+                set {
+                    this[this.tablepublisher_field_service_report_view.groupColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string remarks {
+                get {
+                    try {
+                        return ((string)(this[this.tablepublisher_field_service_report_view.remarksColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'remarks\' in table \'publisher_field_service_report_view\' is " +
+                                "DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablepublisher_field_service_report_view.remarksColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string hope {
+                get {
+                    try {
+                        return ((string)(this[this.tablepublisher_field_service_report_view.hopeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'hope\' in table \'publisher_field_service_report_view\' is DBN" +
+                                "ull.", e);
+                    }
+                }
+                set {
+                    this[this.tablepublisher_field_service_report_view.hopeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool shared_in_ministry {
+                get {
+                    try {
+                        return ((bool)(this[this.tablepublisher_field_service_report_view.shared_in_ministryColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'shared_in_ministry\' in table \'publisher_field_service_repor" +
+                                "t_view\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablepublisher_field_service_report_view.shared_in_ministryColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Ispublisher_idNull() {
+                return this.IsNull(this.tablepublisher_field_service_report_view.publisher_idColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Setpublisher_idNull() {
+                this[this.tablepublisher_field_service_report_view.publisher_idColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Ispublisher_nameNull() {
+                return this.IsNull(this.tablepublisher_field_service_report_view.publisher_nameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Setpublisher_nameNull() {
+                this[this.tablepublisher_field_service_report_view.publisher_nameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsdobNull() {
+                return this.IsNull(this.tablepublisher_field_service_report_view.dobColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetdobNull() {
+                this[this.tablepublisher_field_service_report_view.dobColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Isbaptisam_dateNull() {
+                return this.IsNull(this.tablepublisher_field_service_report_view.baptisam_dateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Setbaptisam_dateNull() {
+                this[this.tablepublisher_field_service_report_view.baptisam_dateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IscontactNull() {
+                return this.IsNull(this.tablepublisher_field_service_report_view.contactColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetcontactNull() {
+                this[this.tablepublisher_field_service_report_view.contactColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsaddressNull() {
+                return this.IsNull(this.tablepublisher_field_service_report_view.addressColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetaddressNull() {
+                this[this.tablepublisher_field_service_report_view.addressColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsactiveNull() {
+                return this.IsNull(this.tablepublisher_field_service_report_view.activeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetactiveNull() {
+                this[this.tablepublisher_field_service_report_view.activeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IspictureNull() {
+                return this.IsNull(this.tablepublisher_field_service_report_view.pictureColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetpictureNull() {
+                this[this.tablepublisher_field_service_report_view.pictureColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsgenderNull() {
+                return this.IsNull(this.tablepublisher_field_service_report_view.genderColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetgenderNull() {
+                this[this.tablepublisher_field_service_report_view.genderColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsdateNull() {
+                return this.IsNull(this.tablepublisher_field_service_report_view.dateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetdateNull() {
+                this[this.tablepublisher_field_service_report_view.dateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Isreport_dateNull() {
+                return this.IsNull(this.tablepublisher_field_service_report_view.report_dateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Setreport_dateNull() {
+                this[this.tablepublisher_field_service_report_view.report_dateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsplacementsNull() {
+                return this.IsNull(this.tablepublisher_field_service_report_view.placementsColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetplacementsNull() {
+                this[this.tablepublisher_field_service_report_view.placementsColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsvideosNull() {
+                return this.IsNull(this.tablepublisher_field_service_report_view.videosColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetvideosNull() {
+                this[this.tablepublisher_field_service_report_view.videosColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IshoursNull() {
+                return this.IsNull(this.tablepublisher_field_service_report_view.hoursColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SethoursNull() {
+                this[this.tablepublisher_field_service_report_view.hoursColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Isreturn_visitsNull() {
+                return this.IsNull(this.tablepublisher_field_service_report_view.return_visitsColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Setreturn_visitsNull() {
+                this[this.tablepublisher_field_service_report_view.return_visitsColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Isbible_studiesNull() {
+                return this.IsNull(this.tablepublisher_field_service_report_view.bible_studiesColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Setbible_studiesNull() {
+                this[this.tablepublisher_field_service_report_view.bible_studiesColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Ishour_typeNull() {
+                return this.IsNull(this.tablepublisher_field_service_report_view.hour_typeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Sethour_typeNull() {
+                this[this.tablepublisher_field_service_report_view.hour_typeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsprivilegeNull() {
+                return this.IsNull(this.tablepublisher_field_service_report_view.privilegeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetprivilegeNull() {
+                this[this.tablepublisher_field_service_report_view.privilegeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Ispublisher_typeNull() {
+                return this.IsNull(this.tablepublisher_field_service_report_view.publisher_typeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Setpublisher_typeNull() {
+                this[this.tablepublisher_field_service_report_view.publisher_typeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsgroupNull() {
+                return this.IsNull(this.tablepublisher_field_service_report_view.groupColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetgroupNull() {
+                this[this.tablepublisher_field_service_report_view.groupColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsremarksNull() {
+                return this.IsNull(this.tablepublisher_field_service_report_view.remarksColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetremarksNull() {
+                this[this.tablepublisher_field_service_report_view.remarksColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IshopeNull() {
+                return this.IsNull(this.tablepublisher_field_service_report_view.hopeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SethopeNull() {
+                this[this.tablepublisher_field_service_report_view.hopeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Isshared_in_ministryNull() {
+                return this.IsNull(this.tablepublisher_field_service_report_view.shared_in_ministryColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Setshared_in_ministryNull() {
+                this[this.tablepublisher_field_service_report_view.shared_in_ministryColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -4649,6 +7804,74 @@ namespace TMSA {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public publisherRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public class counsel_pointRowChangeEvent : global::System.EventArgs {
+            
+            private counsel_pointRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public counsel_pointRowChangeEvent(counsel_pointRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public counsel_pointRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public class publisher_assignmentRowChangeEvent : global::System.EventArgs {
+            
+            private publisher_assignmentRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public publisher_assignmentRowChangeEvent(publisher_assignmentRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public publisher_assignmentRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -4701,22 +7924,22 @@ namespace TMSA {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public class publisher_field_service_report_viewRowChangeEvent : global::System.EventArgs {
+        public class publisher_last_assignment_viewRowChangeEvent : global::System.EventArgs {
             
-            private publisher_field_service_report_viewRow eventRow;
+            private publisher_last_assignment_viewRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public publisher_field_service_report_viewRowChangeEvent(publisher_field_service_report_viewRow row, global::System.Data.DataRowAction action) {
+            public publisher_last_assignment_viewRowChangeEvent(publisher_last_assignment_viewRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public publisher_field_service_report_viewRow Row {
+            public publisher_last_assignment_viewRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -4785,6 +8008,40 @@ namespace TMSA {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public GetServiceYearsRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public class publisher_field_service_report_viewRowChangeEvent : global::System.EventArgs {
+            
+            private publisher_field_service_report_viewRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public publisher_field_service_report_viewRowChangeEvent(publisher_field_service_report_viewRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public publisher_field_service_report_viewRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -5690,6 +8947,1131 @@ SELECT publisher_id, last_name, other_names, dob, baptisam_date, contact, emerge
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class counsel_pointTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public counsel_pointTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "counsel_point";
+            tableMapping.ColumnMappings.Add("counsel_point_id", "counsel_point_id");
+            tableMapping.ColumnMappings.Add("study_number", "study_number");
+            tableMapping.ColumnMappings.Add("description", "description");
+            tableMapping.ColumnMappings.Add("is_reading", "is_reading");
+            tableMapping.ColumnMappings.Add("is_demonstration", "is_demonstration");
+            tableMapping.ColumnMappings.Add("is_discourse", "is_discourse");
+            this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[counsel_point] WHERE (([counsel_point_id] = @Original_counsel_point_id) AND ((@IsNull_study_number = 1 AND [study_number] IS NULL) OR ([study_number] = @Original_study_number)) AND ((@IsNull_description = 1 AND [description] IS NULL) OR ([description] = @Original_description)) AND ((@IsNull_is_reading = 1 AND [is_reading] IS NULL) OR ([is_reading] = @Original_is_reading)) AND ((@IsNull_is_demonstration = 1 AND [is_demonstration] IS NULL) OR ([is_demonstration] = @Original_is_demonstration)) AND ((@IsNull_is_discourse = 1 AND [is_discourse] IS NULL) OR ([is_discourse] = @Original_is_discourse)))";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_counsel_point_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "counsel_point_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_study_number", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "study_number", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_study_number", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "study_number", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_description", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "description", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_description", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "description", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_is_reading", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "is_reading", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_is_reading", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "is_reading", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_is_demonstration", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "is_demonstration", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_is_demonstration", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "is_demonstration", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_is_discourse", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "is_discourse", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_is_discourse", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "is_discourse", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.InsertCommand.Connection = this.Connection;
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[counsel_point] ([study_number], [description], [is_reading], [is_demonstration], [is_discourse]) VALUES (@study_number, @description, @is_reading, @is_demonstration, @is_discourse);
+SELECT counsel_point_id, study_number, description, is_reading, is_demonstration, is_discourse FROM counsel_point WHERE (counsel_point_id = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@study_number", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "study_number", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@description", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "description", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@is_reading", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "is_reading", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@is_demonstration", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "is_demonstration", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@is_discourse", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "is_discourse", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[counsel_point] SET [study_number] = @study_number, [description] = @description, [is_reading] = @is_reading, [is_demonstration] = @is_demonstration, [is_discourse] = @is_discourse WHERE (([counsel_point_id] = @Original_counsel_point_id) AND ((@IsNull_study_number = 1 AND [study_number] IS NULL) OR ([study_number] = @Original_study_number)) AND ((@IsNull_description = 1 AND [description] IS NULL) OR ([description] = @Original_description)) AND ((@IsNull_is_reading = 1 AND [is_reading] IS NULL) OR ([is_reading] = @Original_is_reading)) AND ((@IsNull_is_demonstration = 1 AND [is_demonstration] IS NULL) OR ([is_demonstration] = @Original_is_demonstration)) AND ((@IsNull_is_discourse = 1 AND [is_discourse] IS NULL) OR ([is_discourse] = @Original_is_discourse)));
+SELECT counsel_point_id, study_number, description, is_reading, is_demonstration, is_discourse FROM counsel_point WHERE (counsel_point_id = @counsel_point_id)";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@study_number", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "study_number", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@description", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "description", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@is_reading", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "is_reading", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@is_demonstration", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "is_demonstration", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@is_discourse", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "is_discourse", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_counsel_point_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "counsel_point_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_study_number", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "study_number", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_study_number", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "study_number", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_description", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "description", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_description", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "description", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_is_reading", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "is_reading", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_is_reading", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "is_reading", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_is_demonstration", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "is_demonstration", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_is_demonstration", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "is_demonstration", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_is_discourse", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "is_discourse", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_is_discourse", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "is_discourse", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@counsel_point_id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "counsel_point_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::TMSA.Properties.Settings.Default.TMSAConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT counsel_point_id, study_number, description, is_reading, is_demonstration," +
+                " is_discourse FROM dbo.counsel_point";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(TMSADataSet.counsel_pointDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual TMSADataSet.counsel_pointDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            TMSADataSet.counsel_pointDataTable dataTable = new TMSADataSet.counsel_pointDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(TMSADataSet.counsel_pointDataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(TMSADataSet dataSet) {
+            return this.Adapter.Update(dataSet, "counsel_point");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(int Original_counsel_point_id, global::System.Nullable<int> Original_study_number, string Original_description, global::System.Nullable<bool> Original_is_reading, global::System.Nullable<bool> Original_is_demonstration, global::System.Nullable<bool> Original_is_discourse) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_counsel_point_id));
+            if ((Original_study_number.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_study_number.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((Original_description == null)) {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_description));
+            }
+            if ((Original_is_reading.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((bool)(Original_is_reading.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            if ((Original_is_demonstration.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((bool)(Original_is_demonstration.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            if ((Original_is_discourse.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((bool)(Original_is_discourse.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(global::System.Nullable<int> study_number, string description, global::System.Nullable<bool> is_reading, global::System.Nullable<bool> is_demonstration, global::System.Nullable<bool> is_discourse) {
+            if ((study_number.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((int)(study_number.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            if ((description == null)) {
+                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(description));
+            }
+            if ((is_reading.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((bool)(is_reading.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((is_demonstration.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((bool)(is_demonstration.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((is_discourse.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((bool)(is_discourse.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
+            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.InsertCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(global::System.Nullable<int> study_number, string description, global::System.Nullable<bool> is_reading, global::System.Nullable<bool> is_demonstration, global::System.Nullable<bool> is_discourse, int Original_counsel_point_id, global::System.Nullable<int> Original_study_number, string Original_description, global::System.Nullable<bool> Original_is_reading, global::System.Nullable<bool> Original_is_demonstration, global::System.Nullable<bool> Original_is_discourse, int counsel_point_id) {
+            if ((study_number.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(study_number.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            if ((description == null)) {
+                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(description));
+            }
+            if ((is_reading.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((bool)(is_reading.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((is_demonstration.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((bool)(is_demonstration.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((is_discourse.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((bool)(is_discourse.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_counsel_point_id));
+            if ((Original_study_number.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_study_number.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            if ((Original_description == null)) {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_description));
+            }
+            if ((Original_is_reading.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((bool)(Original_is_reading.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            if ((Original_is_demonstration.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((bool)(Original_is_demonstration.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            if ((Original_is_discourse.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((bool)(Original_is_discourse.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[16].Value = ((int)(counsel_point_id));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(global::System.Nullable<int> study_number, string description, global::System.Nullable<bool> is_reading, global::System.Nullable<bool> is_demonstration, global::System.Nullable<bool> is_discourse, int Original_counsel_point_id, global::System.Nullable<int> Original_study_number, string Original_description, global::System.Nullable<bool> Original_is_reading, global::System.Nullable<bool> Original_is_demonstration, global::System.Nullable<bool> Original_is_discourse) {
+            return this.Update(study_number, description, is_reading, is_demonstration, is_discourse, Original_counsel_point_id, Original_study_number, Original_description, Original_is_reading, Original_is_demonstration, Original_is_discourse, Original_counsel_point_id);
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class publisher_assignmentTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public publisher_assignmentTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "publisher_assignment";
+            tableMapping.ColumnMappings.Add("publisher_assignment_id", "publisher_assignment_id");
+            tableMapping.ColumnMappings.Add("publisher_id", "publisher_id");
+            tableMapping.ColumnMappings.Add("assistant_id", "assistant_id");
+            tableMapping.ColumnMappings.Add("counsel_point_id", "counsel_point_id");
+            tableMapping.ColumnMappings.Add("week_start_date", "week_start_date");
+            tableMapping.ColumnMappings.Add("week_end_date", "week_end_date");
+            tableMapping.ColumnMappings.Add("date_assigned", "date_assigned");
+            tableMapping.ColumnMappings.Add("date_completed", "date_completed");
+            tableMapping.ColumnMappings.Add("assignment_type", "assignment_type");
+            tableMapping.ColumnMappings.Add("hall", "hall");
+            this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[publisher_assignment] WHERE (([publisher_assignment_id] = @Original_publisher_assignment_id) AND ((@IsNull_publisher_id = 1 AND [publisher_id] IS NULL) OR ([publisher_id] = @Original_publisher_id)) AND ((@IsNull_assistant_id = 1 AND [assistant_id] IS NULL) OR ([assistant_id] = @Original_assistant_id)) AND ((@IsNull_counsel_point_id = 1 AND [counsel_point_id] IS NULL) OR ([counsel_point_id] = @Original_counsel_point_id)) AND ((@IsNull_week_start_date = 1 AND [week_start_date] IS NULL) OR ([week_start_date] = @Original_week_start_date)) AND ((@IsNull_week_end_date = 1 AND [week_end_date] IS NULL) OR ([week_end_date] = @Original_week_end_date)) AND ((@IsNull_date_assigned = 1 AND [date_assigned] IS NULL) OR ([date_assigned] = @Original_date_assigned)) AND ((@IsNull_date_completed = 1 AND [date_completed] IS NULL) OR ([date_completed] = @Original_date_completed)) AND ((@IsNull_assignment_type = 1 AND [assignment_type] IS NULL) OR ([assignment_type] = @Original_assignment_type)) AND ((@IsNull_hall = 1 AND [hall] IS NULL) OR ([hall] = @Original_hall)))";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_publisher_assignment_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "publisher_assignment_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_publisher_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "publisher_id", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_publisher_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "publisher_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_assistant_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "assistant_id", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_assistant_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "assistant_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_counsel_point_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "counsel_point_id", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_counsel_point_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "counsel_point_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_week_start_date", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "week_start_date", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_week_start_date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "week_start_date", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_week_end_date", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "week_end_date", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_week_end_date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "week_end_date", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_date_assigned", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "date_assigned", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_date_assigned", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "date_assigned", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_date_completed", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "date_completed", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_date_completed", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "date_completed", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_assignment_type", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "assignment_type", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_assignment_type", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "assignment_type", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_hall", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "hall", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_hall", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "hall", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.InsertCommand.Connection = this.Connection;
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[publisher_assignment] ([publisher_id], [assistant_id], [counsel_point_id], [week_start_date], [week_end_date], [date_assigned], [date_completed], [assignment_type], [hall]) VALUES (@publisher_id, @assistant_id, @counsel_point_id, @week_start_date, @week_end_date, @date_assigned, @date_completed, @assignment_type, @hall);
+SELECT publisher_assignment_id, publisher_id, assistant_id, counsel_point_id, week_start_date, week_end_date, date_assigned, date_completed, assignment_type, hall FROM publisher_assignment WHERE (publisher_assignment_id = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@publisher_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "publisher_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@assistant_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "assistant_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@counsel_point_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "counsel_point_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@week_start_date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "week_start_date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@week_end_date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "week_end_date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@date_assigned", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "date_assigned", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@date_completed", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "date_completed", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@assignment_type", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "assignment_type", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@hall", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "hall", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[publisher_assignment] SET [publisher_id] = @publisher_id, [assistan" +
+                "t_id] = @assistant_id, [counsel_point_id] = @counsel_point_id, [week_start_date]" +
+                " = @week_start_date, [week_end_date] = @week_end_date, [date_assigned] = @date_a" +
+                "ssigned, [date_completed] = @date_completed, [assignment_type] = @assignment_typ" +
+                "e, [hall] = @hall WHERE (([publisher_assignment_id] = @Original_publisher_assign" +
+                "ment_id) AND ((@IsNull_publisher_id = 1 AND [publisher_id] IS NULL) OR ([publish" +
+                "er_id] = @Original_publisher_id)) AND ((@IsNull_assistant_id = 1 AND [assistant_" +
+                "id] IS NULL) OR ([assistant_id] = @Original_assistant_id)) AND ((@IsNull_counsel" +
+                "_point_id = 1 AND [counsel_point_id] IS NULL) OR ([counsel_point_id] = @Original" +
+                "_counsel_point_id)) AND ((@IsNull_week_start_date = 1 AND [week_start_date] IS N" +
+                "ULL) OR ([week_start_date] = @Original_week_start_date)) AND ((@IsNull_week_end_" +
+                "date = 1 AND [week_end_date] IS NULL) OR ([week_end_date] = @Original_week_end_d" +
+                "ate)) AND ((@IsNull_date_assigned = 1 AND [date_assigned] IS NULL) OR ([date_ass" +
+                "igned] = @Original_date_assigned)) AND ((@IsNull_date_completed = 1 AND [date_co" +
+                "mpleted] IS NULL) OR ([date_completed] = @Original_date_completed)) AND ((@IsNul" +
+                "l_assignment_type = 1 AND [assignment_type] IS NULL) OR ([assignment_type] = @Or" +
+                "iginal_assignment_type)) AND ((@IsNull_hall = 1 AND [hall] IS NULL) OR ([hall] =" +
+                " @Original_hall)));\r\nSELECT publisher_assignment_id, publisher_id, assistant_id," +
+                " counsel_point_id, week_start_date, week_end_date, date_assigned, date_completed" +
+                ", assignment_type, hall FROM publisher_assignment WHERE (publisher_assignment_id" +
+                " = @publisher_assignment_id)";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@publisher_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "publisher_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@assistant_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "assistant_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@counsel_point_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "counsel_point_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@week_start_date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "week_start_date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@week_end_date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "week_end_date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@date_assigned", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "date_assigned", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@date_completed", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "date_completed", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@assignment_type", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "assignment_type", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@hall", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "hall", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_publisher_assignment_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "publisher_assignment_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_publisher_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "publisher_id", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_publisher_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "publisher_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_assistant_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "assistant_id", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_assistant_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "assistant_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_counsel_point_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "counsel_point_id", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_counsel_point_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "counsel_point_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_week_start_date", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "week_start_date", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_week_start_date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "week_start_date", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_week_end_date", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "week_end_date", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_week_end_date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "week_end_date", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_date_assigned", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "date_assigned", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_date_assigned", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "date_assigned", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_date_completed", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "date_completed", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_date_completed", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "date_completed", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_assignment_type", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "assignment_type", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_assignment_type", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "assignment_type", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_hall", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "hall", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_hall", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "hall", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@publisher_assignment_id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "publisher_assignment_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::TMSA.Properties.Settings.Default.TMSAConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT publisher_assignment_id, publisher_id, assistant_id, counsel_point_id, wee" +
+                "k_start_date, week_end_date, date_assigned, date_completed, assignment_type, hal" +
+                "l FROM dbo.publisher_assignment";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(TMSADataSet.publisher_assignmentDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual TMSADataSet.publisher_assignmentDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            TMSADataSet.publisher_assignmentDataTable dataTable = new TMSADataSet.publisher_assignmentDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(TMSADataSet.publisher_assignmentDataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(TMSADataSet dataSet) {
+            return this.Adapter.Update(dataSet, "publisher_assignment");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(int Original_publisher_assignment_id, global::System.Nullable<int> Original_publisher_id, global::System.Nullable<int> Original_assistant_id, global::System.Nullable<int> Original_counsel_point_id, global::System.Nullable<global::System.DateTime> Original_week_start_date, global::System.Nullable<global::System.DateTime> Original_week_end_date, global::System.Nullable<global::System.DateTime> Original_date_assigned, global::System.Nullable<global::System.DateTime> Original_date_completed, string Original_assignment_type, string Original_hall) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_publisher_assignment_id));
+            if ((Original_publisher_id.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_publisher_id.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((Original_assistant_id.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_assistant_id.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((Original_counsel_point_id.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((int)(Original_counsel_point_id.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            if ((Original_week_start_date.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((System.DateTime)(Original_week_start_date.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            if ((Original_week_end_date.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((System.DateTime)(Original_week_end_date.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            if ((Original_date_assigned.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[12].Value = ((System.DateTime)(Original_date_assigned.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            if ((Original_date_completed.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[14].Value = ((System.DateTime)(Original_date_completed.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            if ((Original_assignment_type == null)) {
+                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[16].Value = ((string)(Original_assignment_type));
+            }
+            if ((Original_hall == null)) {
+                this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[18].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[18].Value = ((string)(Original_hall));
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(global::System.Nullable<int> publisher_id, global::System.Nullable<int> assistant_id, global::System.Nullable<int> counsel_point_id, global::System.Nullable<global::System.DateTime> week_start_date, global::System.Nullable<global::System.DateTime> week_end_date, global::System.Nullable<global::System.DateTime> date_assigned, global::System.Nullable<global::System.DateTime> date_completed, string assignment_type, string hall) {
+            if ((publisher_id.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((int)(publisher_id.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            if ((assistant_id.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((int)(assistant_id.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((counsel_point_id.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((int)(counsel_point_id.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((week_start_date.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((System.DateTime)(week_start_date.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((week_end_date.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((System.DateTime)(week_end_date.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((date_assigned.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((System.DateTime)(date_assigned.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            if ((date_completed.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[6].Value = ((System.DateTime)(date_completed.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            if ((assignment_type == null)) {
+                this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(assignment_type));
+            }
+            if ((hall == null)) {
+                this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[8].Value = ((string)(hall));
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
+            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.InsertCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(
+                    global::System.Nullable<int> publisher_id, 
+                    global::System.Nullable<int> assistant_id, 
+                    global::System.Nullable<int> counsel_point_id, 
+                    global::System.Nullable<global::System.DateTime> week_start_date, 
+                    global::System.Nullable<global::System.DateTime> week_end_date, 
+                    global::System.Nullable<global::System.DateTime> date_assigned, 
+                    global::System.Nullable<global::System.DateTime> date_completed, 
+                    string assignment_type, 
+                    string hall, 
+                    int Original_publisher_assignment_id, 
+                    global::System.Nullable<int> Original_publisher_id, 
+                    global::System.Nullable<int> Original_assistant_id, 
+                    global::System.Nullable<int> Original_counsel_point_id, 
+                    global::System.Nullable<global::System.DateTime> Original_week_start_date, 
+                    global::System.Nullable<global::System.DateTime> Original_week_end_date, 
+                    global::System.Nullable<global::System.DateTime> Original_date_assigned, 
+                    global::System.Nullable<global::System.DateTime> Original_date_completed, 
+                    string Original_assignment_type, 
+                    string Original_hall, 
+                    int publisher_assignment_id) {
+            if ((publisher_id.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(publisher_id.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            if ((assistant_id.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(assistant_id.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((counsel_point_id.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(counsel_point_id.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((week_start_date.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((System.DateTime)(week_start_date.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((week_end_date.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((System.DateTime)(week_end_date.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((date_assigned.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((System.DateTime)(date_assigned.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            if ((date_completed.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((System.DateTime)(date_completed.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            if ((assignment_type == null)) {
+                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(assignment_type));
+            }
+            if ((hall == null)) {
+                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(hall));
+            }
+            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_publisher_assignment_id));
+            if ((Original_publisher_id.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Original_publisher_id.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            if ((Original_assistant_id.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(Original_assistant_id.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            if ((Original_counsel_point_id.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((int)(Original_counsel_point_id.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
+            }
+            if ((Original_week_start_date.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((System.DateTime)(Original_week_start_date.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
+            }
+            if ((Original_week_end_date.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((System.DateTime)(Original_week_end_date.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
+            }
+            if ((Original_date_assigned.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((System.DateTime)(Original_date_assigned.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
+            }
+            if ((Original_date_completed.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((System.DateTime)(Original_date_completed.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[23].Value = global::System.DBNull.Value;
+            }
+            if ((Original_assignment_type == null)) {
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[25].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((string)(Original_assignment_type));
+            }
+            if ((Original_hall == null)) {
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[27].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((string)(Original_hall));
+            }
+            this.Adapter.UpdateCommand.Parameters[28].Value = ((int)(publisher_assignment_id));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(
+                    global::System.Nullable<int> publisher_id, 
+                    global::System.Nullable<int> assistant_id, 
+                    global::System.Nullable<int> counsel_point_id, 
+                    global::System.Nullable<global::System.DateTime> week_start_date, 
+                    global::System.Nullable<global::System.DateTime> week_end_date, 
+                    global::System.Nullable<global::System.DateTime> date_assigned, 
+                    global::System.Nullable<global::System.DateTime> date_completed, 
+                    string assignment_type, 
+                    string hall, 
+                    int Original_publisher_assignment_id, 
+                    global::System.Nullable<int> Original_publisher_id, 
+                    global::System.Nullable<int> Original_assistant_id, 
+                    global::System.Nullable<int> Original_counsel_point_id, 
+                    global::System.Nullable<global::System.DateTime> Original_week_start_date, 
+                    global::System.Nullable<global::System.DateTime> Original_week_end_date, 
+                    global::System.Nullable<global::System.DateTime> Original_date_assigned, 
+                    global::System.Nullable<global::System.DateTime> Original_date_completed, 
+                    string Original_assignment_type, 
+                    string Original_hall) {
+            return this.Update(publisher_id, assistant_id, counsel_point_id, week_start_date, week_end_date, date_assigned, date_completed, assignment_type, hall, Original_publisher_assignment_id, Original_publisher_id, Original_assistant_id, Original_counsel_point_id, Original_week_start_date, Original_week_end_date, Original_date_assigned, Original_date_completed, Original_assignment_type, Original_hall, Original_publisher_assignment_id);
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
     public partial class publisher_field_service_reportTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
@@ -5805,27 +10187,30 @@ SELECT publisher_id, last_name, other_names, dob, baptisam_date, contact, emerge
             tableMapping.ColumnMappings.Add("publisher_field_service_report_id", "publisher_field_service_report_id");
             tableMapping.ColumnMappings.Add("publisher_id", "publisher_id");
             tableMapping.ColumnMappings.Add("date", "date");
+            tableMapping.ColumnMappings.Add("report_date", "report_date");
             tableMapping.ColumnMappings.Add("placements", "placements");
             tableMapping.ColumnMappings.Add("videos", "videos");
             tableMapping.ColumnMappings.Add("hours", "hours");
             tableMapping.ColumnMappings.Add("return_visits", "return_visits");
             tableMapping.ColumnMappings.Add("bible_studies", "bible_studies");
-            tableMapping.ColumnMappings.Add("report_date", "report_date");
+            tableMapping.ColumnMappings.Add("remarks", "remarks");
             tableMapping.ColumnMappings.Add("hour_type", "hour_type");
             tableMapping.ColumnMappings.Add("privilege", "privilege");
             tableMapping.ColumnMappings.Add("publisher_type", "publisher_type");
             tableMapping.ColumnMappings.Add("group", "group");
-            tableMapping.ColumnMappings.Add("remarks", "remarks");
+            tableMapping.ColumnMappings.Add("shared_in_ministry", "shared_in_ministry");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [publisher_field_service_report] WHERE (([publisher_field_service_report_id] = @Original_publisher_field_service_report_id) AND ((@IsNull_publisher_id = 1 AND [publisher_id] IS NULL) OR ([publisher_id] = @Original_publisher_id)) AND ((@IsNull_date = 1 AND [date] IS NULL) OR ([date] = @Original_date)) AND ((@IsNull_placements = 1 AND [placements] IS NULL) OR ([placements] = @Original_placements)) AND ((@IsNull_videos = 1 AND [videos] IS NULL) OR ([videos] = @Original_videos)) AND ((@IsNull_hours = 1 AND [hours] IS NULL) OR ([hours] = @Original_hours)) AND ((@IsNull_return_visits = 1 AND [return_visits] IS NULL) OR ([return_visits] = @Original_return_visits)) AND ((@IsNull_bible_studies = 1 AND [bible_studies] IS NULL) OR ([bible_studies] = @Original_bible_studies)) AND ((@IsNull_group = 1 AND [group] IS NULL) OR ([group] = @Original_group)) AND ((@IsNull_hour_type = 1 AND [hour_type] IS NULL) OR ([hour_type] = @Original_hour_type)) AND ((@IsNull_privilege = 1 AND [privilege] IS NULL) OR ([privilege] = @Original_privilege)) AND ((@IsNull_publisher_type = 1 AND [publisher_type] IS NULL) OR ([publisher_type] = @Original_publisher_type)) AND ((@IsNull_report_date = 1 AND [report_date] IS NULL) OR ([report_date] = @Original_report_date)) AND ((@IsNull_remarks = 1 AND [remarks] IS NULL) OR ([remarks] = @Original_remarks)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[publisher_field_service_report] WHERE (([publisher_field_service_report_id] = @Original_publisher_field_service_report_id) AND ((@IsNull_publisher_id = 1 AND [publisher_id] IS NULL) OR ([publisher_id] = @Original_publisher_id)) AND ((@IsNull_date = 1 AND [date] IS NULL) OR ([date] = @Original_date)) AND ((@IsNull_report_date = 1 AND [report_date] IS NULL) OR ([report_date] = @Original_report_date)) AND ((@IsNull_placements = 1 AND [placements] IS NULL) OR ([placements] = @Original_placements)) AND ((@IsNull_videos = 1 AND [videos] IS NULL) OR ([videos] = @Original_videos)) AND ((@IsNull_hours = 1 AND [hours] IS NULL) OR ([hours] = @Original_hours)) AND ((@IsNull_return_visits = 1 AND [return_visits] IS NULL) OR ([return_visits] = @Original_return_visits)) AND ((@IsNull_bible_studies = 1 AND [bible_studies] IS NULL) OR ([bible_studies] = @Original_bible_studies)) AND ((@IsNull_remarks = 1 AND [remarks] IS NULL) OR ([remarks] = @Original_remarks)) AND ((@IsNull_hour_type = 1 AND [hour_type] IS NULL) OR ([hour_type] = @Original_hour_type)) AND ((@IsNull_privilege = 1 AND [privilege] IS NULL) OR ([privilege] = @Original_privilege)) AND ((@IsNull_publisher_type = 1 AND [publisher_type] IS NULL) OR ([publisher_type] = @Original_publisher_type)) AND ((@IsNull_group = 1 AND [group] IS NULL) OR ([group] = @Original_group)) AND ((@IsNull_shared_in_ministry = 1 AND [shared_in_ministry] IS NULL) OR ([shared_in_ministry] = @Original_shared_in_ministry)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_publisher_field_service_report_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "publisher_field_service_report_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_publisher_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "publisher_id", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_publisher_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "publisher_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_date", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "date", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "date", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_report_date", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "report_date", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_report_date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "report_date", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_placements", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "placements", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_placements", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "placements", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_videos", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "videos", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -5836,82 +10221,89 @@ SELECT publisher_id, last_name, other_names, dob, baptisam_date, contact, emerge
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_return_visits", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "return_visits", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_bible_studies", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "bible_studies", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_bible_studies", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "bible_studies", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_group", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "group", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_group", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "group", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_remarks", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "remarks", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_remarks", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "remarks", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_hour_type", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "hour_type", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_hour_type", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "hour_type", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_privilege", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "privilege", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_privilege", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "privilege", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_publisher_type", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "publisher_type", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_publisher_type", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "publisher_type", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_report_date", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "report_date", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_report_date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "report_date", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_remarks", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "remarks", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_remarks", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "remarks", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_group", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "group", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_group", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "group", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_shared_in_ministry", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "shared_in_ministry", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_shared_in_ministry", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "shared_in_ministry", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [publisher_field_service_report] ([publisher_id], [date], [placements], [videos], [hours], [return_visits], [bible_studies], [group], [hour_type], [privilege], [publisher_type], [report_date], [remarks]) VALUES (@publisher_id, @date, @placements, @videos, @hours, @return_visits, @bible_studies, @group, @hour_type, @privilege, @publisher_type, @report_date, @remarks);
-SELECT publisher_field_service_report_id, publisher_id, date, placements, videos, hours, return_visits, bible_studies, [group], hour_type, privilege, publisher_type, report_date, remarks FROM publisher_field_service_report WHERE (publisher_field_service_report_id = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[publisher_field_service_report] ([publisher_id], [date], [report_date], [placements], [videos], [hours], [return_visits], [bible_studies], [remarks], [hour_type], [privilege], [publisher_type], [group], [shared_in_ministry]) VALUES (@publisher_id, @date, @report_date, @placements, @videos, @hours, @return_visits, @bible_studies, @remarks, @hour_type, @privilege, @publisher_type, @group, @shared_in_ministry);
+SELECT publisher_field_service_report_id, publisher_id, date, report_date, placements, videos, hours, return_visits, bible_studies, remarks, hour_type, privilege, publisher_type, [group], shared_in_ministry FROM publisher_field_service_report WHERE (publisher_field_service_report_id = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@publisher_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "publisher_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@report_date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "report_date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@placements", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "placements", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@videos", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "videos", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@hours", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "hours", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@return_visits", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "return_visits", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@bible_studies", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "bible_studies", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@group", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "group", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@remarks", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "remarks", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@hour_type", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "hour_type", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@privilege", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "privilege", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@publisher_type", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "publisher_type", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@report_date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "report_date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@remarks", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "remarks", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@group", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "group", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@shared_in_ministry", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "shared_in_ministry", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE [publisher_field_service_report] SET [publisher_id] = @publisher_id, [date" +
-                "] = @date, [placements] = @placements, [videos] = @videos, [hours] = @hours, [re" +
-                "turn_visits] = @return_visits, [bible_studies] = @bible_studies, [group] = @grou" +
-                "p, [hour_type] = @hour_type, [privilege] = @privilege, [publisher_type] = @publi" +
-                "sher_type, [report_date] = @report_date, [remarks] = @remarks WHERE (([publisher" +
-                "_field_service_report_id] = @Original_publisher_field_service_report_id) AND ((@" +
-                "IsNull_publisher_id = 1 AND [publisher_id] IS NULL) OR ([publisher_id] = @Origin" +
-                "al_publisher_id)) AND ((@IsNull_date = 1 AND [date] IS NULL) OR ([date] = @Origi" +
-                "nal_date)) AND ((@IsNull_placements = 1 AND [placements] IS NULL) OR ([placement" +
-                "s] = @Original_placements)) AND ((@IsNull_videos = 1 AND [videos] IS NULL) OR ([" +
-                "videos] = @Original_videos)) AND ((@IsNull_hours = 1 AND [hours] IS NULL) OR ([h" +
-                "ours] = @Original_hours)) AND ((@IsNull_return_visits = 1 AND [return_visits] IS" +
-                " NULL) OR ([return_visits] = @Original_return_visits)) AND ((@IsNull_bible_studi" +
-                "es = 1 AND [bible_studies] IS NULL) OR ([bible_studies] = @Original_bible_studie" +
-                "s)) AND ((@IsNull_group = 1 AND [group] IS NULL) OR ([group] = @Original_group))" +
-                " AND ((@IsNull_hour_type = 1 AND [hour_type] IS NULL) OR ([hour_type] = @Origina" +
-                "l_hour_type)) AND ((@IsNull_privilege = 1 AND [privilege] IS NULL) OR ([privileg" +
-                "e] = @Original_privilege)) AND ((@IsNull_publisher_type = 1 AND [publisher_type]" +
-                " IS NULL) OR ([publisher_type] = @Original_publisher_type)) AND ((@IsNull_report" +
-                "_date = 1 AND [report_date] IS NULL) OR ([report_date] = @Original_report_date))" +
-                " AND ((@IsNull_remarks = 1 AND [remarks] IS NULL) OR ([remarks] = @Original_rema" +
-                "rks)));\r\nSELECT publisher_field_service_report_id, publisher_id, date, placement" +
-                "s, videos, hours, return_visits, bible_studies, [group], hour_type, privilege, p" +
-                "ublisher_type, report_date, remarks FROM publisher_field_service_report WHERE (p" +
-                "ublisher_field_service_report_id = @publisher_field_service_report_id)";
+            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[publisher_field_service_report] SET [publisher_id] = @publisher_id," +
+                " [date] = @date, [report_date] = @report_date, [placements] = @placements, [vide" +
+                "os] = @videos, [hours] = @hours, [return_visits] = @return_visits, [bible_studie" +
+                "s] = @bible_studies, [remarks] = @remarks, [hour_type] = @hour_type, [privilege]" +
+                " = @privilege, [publisher_type] = @publisher_type, [group] = @group, [shared_in_" +
+                "ministry] = @shared_in_ministry WHERE (([publisher_field_service_report_id] = @O" +
+                "riginal_publisher_field_service_report_id) AND ((@IsNull_publisher_id = 1 AND [p" +
+                "ublisher_id] IS NULL) OR ([publisher_id] = @Original_publisher_id)) AND ((@IsNul" +
+                "l_date = 1 AND [date] IS NULL) OR ([date] = @Original_date)) AND ((@IsNull_repor" +
+                "t_date = 1 AND [report_date] IS NULL) OR ([report_date] = @Original_report_date)" +
+                ") AND ((@IsNull_placements = 1 AND [placements] IS NULL) OR ([placements] = @Ori" +
+                "ginal_placements)) AND ((@IsNull_videos = 1 AND [videos] IS NULL) OR ([videos] =" +
+                " @Original_videos)) AND ((@IsNull_hours = 1 AND [hours] IS NULL) OR ([hours] = @" +
+                "Original_hours)) AND ((@IsNull_return_visits = 1 AND [return_visits] IS NULL) OR" +
+                " ([return_visits] = @Original_return_visits)) AND ((@IsNull_bible_studies = 1 AN" +
+                "D [bible_studies] IS NULL) OR ([bible_studies] = @Original_bible_studies)) AND (" +
+                "(@IsNull_remarks = 1 AND [remarks] IS NULL) OR ([remarks] = @Original_remarks)) " +
+                "AND ((@IsNull_hour_type = 1 AND [hour_type] IS NULL) OR ([hour_type] = @Original" +
+                "_hour_type)) AND ((@IsNull_privilege = 1 AND [privilege] IS NULL) OR ([privilege" +
+                "] = @Original_privilege)) AND ((@IsNull_publisher_type = 1 AND [publisher_type] " +
+                "IS NULL) OR ([publisher_type] = @Original_publisher_type)) AND ((@IsNull_group =" +
+                " 1 AND [group] IS NULL) OR ([group] = @Original_group)) AND ((@IsNull_shared_in_" +
+                "ministry = 1 AND [shared_in_ministry] IS NULL) OR ([shared_in_ministry] = @Origi" +
+                "nal_shared_in_ministry)));\r\nSELECT publisher_field_service_report_id, publisher_" +
+                "id, date, report_date, placements, videos, hours, return_visits, bible_studies, " +
+                "remarks, hour_type, privilege, publisher_type, [group], shared_in_ministry FROM " +
+                "publisher_field_service_report WHERE (publisher_field_service_report_id = @publi" +
+                "sher_field_service_report_id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@publisher_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "publisher_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@report_date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "report_date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@placements", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "placements", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@videos", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "videos", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@hours", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "hours", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@return_visits", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "return_visits", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@bible_studies", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "bible_studies", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@group", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "group", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@remarks", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "remarks", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@hour_type", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "hour_type", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@privilege", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "privilege", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@publisher_type", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "publisher_type", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@report_date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "report_date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@remarks", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "remarks", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@group", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "group", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@shared_in_ministry", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "shared_in_ministry", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_publisher_field_service_report_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "publisher_field_service_report_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_publisher_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "publisher_id", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_publisher_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "publisher_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_date", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "date", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "date", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_report_date", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "report_date", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_report_date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "report_date", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_placements", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "placements", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_placements", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "placements", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_videos", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "videos", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -5922,18 +10314,18 @@ SELECT publisher_field_service_report_id, publisher_id, date, placements, videos
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_return_visits", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "return_visits", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_bible_studies", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "bible_studies", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_bible_studies", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "bible_studies", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_group", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "group", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_group", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "group", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_remarks", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "remarks", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_remarks", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "remarks", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_hour_type", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "hour_type", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_hour_type", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "hour_type", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_privilege", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "privilege", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_privilege", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "privilege", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_publisher_type", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "publisher_type", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_publisher_type", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "publisher_type", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_report_date", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "report_date", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_report_date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "report_date", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_remarks", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "remarks", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_remarks", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "remarks", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_group", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "group", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_group", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "group", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_shared_in_ministry", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "shared_in_ministry", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_shared_in_ministry", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "shared_in_ministry", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@publisher_field_service_report_id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "publisher_field_service_report_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -5950,9 +10342,10 @@ SELECT publisher_field_service_report_id, publisher_id, date, placements, videos
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT publisher_field_service_report_id, publisher_id, date, placements, videos," +
-                " hours, return_visits, bible_studies, [group], hour_type, privilege, publisher_t" +
-                "ype, report_date, remarks FROM publisher_field_service_report";
+            this._commandCollection[0].CommandText = "SELECT publisher_field_service_report_id, publisher_id, date, report_date, placem" +
+                "ents, videos, hours, return_visits, bible_studies, remarks, hour_type, privilege" +
+                ", publisher_type, [group], shared_in_ministry FROM dbo.publisher_field_service_r" +
+                "eport";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -6013,7 +10406,7 @@ SELECT publisher_field_service_report_id, publisher_id, date, placements, videos
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_publisher_field_service_report_id, global::System.Nullable<int> Original_publisher_id, global::System.Nullable<global::System.DateTime> Original_date, global::System.Nullable<int> Original_placements, global::System.Nullable<int> Original_videos, global::System.Nullable<decimal> Original_hours, global::System.Nullable<int> Original_return_visits, global::System.Nullable<int> Original_bible_studies, string Original_group, string Original_hour_type, string Original_privilege, string Original_publisher_type, global::System.Nullable<global::System.DateTime> Original_report_date, string Original_remarks) {
+        public virtual int Delete(int Original_publisher_field_service_report_id, global::System.Nullable<int> Original_publisher_id, global::System.Nullable<global::System.DateTime> Original_date, global::System.Nullable<global::System.DateTime> Original_report_date, global::System.Nullable<int> Original_placements, global::System.Nullable<int> Original_videos, global::System.Nullable<decimal> Original_hours, global::System.Nullable<int> Original_return_visits, global::System.Nullable<int> Original_bible_studies, string Original_remarks, string Original_hour_type, string Original_privilege, string Original_publisher_type, string Original_group, global::System.Nullable<bool> Original_shared_in_ministry) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_publisher_field_service_report_id));
             if ((Original_publisher_id.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
@@ -6031,93 +10424,101 @@ SELECT publisher_field_service_report_id, publisher_id, date, placements, videos
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            if ((Original_placements.HasValue == true)) {
+            if ((Original_report_date.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((int)(Original_placements.Value));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((System.DateTime)(Original_report_date.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
-            if ((Original_videos.HasValue == true)) {
+            if ((Original_placements.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((int)(Original_videos.Value));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((int)(Original_placements.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
-            if ((Original_hours.HasValue == true)) {
+            if ((Original_videos.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[10].Value = ((decimal)(Original_hours.Value));
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((int)(Original_videos.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
-            if ((Original_return_visits.HasValue == true)) {
+            if ((Original_hours.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[12].Value = ((int)(Original_return_visits.Value));
+                this.Adapter.DeleteCommand.Parameters[12].Value = ((decimal)(Original_hours.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
-            if ((Original_bible_studies.HasValue == true)) {
+            if ((Original_return_visits.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[14].Value = ((int)(Original_bible_studies.Value));
+                this.Adapter.DeleteCommand.Parameters[14].Value = ((int)(Original_return_visits.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
-            if ((Original_group == null)) {
+            if ((Original_bible_studies.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[16].Value = ((int)(Original_bible_studies.Value));
+            }
+            else {
                 this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[16].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[16].Value = ((string)(Original_group));
-            }
-            if ((Original_hour_type == null)) {
+            if ((Original_remarks == null)) {
                 this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[18].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[18].Value = ((string)(Original_hour_type));
+                this.Adapter.DeleteCommand.Parameters[18].Value = ((string)(Original_remarks));
             }
-            if ((Original_privilege == null)) {
+            if ((Original_hour_type == null)) {
                 this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[20].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[20].Value = ((string)(Original_privilege));
+                this.Adapter.DeleteCommand.Parameters[20].Value = ((string)(Original_hour_type));
             }
-            if ((Original_publisher_type == null)) {
+            if ((Original_privilege == null)) {
                 this.Adapter.DeleteCommand.Parameters[21].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[22].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[21].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[22].Value = ((string)(Original_publisher_type));
+                this.Adapter.DeleteCommand.Parameters[22].Value = ((string)(Original_privilege));
             }
-            if ((Original_report_date.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[23].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[24].Value = ((System.DateTime)(Original_report_date.Value));
-            }
-            else {
+            if ((Original_publisher_type == null)) {
                 this.Adapter.DeleteCommand.Parameters[23].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[24].Value = global::System.DBNull.Value;
             }
-            if ((Original_remarks == null)) {
+            else {
+                this.Adapter.DeleteCommand.Parameters[23].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[24].Value = ((string)(Original_publisher_type));
+            }
+            if ((Original_group == null)) {
                 this.Adapter.DeleteCommand.Parameters[25].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[26].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[25].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[26].Value = ((string)(Original_remarks));
+                this.Adapter.DeleteCommand.Parameters[26].Value = ((string)(Original_group));
+            }
+            if ((Original_shared_in_ministry.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[27].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[28].Value = ((bool)(Original_shared_in_ministry.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[27].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[28].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -6139,7 +10540,7 @@ SELECT publisher_field_service_report_id, publisher_id, date, placements, videos
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(global::System.Nullable<int> publisher_id, global::System.Nullable<global::System.DateTime> date, global::System.Nullable<int> placements, global::System.Nullable<int> videos, global::System.Nullable<decimal> hours, global::System.Nullable<int> return_visits, global::System.Nullable<int> bible_studies, string group, string hour_type, string privilege, string publisher_type, global::System.Nullable<global::System.DateTime> report_date, string remarks) {
+        public virtual int Insert(global::System.Nullable<int> publisher_id, global::System.Nullable<global::System.DateTime> date, global::System.Nullable<global::System.DateTime> report_date, global::System.Nullable<int> placements, global::System.Nullable<int> videos, global::System.Nullable<decimal> hours, global::System.Nullable<int> return_visits, global::System.Nullable<int> bible_studies, string remarks, string hour_type, string privilege, string publisher_type, string group, global::System.Nullable<bool> shared_in_ministry) {
             if ((publisher_id.HasValue == true)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = ((int)(publisher_id.Value));
             }
@@ -6152,71 +10553,77 @@ SELECT publisher_field_service_report_id, publisher_id, date, placements, videos
             else {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            if ((placements.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((int)(placements.Value));
+            if ((report_date.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((System.DateTime)(report_date.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            if ((videos.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((int)(videos.Value));
+            if ((placements.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((int)(placements.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            if ((hours.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((decimal)(hours.Value));
+            if ((videos.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((int)(videos.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            if ((return_visits.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((int)(return_visits.Value));
+            if ((hours.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((decimal)(hours.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
-            if ((bible_studies.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[6].Value = ((int)(bible_studies.Value));
+            if ((return_visits.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[6].Value = ((int)(return_visits.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
-            if ((group == null)) {
-                this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
+            if ((bible_studies.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[7].Value = ((int)(bible_studies.Value));
             }
             else {
-                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(group));
+                this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
-            if ((hour_type == null)) {
+            if ((remarks == null)) {
                 this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[8].Value = ((string)(hour_type));
+                this.Adapter.InsertCommand.Parameters[8].Value = ((string)(remarks));
             }
-            if ((privilege == null)) {
+            if ((hour_type == null)) {
                 this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[9].Value = ((string)(privilege));
+                this.Adapter.InsertCommand.Parameters[9].Value = ((string)(hour_type));
             }
-            if ((publisher_type == null)) {
+            if ((privilege == null)) {
                 this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[10].Value = ((string)(publisher_type));
+                this.Adapter.InsertCommand.Parameters[10].Value = ((string)(privilege));
             }
-            if ((report_date.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[11].Value = ((System.DateTime)(report_date.Value));
-            }
-            else {
+            if ((publisher_type == null)) {
                 this.Adapter.InsertCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
-            if ((remarks == null)) {
+            else {
+                this.Adapter.InsertCommand.Parameters[11].Value = ((string)(publisher_type));
+            }
+            if ((group == null)) {
                 this.Adapter.InsertCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[12].Value = ((string)(remarks));
+                this.Adapter.InsertCommand.Parameters[12].Value = ((string)(group));
+            }
+            if ((shared_in_ministry.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[13].Value = ((bool)(shared_in_ministry.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[13].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -6241,31 +10648,33 @@ SELECT publisher_field_service_report_id, publisher_id, date, placements, videos
         public virtual int Update(
                     global::System.Nullable<int> publisher_id, 
                     global::System.Nullable<global::System.DateTime> date, 
+                    global::System.Nullable<global::System.DateTime> report_date, 
                     global::System.Nullable<int> placements, 
                     global::System.Nullable<int> videos, 
                     global::System.Nullable<decimal> hours, 
                     global::System.Nullable<int> return_visits, 
                     global::System.Nullable<int> bible_studies, 
-                    string group, 
+                    string remarks, 
                     string hour_type, 
                     string privilege, 
                     string publisher_type, 
-                    global::System.Nullable<global::System.DateTime> report_date, 
-                    string remarks, 
+                    string group, 
+                    global::System.Nullable<bool> shared_in_ministry, 
                     int Original_publisher_field_service_report_id, 
                     global::System.Nullable<int> Original_publisher_id, 
                     global::System.Nullable<global::System.DateTime> Original_date, 
+                    global::System.Nullable<global::System.DateTime> Original_report_date, 
                     global::System.Nullable<int> Original_placements, 
                     global::System.Nullable<int> Original_videos, 
                     global::System.Nullable<decimal> Original_hours, 
                     global::System.Nullable<int> Original_return_visits, 
                     global::System.Nullable<int> Original_bible_studies, 
-                    string Original_group, 
+                    string Original_remarks, 
                     string Original_hour_type, 
                     string Original_privilege, 
                     string Original_publisher_type, 
-                    global::System.Nullable<global::System.DateTime> Original_report_date, 
-                    string Original_remarks, 
+                    string Original_group, 
+                    global::System.Nullable<bool> Original_shared_in_ministry, 
                     int publisher_field_service_report_id) {
             if ((publisher_id.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(publisher_id.Value));
@@ -6279,178 +10688,192 @@ SELECT publisher_field_service_report_id, publisher_id, date, placements, videos
             else {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            if ((placements.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(placements.Value));
+            if ((report_date.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((System.DateTime)(report_date.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            if ((videos.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(videos.Value));
+            if ((placements.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(placements.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            if ((hours.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((decimal)(hours.Value));
+            if ((videos.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(videos.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            if ((return_visits.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(return_visits.Value));
+            if ((hours.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((decimal)(hours.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
-            if ((bible_studies.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(bible_studies.Value));
+            if ((return_visits.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(return_visits.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
-            if ((group == null)) {
-                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+            if ((bible_studies.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(bible_studies.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(group));
+                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
-            if ((hour_type == null)) {
+            if ((remarks == null)) {
                 this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(hour_type));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(remarks));
             }
-            if ((privilege == null)) {
+            if ((hour_type == null)) {
                 this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(privilege));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(hour_type));
             }
-            if ((publisher_type == null)) {
+            if ((privilege == null)) {
                 this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(publisher_type));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(privilege));
             }
-            if ((report_date.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((System.DateTime)(report_date.Value));
-            }
-            else {
+            if ((publisher_type == null)) {
                 this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
-            if ((remarks == null)) {
+            else {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(publisher_type));
+            }
+            if ((group == null)) {
                 this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(remarks));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(group));
             }
-            this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(Original_publisher_field_service_report_id));
-            if ((Original_publisher_id.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((int)(Original_publisher_id.Value));
+            if ((shared_in_ministry.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((bool)(shared_in_ministry.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[14].Value = ((int)(Original_publisher_field_service_report_id));
+            if ((Original_publisher_id.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((int)(Original_publisher_id.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
             }
             if ((Original_date.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((System.DateTime)(Original_date.Value));
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((System.DateTime)(Original_date.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
-            }
-            if ((Original_placements.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((int)(Original_placements.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
-            }
-            if ((Original_videos.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((int)(Original_videos.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
-            }
-            if ((Original_hours.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((decimal)(Original_hours.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[23].Value = global::System.DBNull.Value;
-            }
-            if ((Original_return_visits.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[25].Value = ((int)(Original_return_visits.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[25].Value = global::System.DBNull.Value;
-            }
-            if ((Original_bible_studies.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[27].Value = ((int)(Original_bible_studies.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[27].Value = global::System.DBNull.Value;
-            }
-            if ((Original_group == null)) {
-                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[29].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[29].Value = ((string)(Original_group));
-            }
-            if ((Original_hour_type == null)) {
-                this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[31].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[31].Value = ((string)(Original_hour_type));
-            }
-            if ((Original_privilege == null)) {
-                this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[33].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[33].Value = ((string)(Original_privilege));
-            }
-            if ((Original_publisher_type == null)) {
-                this.Adapter.UpdateCommand.Parameters[34].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[35].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[34].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[35].Value = ((string)(Original_publisher_type));
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
             }
             if ((Original_report_date.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[36].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[37].Value = ((System.DateTime)(Original_report_date.Value));
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((System.DateTime)(Original_report_date.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[36].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[37].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[20].Value = global::System.DBNull.Value;
+            }
+            if ((Original_placements.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((int)(Original_placements.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
+            }
+            if ((Original_videos.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((int)(Original_videos.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[24].Value = global::System.DBNull.Value;
+            }
+            if ((Original_hours.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((decimal)(Original_hours.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[26].Value = global::System.DBNull.Value;
+            }
+            if ((Original_return_visits.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((int)(Original_return_visits.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[28].Value = global::System.DBNull.Value;
+            }
+            if ((Original_bible_studies.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[30].Value = ((int)(Original_bible_studies.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[30].Value = global::System.DBNull.Value;
             }
             if ((Original_remarks == null)) {
-                this.Adapter.UpdateCommand.Parameters[38].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[39].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[32].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[38].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[39].Value = ((string)(Original_remarks));
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[32].Value = ((string)(Original_remarks));
             }
-            this.Adapter.UpdateCommand.Parameters[40].Value = ((int)(publisher_field_service_report_id));
+            if ((Original_hour_type == null)) {
+                this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[34].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[34].Value = ((string)(Original_hour_type));
+            }
+            if ((Original_privilege == null)) {
+                this.Adapter.UpdateCommand.Parameters[35].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[36].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[35].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[36].Value = ((string)(Original_privilege));
+            }
+            if ((Original_publisher_type == null)) {
+                this.Adapter.UpdateCommand.Parameters[37].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[38].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[37].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[38].Value = ((string)(Original_publisher_type));
+            }
+            if ((Original_group == null)) {
+                this.Adapter.UpdateCommand.Parameters[39].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[40].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[39].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[40].Value = ((string)(Original_group));
+            }
+            if ((Original_shared_in_ministry.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[41].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[42].Value = ((bool)(Original_shared_in_ministry.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[41].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[42].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[43].Value = ((int)(publisher_field_service_report_id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -6474,32 +10897,34 @@ SELECT publisher_field_service_report_id, publisher_id, date, placements, videos
         public virtual int Update(
                     global::System.Nullable<int> publisher_id, 
                     global::System.Nullable<global::System.DateTime> date, 
+                    global::System.Nullable<global::System.DateTime> report_date, 
                     global::System.Nullable<int> placements, 
                     global::System.Nullable<int> videos, 
                     global::System.Nullable<decimal> hours, 
                     global::System.Nullable<int> return_visits, 
                     global::System.Nullable<int> bible_studies, 
-                    string group, 
+                    string remarks, 
                     string hour_type, 
                     string privilege, 
                     string publisher_type, 
-                    global::System.Nullable<global::System.DateTime> report_date, 
-                    string remarks, 
+                    string group, 
+                    global::System.Nullable<bool> shared_in_ministry, 
                     int Original_publisher_field_service_report_id, 
                     global::System.Nullable<int> Original_publisher_id, 
                     global::System.Nullable<global::System.DateTime> Original_date, 
+                    global::System.Nullable<global::System.DateTime> Original_report_date, 
                     global::System.Nullable<int> Original_placements, 
                     global::System.Nullable<int> Original_videos, 
                     global::System.Nullable<decimal> Original_hours, 
                     global::System.Nullable<int> Original_return_visits, 
                     global::System.Nullable<int> Original_bible_studies, 
-                    string Original_group, 
+                    string Original_remarks, 
                     string Original_hour_type, 
                     string Original_privilege, 
                     string Original_publisher_type, 
-                    global::System.Nullable<global::System.DateTime> Original_report_date, 
-                    string Original_remarks) {
-            return this.Update(publisher_id, date, placements, videos, hours, return_visits, bible_studies, group, hour_type, privilege, publisher_type, report_date, remarks, Original_publisher_field_service_report_id, Original_publisher_id, Original_date, Original_placements, Original_videos, Original_hours, Original_return_visits, Original_bible_studies, Original_group, Original_hour_type, Original_privilege, Original_publisher_type, Original_report_date, Original_remarks, Original_publisher_field_service_report_id);
+                    string Original_group, 
+                    global::System.Nullable<bool> Original_shared_in_ministry) {
+            return this.Update(publisher_id, date, report_date, placements, videos, hours, return_visits, bible_studies, remarks, hour_type, privilege, publisher_type, group, shared_in_ministry, Original_publisher_field_service_report_id, Original_publisher_id, Original_date, Original_report_date, Original_placements, Original_videos, Original_hours, Original_return_visits, Original_bible_studies, Original_remarks, Original_hour_type, Original_privilege, Original_publisher_type, Original_group, Original_shared_in_ministry, Original_publisher_field_service_report_id);
         }
     }
     
@@ -6512,7 +10937,7 @@ SELECT publisher_field_service_report_id, publisher_id, date, placements, videos
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class publisher_field_service_report_viewTableAdapter : global::System.ComponentModel.Component {
+    public partial class publisher_last_assignment_viewTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -6526,7 +10951,7 @@ SELECT publisher_field_service_report_id, publisher_id, date, placements, videos
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public publisher_field_service_report_viewTableAdapter() {
+        public publisher_last_assignment_viewTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -6623,30 +11048,40 @@ SELECT publisher_field_service_report_id, publisher_id, date, placements, videos
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "publisher_field_service_report_view";
+            tableMapping.DataSetTable = "publisher_last_assignment_view";
+            tableMapping.ColumnMappings.Add("week_start_date", "week_start_date");
+            tableMapping.ColumnMappings.Add("last_assignment_date", "last_assignment_date");
+            tableMapping.ColumnMappings.Add("date_assigned", "date_assigned");
+            tableMapping.ColumnMappings.Add("last_completed_assignment_date", "last_completed_assignment_date");
+            tableMapping.ColumnMappings.Add("assignment_type", "assignment_type");
+            tableMapping.ColumnMappings.Add("hall", "hall");
             tableMapping.ColumnMappings.Add("publisher_id", "publisher_id");
             tableMapping.ColumnMappings.Add("publisher_name", "publisher_name");
-            tableMapping.ColumnMappings.Add("dob", "dob");
-            tableMapping.ColumnMappings.Add("baptisam_date", "baptisam_date");
-            tableMapping.ColumnMappings.Add("contact", "contact");
-            tableMapping.ColumnMappings.Add("address", "address");
-            tableMapping.ColumnMappings.Add("active", "active");
-            tableMapping.ColumnMappings.Add("picture", "picture");
-            tableMapping.ColumnMappings.Add("gender", "gender");
-            tableMapping.ColumnMappings.Add("hour_type", "hour_type");
-            tableMapping.ColumnMappings.Add("privilege", "privilege");
+            tableMapping.ColumnMappings.Add("publisher_dob", "publisher_dob");
+            tableMapping.ColumnMappings.Add("publisher_contact", "publisher_contact");
+            tableMapping.ColumnMappings.Add("publisher_address", "publisher_address");
+            tableMapping.ColumnMappings.Add("publisher_active", "publisher_active");
+            tableMapping.ColumnMappings.Add("publisher_picture", "publisher_picture");
+            tableMapping.ColumnMappings.Add("publisher_gender", "publisher_gender");
+            tableMapping.ColumnMappings.Add("publisher_privilege", "publisher_privilege");
             tableMapping.ColumnMappings.Add("publisher_type", "publisher_type");
-            tableMapping.ColumnMappings.Add("group", "group");
-            tableMapping.ColumnMappings.Add("publisher_field_service_report_id", "publisher_field_service_report_id");
-            tableMapping.ColumnMappings.Add("date", "date");
-            tableMapping.ColumnMappings.Add("placements", "placements");
-            tableMapping.ColumnMappings.Add("videos", "videos");
-            tableMapping.ColumnMappings.Add("hours", "hours");
-            tableMapping.ColumnMappings.Add("return_visits", "return_visits");
-            tableMapping.ColumnMappings.Add("bible_studies", "bible_studies");
-            tableMapping.ColumnMappings.Add("report_date", "report_date");
-            tableMapping.ColumnMappings.Add("remarks", "remarks");
-            tableMapping.ColumnMappings.Add("hope", "hope");
+            tableMapping.ColumnMappings.Add("publisher_group", "publisher_group");
+            tableMapping.ColumnMappings.Add("assistant_id", "assistant_id");
+            tableMapping.ColumnMappings.Add("assistant_name", "assistant_name");
+            tableMapping.ColumnMappings.Add("assistant_dob", "assistant_dob");
+            tableMapping.ColumnMappings.Add("assistant_contact", "assistant_contact");
+            tableMapping.ColumnMappings.Add("assistant_address", "assistant_address");
+            tableMapping.ColumnMappings.Add("assistant_active", "assistant_active");
+            tableMapping.ColumnMappings.Add("assistant_picture", "assistant_picture");
+            tableMapping.ColumnMappings.Add("assistant_gender", "assistant_gender");
+            tableMapping.ColumnMappings.Add("assistant_privilege", "assistant_privilege");
+            tableMapping.ColumnMappings.Add("assistant_type", "assistant_type");
+            tableMapping.ColumnMappings.Add("assistant_group", "assistant_group");
+            tableMapping.ColumnMappings.Add("study_number", "study_number");
+            tableMapping.ColumnMappings.Add("description", "description");
+            tableMapping.ColumnMappings.Add("is_reading", "is_reading");
+            tableMapping.ColumnMappings.Add("is_demonstration", "is_demonstration");
+            tableMapping.ColumnMappings.Add("is_discourse", "is_discourse");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -6660,23 +11095,18 @@ SELECT publisher_field_service_report_id, publisher_id, date, placements, videos
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT publisher_id, publisher_name, dob, baptisam_date, contact, address, active, picture, gender, hour_type, privilege, publisher_type, [group], publisher_field_service_report_id, date, placements, videos, hours, return_visits, bible_studies, report_date, hope, remarks FROM publisher_field_service_report_view";
+            this._commandCollection[0].CommandText = @"SELECT week_start_date, last_assignment_date, date_assigned, last_completed_assignment_date, assignment_type, hall, publisher_id, publisher_name, publisher_dob, publisher_contact, publisher_address, publisher_active, publisher_picture, publisher_gender, publisher_privilege, publisher_type, publisher_group, assistant_id, assistant_name, assistant_dob, assistant_contact, assistant_address, assistant_active, assistant_picture, assistant_gender, assistant_privilege, assistant_type, assistant_group, study_number, description, is_reading, is_demonstration, is_discourse FROM dbo.publisher_last_assignment_view";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = @"SELECT publisher_id, publisher_name, dob, baptisam_date, contact, address, active, picture, gender, hour_type, privilege, publisher_type, [group], publisher_field_service_report_id, date, placements, videos, hours, return_visits, bible_studies, report_date, hope, remarks FROM publisher_field_service_report_view WHERE (date = @reportDate)";
-            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@reportDate", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(TMSADataSet.publisher_field_service_report_viewDataTable dataTable) {
+        public virtual int Fill(TMSADataSet.publisher_last_assignment_viewDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -6689,45 +11119,9 @@ SELECT publisher_field_service_report_id, publisher_id, date, placements, videos
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual TMSADataSet.publisher_field_service_report_viewDataTable GetData() {
+        public virtual TMSADataSet.publisher_last_assignment_viewDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            TMSADataSet.publisher_field_service_report_viewDataTable dataTable = new TMSADataSet.publisher_field_service_report_viewDataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillByDate(TMSADataSet.publisher_field_service_report_viewDataTable dataTable, string reportDate) {
-            this.Adapter.SelectCommand = this.CommandCollection[1];
-            if ((reportDate == null)) {
-                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(reportDate));
-            }
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual TMSADataSet.publisher_field_service_report_viewDataTable GetDataByReportDate(string reportDate) {
-            this.Adapter.SelectCommand = this.CommandCollection[1];
-            if ((reportDate == null)) {
-                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(reportDate));
-            }
-            TMSADataSet.publisher_field_service_report_viewDataTable dataTable = new TMSADataSet.publisher_field_service_report_viewDataTable();
+            TMSADataSet.publisher_last_assignment_viewDataTable dataTable = new TMSADataSet.publisher_last_assignment_viewDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -6884,7 +11278,7 @@ SELECT publisher_field_service_report_id, publisher_id, date, placements, videos
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT last_field_service_report_date, publisher_id, publisher_name, dob, baptisam_date, contact, address, active, picture, gender, hour_type, privilege, publisher_type, [group] FROM publisher_last_field_service_report_view WHERE (publisher_type <> 'Non - Publisher')";
+            this._commandCollection[0].CommandText = @"SELECT last_field_service_report_date, publisher_id, publisher_name, dob, baptisam_date, contact, address, active, picture, gender, hour_type, privilege, publisher_type, [group] FROM dbo.publisher_last_field_service_report_view WHERE (publisher_type <> 'Non - Publisher')";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -7082,6 +11476,196 @@ SELECT publisher_field_service_report_id, publisher_id, date, placements, videos
     }
     
     /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class publisher_field_service_report_viewTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public publisher_field_service_report_viewTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "publisher_field_service_report_view";
+            tableMapping.ColumnMappings.Add("publisher_id", "publisher_id");
+            tableMapping.ColumnMappings.Add("publisher_name", "publisher_name");
+            tableMapping.ColumnMappings.Add("dob", "dob");
+            tableMapping.ColumnMappings.Add("baptisam_date", "baptisam_date");
+            tableMapping.ColumnMappings.Add("contact", "contact");
+            tableMapping.ColumnMappings.Add("address", "address");
+            tableMapping.ColumnMappings.Add("active", "active");
+            tableMapping.ColumnMappings.Add("picture", "picture");
+            tableMapping.ColumnMappings.Add("gender", "gender");
+            tableMapping.ColumnMappings.Add("publisher_field_service_report_id", "publisher_field_service_report_id");
+            tableMapping.ColumnMappings.Add("date", "date");
+            tableMapping.ColumnMappings.Add("report_date", "report_date");
+            tableMapping.ColumnMappings.Add("placements", "placements");
+            tableMapping.ColumnMappings.Add("videos", "videos");
+            tableMapping.ColumnMappings.Add("hours", "hours");
+            tableMapping.ColumnMappings.Add("return_visits", "return_visits");
+            tableMapping.ColumnMappings.Add("bible_studies", "bible_studies");
+            tableMapping.ColumnMappings.Add("hour_type", "hour_type");
+            tableMapping.ColumnMappings.Add("privilege", "privilege");
+            tableMapping.ColumnMappings.Add("publisher_type", "publisher_type");
+            tableMapping.ColumnMappings.Add("group", "group");
+            tableMapping.ColumnMappings.Add("remarks", "remarks");
+            tableMapping.ColumnMappings.Add("hope", "hope");
+            tableMapping.ColumnMappings.Add("shared_in_ministry", "shared_in_ministry");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::TMSA.Properties.Settings.Default.TMSAConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = @"SELECT publisher_id, publisher_name, dob, baptisam_date, contact, address, active, picture, gender, publisher_field_service_report_id, date, report_date, placements, videos, hours, return_visits, bible_studies, hour_type, privilege, publisher_type, [group], remarks, hope, shared_in_ministry FROM publisher_field_service_report_view";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(TMSADataSet.publisher_field_service_report_viewDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual TMSADataSet.publisher_field_service_report_viewDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            TMSADataSet.publisher_field_service_report_viewDataTable dataTable = new TMSADataSet.publisher_field_service_report_viewDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
     ///TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
     ///</summary>
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -7094,6 +11678,10 @@ SELECT publisher_field_service_report_id, publisher_id, date, placements, videos
         private UpdateOrderOption _updateOrder;
         
         private publisherTableAdapter _publisherTableAdapter;
+        
+        private counsel_pointTableAdapter _counsel_pointTableAdapter;
+        
+        private publisher_assignmentTableAdapter _publisher_assignmentTableAdapter;
         
         private publisher_field_service_reportTableAdapter _publisher_field_service_reportTableAdapter;
         
@@ -7123,6 +11711,34 @@ SELECT publisher_field_service_report_id, publisher_id, date, placements, videos
             }
             set {
                 this._publisherTableAdapter = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
+            "a", "System.Drawing.Design.UITypeEditor")]
+        public counsel_pointTableAdapter counsel_pointTableAdapter {
+            get {
+                return this._counsel_pointTableAdapter;
+            }
+            set {
+                this._counsel_pointTableAdapter = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
+            "a", "System.Drawing.Design.UITypeEditor")]
+        public publisher_assignmentTableAdapter publisher_assignmentTableAdapter {
+            get {
+                return this._publisher_assignmentTableAdapter;
+            }
+            set {
+                this._publisher_assignmentTableAdapter = value;
             }
         }
         
@@ -7163,6 +11779,14 @@ SELECT publisher_field_service_report_id, publisher_id, date, placements, videos
                             && (this._publisherTableAdapter.Connection != null))) {
                     return this._publisherTableAdapter.Connection;
                 }
+                if (((this._counsel_pointTableAdapter != null) 
+                            && (this._counsel_pointTableAdapter.Connection != null))) {
+                    return this._counsel_pointTableAdapter.Connection;
+                }
+                if (((this._publisher_assignmentTableAdapter != null) 
+                            && (this._publisher_assignmentTableAdapter.Connection != null))) {
+                    return this._publisher_assignmentTableAdapter.Connection;
+                }
                 if (((this._publisher_field_service_reportTableAdapter != null) 
                             && (this._publisher_field_service_reportTableAdapter.Connection != null))) {
                     return this._publisher_field_service_reportTableAdapter.Connection;
@@ -7181,6 +11805,12 @@ SELECT publisher_field_service_report_id, publisher_id, date, placements, videos
             get {
                 int count = 0;
                 if ((this._publisherTableAdapter != null)) {
+                    count = (count + 1);
+                }
+                if ((this._counsel_pointTableAdapter != null)) {
+                    count = (count + 1);
+                }
+                if ((this._publisher_assignmentTableAdapter != null)) {
                     count = (count + 1);
                 }
                 if ((this._publisher_field_service_reportTableAdapter != null)) {
@@ -7203,6 +11833,24 @@ SELECT publisher_field_service_report_id, publisher_id, date, placements, videos
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._publisherTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._counsel_pointTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.counsel_point.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._counsel_pointTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._publisher_assignmentTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.publisher_assignment.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._publisher_assignmentTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -7233,6 +11881,22 @@ SELECT publisher_field_service_report_id, publisher_id, date, placements, videos
                     allAddedRows.AddRange(addedRows);
                 }
             }
+            if ((this._counsel_pointTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.counsel_point.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._counsel_pointTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._publisher_assignmentTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.publisher_assignment.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._publisher_assignmentTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             if ((this._publisher_field_service_reportTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.publisher_field_service_report.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -7256,6 +11920,22 @@ SELECT publisher_field_service_report_id, publisher_id, date, placements, videos
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._publisher_field_service_reportTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._publisher_assignmentTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.publisher_assignment.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._publisher_assignmentTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._counsel_pointTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.counsel_point.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._counsel_pointTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -7311,6 +11991,16 @@ SELECT publisher_field_service_report_id, publisher_id, date, placements, videos
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
+            if (((this._counsel_pointTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._counsel_pointTableAdapter.Connection) == false))) {
+                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
+                        "tring.");
+            }
+            if (((this._publisher_assignmentTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._publisher_assignmentTableAdapter.Connection) == false))) {
+                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
+                        "tring.");
+            }
             if (((this._publisher_field_service_reportTableAdapter != null) 
                         && (this.MatchTableAdapterConnection(this._publisher_field_service_reportTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
@@ -7355,6 +12045,24 @@ SELECT publisher_field_service_report_id, publisher_id, date, placements, videos
                     if (this._publisherTableAdapter.Adapter.AcceptChangesDuringUpdate) {
                         this._publisherTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
                         adaptersWithAcceptChangesDuringUpdate.Add(this._publisherTableAdapter.Adapter);
+                    }
+                }
+                if ((this._counsel_pointTableAdapter != null)) {
+                    revertConnections.Add(this._counsel_pointTableAdapter, this._counsel_pointTableAdapter.Connection);
+                    this._counsel_pointTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._counsel_pointTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._counsel_pointTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._counsel_pointTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._counsel_pointTableAdapter.Adapter);
+                    }
+                }
+                if ((this._publisher_assignmentTableAdapter != null)) {
+                    revertConnections.Add(this._publisher_assignmentTableAdapter, this._publisher_assignmentTableAdapter.Connection);
+                    this._publisher_assignmentTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._publisher_assignmentTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._publisher_assignmentTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._publisher_assignmentTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._publisher_assignmentTableAdapter.Adapter);
                     }
                 }
                 if ((this._publisher_field_service_reportTableAdapter != null)) {
@@ -7427,6 +12135,14 @@ SELECT publisher_field_service_report_id, publisher_id, date, placements, videos
                 if ((this._publisherTableAdapter != null)) {
                     this._publisherTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._publisherTableAdapter]));
                     this._publisherTableAdapter.Transaction = null;
+                }
+                if ((this._counsel_pointTableAdapter != null)) {
+                    this._counsel_pointTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._counsel_pointTableAdapter]));
+                    this._counsel_pointTableAdapter.Transaction = null;
+                }
+                if ((this._publisher_assignmentTableAdapter != null)) {
+                    this._publisher_assignmentTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._publisher_assignmentTableAdapter]));
+                    this._publisher_assignmentTableAdapter.Transaction = null;
                 }
                 if ((this._publisher_field_service_reportTableAdapter != null)) {
                     this._publisher_field_service_reportTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._publisher_field_service_reportTableAdapter]));

@@ -328,6 +328,7 @@
             this.cmbHourType.FormattingEnabled = true;
             this.cmbHourType.Items.AddRange(new object[] {
             "",
+            "Field Missionary",
             "Special Pioneer",
             "Regular Pioneer",
             "Auxiliary Pioneer",

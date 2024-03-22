@@ -498,40 +498,6 @@ C:\Users\Cyril\Documents\Visual Studio 2019\Projects\CSANLNE\TMSA\bin\Debug\zh-H
 C:\Users\Cyril\Documents\Visual Studio 2019\Projects\CSANLNE\TMSA\obj\Debug\TMSA.csproj.AssemblyReference.cache
 C:\Users\Cyril\Documents\Visual Studio 2019\Projects\CSANLNE\TMSA\obj\Debug\RdlCompile.cache
 C:\Users\Cyril\Documents\Visual Studio 2019\Projects\CSANLNE\TMSA\obj\Debug\RdlCompile.compiled
-C:\Users\Cyril\Documents\Visual Studio 2019\Projects\CSA\TMSA\obj\Debug\TMSA.csproj.AssemblyReference.cache
-C:\Users\Cyril\Documents\Visual Studio 2019\Projects\CSA\TMSA\obj\Debug\Interop.ACTIVEXLib.dll
-C:\Users\Cyril\Documents\Visual Studio 2019\Projects\CSA\TMSA\obj\Debug\Interop.MSDAOSP.dll
-C:\Users\Cyril\Documents\Visual Studio 2019\Projects\CSA\TMSA\obj\Debug\Interop.MSDASC.dll
-C:\Users\Cyril\Documents\Visual Studio 2019\Projects\CSA\TMSA\bin\Debug\TMSA.exe.config
-C:\Users\Cyril\Documents\Visual Studio 2019\Projects\CSA\TMSA\bin\Debug\TMSA.exe.manifest
-C:\Users\Cyril\Documents\Visual Studio 2019\Projects\CSA\TMSA\bin\Debug\TMSA.application
-C:\Users\Cyril\Documents\Visual Studio 2019\Projects\CSA\TMSA\bin\Debug\TMSA.exe
-C:\Users\Cyril\Documents\Visual Studio 2019\Projects\CSA\TMSA\bin\Debug\TMSA.pdb
-C:\Users\Cyril\Documents\Visual Studio 2019\Projects\CSA\TMSA\bin\Debug\aa\TMSA.resources.dll
-C:\Users\Cyril\Documents\Visual Studio 2019\Projects\CSA\TMSA\bin\Debug\EntityFramework.dll
-C:\Users\Cyril\Documents\Visual Studio 2019\Projects\CSA\TMSA\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\Cyril\Documents\Visual Studio 2019\Projects\CSA\TMSA\bin\Debug\EntityFramework.xml
-C:\Users\Cyril\Documents\Visual Studio 2019\Projects\CSA\TMSA\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\Cyril\Documents\Visual Studio 2019\Projects\CSA\TMSA\obj\Debug\TMSA.csproj.ResolveComReference.cache
-C:\Users\Cyril\Documents\Visual Studio 2019\Projects\CSA\TMSA\obj\Debug\TMSA.frmApplicationSettings.resources
-C:\Users\Cyril\Documents\Visual Studio 2019\Projects\CSA\TMSA\obj\Debug\TMSA.frmFSRreport.resources
-C:\Users\Cyril\Documents\Visual Studio 2019\Projects\CSA\TMSA\obj\Debug\TMSA.frmFSrecords.resources
-C:\Users\Cyril\Documents\Visual Studio 2019\Projects\CSA\TMSA\obj\Debug\TMSA.frmPublishers.resources
-C:\Users\Cyril\Documents\Visual Studio 2019\Projects\CSA\TMSA\obj\Debug\TMSA.frmPublisherCard.resources
-C:\Users\Cyril\Documents\Visual Studio 2019\Projects\CSA\TMSA\obj\Debug\TMSA.frmFSrecordsImport.resources
-C:\Users\Cyril\Documents\Visual Studio 2019\Projects\CSA\TMSA\obj\Debug\TMSA.frmChoosePublisher.resources
-C:\Users\Cyril\Documents\Visual Studio 2019\Projects\CSA\TMSA\obj\Debug\TMSA.frmMain.resources
-C:\Users\Cyril\Documents\Visual Studio 2019\Projects\CSA\TMSA\obj\Debug\TMSA.frmMessageBoxForm.resources
-C:\Users\Cyril\Documents\Visual Studio 2019\Projects\CSA\TMSA\obj\Debug\TMSA.Properties.Resources.resources
-C:\Users\Cyril\Documents\Visual Studio 2019\Projects\CSA\TMSA\obj\Debug\TMSA.frmPublisherCard.aa.resources
-C:\Users\Cyril\Documents\Visual Studio 2019\Projects\CSA\TMSA\obj\Debug\TMSA.csproj.GenerateResource.cache
-C:\Users\Cyril\Documents\Visual Studio 2019\Projects\CSA\TMSA\obj\Debug\TMSA.csproj.CoreCompileInputs.cache
-C:\Users\Cyril\Documents\Visual Studio 2019\Projects\CSA\TMSA\obj\Debug\aa\TMSA.resources.dll
-C:\Users\Cyril\Documents\Visual Studio 2019\Projects\CSA\TMSA\obj\Debug\TMSA.exe.manifest
-C:\Users\Cyril\Documents\Visual Studio 2019\Projects\CSA\TMSA\obj\Debug\TMSA.application
-C:\Users\Cyril\Documents\Visual Studio 2019\Projects\CSA\TMSA\obj\Debug\TMSA.csproj.CopyComplete
-C:\Users\Cyril\Documents\Visual Studio 2019\Projects\CSA\TMSA\obj\Debug\TMSA.exe
-C:\Users\Cyril\Documents\Visual Studio 2019\Projects\CSA\TMSA\obj\Debug\TMSA.pdb
 C:\Users\Cyril\Documents\Visual Studio 2019\Projects\SandBox\CSA - Copy (3)\TMSA\bin\Debug\TMSA.exe.config
 C:\Users\Cyril\Documents\Visual Studio 2019\Projects\SandBox\CSA - Copy (3)\TMSA\bin\Debug\TMSA.exe.manifest
 C:\Users\Cyril\Documents\Visual Studio 2019\Projects\SandBox\CSA - Copy (3)\TMSA\bin\Debug\TMSA.application
@@ -579,7 +545,17 @@ C:\Users\Cyril\Documents\Visual Studio 2019\Projects\SandBox\CSA - Copy (3)\TMSA
 C:\Users\Cyril\Documents\Visual Studio 2019\Projects\SandBox\CSA - Copy (3)\TMSA\obj\Debug\TMSA.csproj.CopyComplete
 C:\Users\Cyril\Documents\Visual Studio 2019\Projects\SandBox\CSA - Copy (3)\TMSA\obj\Debug\TMSA.exe
 C:\Users\Cyril\Documents\Visual Studio 2019\Projects\SandBox\CSA - Copy (3)\TMSA\obj\Debug\TMSA.pdb
+C:\Users\Cyril\Documents\Visual Studio 2019\Projects\CSA\TMSA\bin\Debug\TMSA.exe.config
+C:\Users\Cyril\Documents\Visual Studio 2019\Projects\CSA\TMSA\bin\Debug\TMSA.exe.manifest
+C:\Users\Cyril\Documents\Visual Studio 2019\Projects\CSA\TMSA\bin\Debug\TMSA.application
+C:\Users\Cyril\Documents\Visual Studio 2019\Projects\CSA\TMSA\bin\Debug\TMSA.exe
+C:\Users\Cyril\Documents\Visual Studio 2019\Projects\CSA\TMSA\bin\Debug\TMSA.pdb
+C:\Users\Cyril\Documents\Visual Studio 2019\Projects\CSA\TMSA\bin\Debug\aa\TMSA.resources.dll
+C:\Users\Cyril\Documents\Visual Studio 2019\Projects\CSA\TMSA\bin\Debug\EntityFramework.dll
+C:\Users\Cyril\Documents\Visual Studio 2019\Projects\CSA\TMSA\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\Cyril\Documents\Visual Studio 2019\Projects\CSA\TMSA\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\Cyril\Documents\Visual Studio 2019\Projects\CSA\TMSA\bin\Debug\EntityFramework.xml
+C:\Users\Cyril\Documents\Visual Studio 2019\Projects\CSA\TMSA\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Cyril\Documents\Visual Studio 2019\Projects\CSA\TMSA\bin\Debug\de\Microsoft.SqlServer.Types.resources.dll
 C:\Users\Cyril\Documents\Visual Studio 2019\Projects\CSA\TMSA\bin\Debug\es\Microsoft.SqlServer.Types.resources.dll
 C:\Users\Cyril\Documents\Visual Studio 2019\Projects\CSA\TMSA\bin\Debug\fr\Microsoft.SqlServer.Types.resources.dll
@@ -590,3 +566,32 @@ C:\Users\Cyril\Documents\Visual Studio 2019\Projects\CSA\TMSA\bin\Debug\pt\Micro
 C:\Users\Cyril\Documents\Visual Studio 2019\Projects\CSA\TMSA\bin\Debug\ru\Microsoft.SqlServer.Types.resources.dll
 C:\Users\Cyril\Documents\Visual Studio 2019\Projects\CSA\TMSA\bin\Debug\zh-Hans\Microsoft.SqlServer.Types.resources.dll
 C:\Users\Cyril\Documents\Visual Studio 2019\Projects\CSA\TMSA\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Cyril\Documents\Visual Studio 2019\Projects\CSA\TMSA\obj\Debug\Interop.ACTIVEXLib.dll
+C:\Users\Cyril\Documents\Visual Studio 2019\Projects\CSA\TMSA\obj\Debug\Interop.MSDAOSP.dll
+C:\Users\Cyril\Documents\Visual Studio 2019\Projects\CSA\TMSA\obj\Debug\Interop.MSDASC.dll
+C:\Users\Cyril\Documents\Visual Studio 2019\Projects\CSA\TMSA\obj\Debug\TMSA.csproj.ResolveComReference.cache
+C:\Users\Cyril\Documents\Visual Studio 2019\Projects\CSA\TMSA\obj\Debug\TMSA.frmApplicationSettings.resources
+C:\Users\Cyril\Documents\Visual Studio 2019\Projects\CSA\TMSA\obj\Debug\TMSA.frmFSRreport.resources
+C:\Users\Cyril\Documents\Visual Studio 2019\Projects\CSA\TMSA\obj\Debug\TMSA.frmFSrecords.resources
+C:\Users\Cyril\Documents\Visual Studio 2019\Projects\CSA\TMSA\obj\Debug\TMSA.frmNewFSrecordsImport.resources
+C:\Users\Cyril\Documents\Visual Studio 2019\Projects\CSA\TMSA\obj\Debug\TMSA.frmNewPublisherCard.resources
+C:\Users\Cyril\Documents\Visual Studio 2019\Projects\CSA\TMSA\obj\Debug\TMSA.frmPublishers.resources
+C:\Users\Cyril\Documents\Visual Studio 2019\Projects\CSA\TMSA\obj\Debug\TMSA.frmPublisherCard.resources
+C:\Users\Cyril\Documents\Visual Studio 2019\Projects\CSA\TMSA\obj\Debug\TMSA.frmFSrecordsImport.resources
+C:\Users\Cyril\Documents\Visual Studio 2019\Projects\CSA\TMSA\obj\Debug\TMSA.frmChoosePublisher.resources
+C:\Users\Cyril\Documents\Visual Studio 2019\Projects\CSA\TMSA\obj\Debug\TMSA.frmMain.resources
+C:\Users\Cyril\Documents\Visual Studio 2019\Projects\CSA\TMSA\obj\Debug\TMSA.frmMessageBoxForm.resources
+C:\Users\Cyril\Documents\Visual Studio 2019\Projects\CSA\TMSA\obj\Debug\TMSA.Properties.Resources.resources
+C:\Users\Cyril\Documents\Visual Studio 2019\Projects\CSA\TMSA\obj\Debug\TMSA.frmNewPublisherCard.aa.resources
+C:\Users\Cyril\Documents\Visual Studio 2019\Projects\CSA\TMSA\obj\Debug\TMSA.frmPublisherCard.aa.resources
+C:\Users\Cyril\Documents\Visual Studio 2019\Projects\CSA\TMSA\obj\Debug\TMSA.csproj.GenerateResource.cache
+C:\Users\Cyril\Documents\Visual Studio 2019\Projects\CSA\TMSA\obj\Debug\TMSA.csproj.CoreCompileInputs.cache
+C:\Users\Cyril\Documents\Visual Studio 2019\Projects\CSA\TMSA\obj\Debug\aa\TMSA.resources.dll
+C:\Users\Cyril\Documents\Visual Studio 2019\Projects\CSA\TMSA\obj\Debug\TMSA.exe.manifest
+C:\Users\Cyril\Documents\Visual Studio 2019\Projects\CSA\TMSA\obj\Debug\TMSA.application
+C:\Users\Cyril\Documents\Visual Studio 2019\Projects\CSA\TMSA\obj\Debug\TMSA.csproj.CopyComplete
+C:\Users\Cyril\Documents\Visual Studio 2019\Projects\CSA\TMSA\obj\Debug\TMSA.exe
+C:\Users\Cyril\Documents\Visual Studio 2019\Projects\CSA\TMSA\obj\Debug\TMSA.pdb
+C:\Users\Cyril\Documents\Visual Studio 2019\Projects\CSA\TMSA\obj\Debug\TMSA.csproj.AssemblyReference.cache
+C:\Users\Cyril\Documents\Visual Studio 2019\Projects\CSA\TMSA\obj\Debug\RdlCompile.cache
+C:\Users\Cyril\Documents\Visual Studio 2019\Projects\CSA\TMSA\obj\Debug\RdlCompile.compiled

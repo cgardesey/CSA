@@ -169,6 +169,7 @@ namespace TMSA
             publisher_types.Add("Baptized Publisher");
 
             List<String> hour_types = new List<string>();
+            hour_types.Add("Field Missionary");
             hour_types.Add("Special Pioneer");
             hour_types.Add("Regular Pioneer");
             hour_types.Add("Auxiliary Pioneer");
@@ -710,6 +711,12 @@ namespace TMSA
         private void tbBaptismDateMask_Click(object sender, EventArgs e)
         {
             tbBaptismDateMask.Visible = false;
+        }
+
+        private void tsNewPublisherCards_Click(object sender, EventArgs e)
+        {
+            Cursor.Current = Cursors.WaitCursor;
+            Singleton.ShowNewPublisherCard(this);
         }
     }
 }

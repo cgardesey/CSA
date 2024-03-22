@@ -91,6 +91,8 @@
             this.publisher_last_field_service_report_viewTableAdapter = new TMSA.TMSADataSetTableAdapters.publisher_last_field_service_report_viewTableAdapter();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.publisherBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.publisherTableAdapter = new TMSA.TMSADataSetTableAdapters.publisherTableAdapter();
             publisher_groupLabel = new System.Windows.Forms.Label();
             publisher_typeLabel = new System.Windows.Forms.Label();
             publisher_privilegeLabel = new System.Windows.Forms.Label();
@@ -106,12 +108,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.publisher_last_assignment_viewDataGridView)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.publisherBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // publisher_groupLabel
             // 
             publisher_groupLabel.AutoSize = true;
-            publisher_groupLabel.Location = new System.Drawing.Point(48, 443);
+            publisher_groupLabel.Location = new System.Drawing.Point(50, 440);
             publisher_groupLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             publisher_groupLabel.Name = "publisher_groupLabel";
             publisher_groupLabel.Size = new System.Drawing.Size(52, 17);
@@ -121,7 +124,7 @@
             // publisher_typeLabel
             // 
             publisher_typeLabel.AutoSize = true;
-            publisher_typeLabel.Location = new System.Drawing.Point(49, 372);
+            publisher_typeLabel.Location = new System.Drawing.Point(49, 364);
             publisher_typeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             publisher_typeLabel.Name = "publisher_typeLabel";
             publisher_typeLabel.Size = new System.Drawing.Size(102, 17);
@@ -131,7 +134,7 @@
             // publisher_privilegeLabel
             // 
             publisher_privilegeLabel.AutoSize = true;
-            publisher_privilegeLabel.Location = new System.Drawing.Point(49, 331);
+            publisher_privilegeLabel.Location = new System.Drawing.Point(49, 326);
             publisher_privilegeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             publisher_privilegeLabel.Name = "publisher_privilegeLabel";
             publisher_privilegeLabel.Size = new System.Drawing.Size(66, 17);
@@ -141,7 +144,7 @@
             // publisher_genderLabel
             // 
             publisher_genderLabel.AutoSize = true;
-            publisher_genderLabel.Location = new System.Drawing.Point(49, 290);
+            publisher_genderLabel.Location = new System.Drawing.Point(49, 288);
             publisher_genderLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             publisher_genderLabel.Name = "publisher_genderLabel";
             publisher_genderLabel.Size = new System.Drawing.Size(60, 17);
@@ -161,7 +164,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new System.Drawing.Point(51, 514);
+            label6.Location = new System.Drawing.Point(50, 478);
             label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             label6.Name = "label6";
             label6.Size = new System.Drawing.Size(113, 17);
@@ -171,7 +174,7 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new System.Drawing.Point(48, 411);
+            label8.Location = new System.Drawing.Point(50, 402);
             label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             label8.Name = "label8";
             label8.Size = new System.Drawing.Size(74, 17);
@@ -204,7 +207,7 @@
             this.publisher_last_assignment_viewBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.publisher_last_assignment_viewBindingNavigator.Name = "publisher_last_assignment_viewBindingNavigator";
             this.publisher_last_assignment_viewBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.publisher_last_assignment_viewBindingNavigator.Size = new System.Drawing.Size(1129, 27);
+            this.publisher_last_assignment_viewBindingNavigator.Size = new System.Drawing.Size(1129, 31);
             this.publisher_last_assignment_viewBindingNavigator.TabIndex = 1;
             this.publisher_last_assignment_viewBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -221,7 +224,7 @@
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 24);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 28);
             this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
@@ -231,7 +234,7 @@
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorMoveFirstItem.Text = "Move first";
             // 
             // bindingNavigatorMovePreviousItem
@@ -240,13 +243,13 @@
             this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorMovePreviousItem.Text = "Move previous";
             // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 27);
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 31);
             // 
             // bindingNavigatorPositionItem
             // 
@@ -261,7 +264,7 @@
             // bindingNavigatorSeparator1
             // 
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 27);
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 31);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -269,7 +272,7 @@
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorMoveNextItem.Text = "Move next";
             // 
             // bindingNavigatorMoveLastItem
@@ -278,13 +281,13 @@
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorMoveLastItem.Text = "Move last";
             // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 31);
             // 
             // tsReload
             // 
@@ -292,7 +295,7 @@
             this.tsReload.Image = ((System.Drawing.Image)(resources.GetObject("tsReload.Image")));
             this.tsReload.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsReload.Name = "tsReload";
-            this.tsReload.Size = new System.Drawing.Size(29, 24);
+            this.tsReload.Size = new System.Drawing.Size(29, 28);
             this.tsReload.Text = "Reload";
             this.tsReload.ToolTipText = "Reload";
             this.tsReload.Click += new System.EventHandler(this.tsReload_Click);
@@ -304,13 +307,13 @@
             this.tsPublishers.Image = ((System.Drawing.Image)(resources.GetObject("tsPublishers.Image")));
             this.tsPublishers.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsPublishers.Name = "tsPublishers";
-            this.tsPublishers.Size = new System.Drawing.Size(79, 24);
+            this.tsPublishers.Size = new System.Drawing.Size(79, 28);
             this.tsPublishers.Text = "Publishers";
             this.tsPublishers.Click += new System.EventHandler(this.tsPublishers_Click);
             // 
             // btnDone
             // 
-            this.btnDone.Location = new System.Drawing.Point(336, 588);
+            this.btnDone.Location = new System.Drawing.Point(336, 626);
             this.btnDone.Margin = new System.Windows.Forms.Padding(4);
             this.btnDone.Name = "btnDone";
             this.btnDone.Size = new System.Drawing.Size(100, 28);
@@ -335,7 +338,7 @@
             // publisher_groupTextBox
             // 
             this.publisher_groupTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.publisher_last_field_service_report_viewBindingSource, "group", true));
-            this.publisher_groupTextBox.Location = new System.Drawing.Point(197, 441);
+            this.publisher_groupTextBox.Location = new System.Drawing.Point(199, 442);
             this.publisher_groupTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.publisher_groupTextBox.Name = "publisher_groupTextBox";
             this.publisher_groupTextBox.ReadOnly = true;
@@ -345,7 +348,7 @@
             // publisher_typeTextBox
             // 
             this.publisher_typeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.publisher_last_field_service_report_viewBindingSource, "publisher_type", true));
-            this.publisher_typeTextBox.Location = new System.Drawing.Point(199, 364);
+            this.publisher_typeTextBox.Location = new System.Drawing.Point(199, 366);
             this.publisher_typeTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.publisher_typeTextBox.Name = "publisher_typeTextBox";
             this.publisher_typeTextBox.ReadOnly = true;
@@ -355,7 +358,7 @@
             // publisher_privilegeTextBox
             // 
             this.publisher_privilegeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.publisher_last_field_service_report_viewBindingSource, "privilege", true));
-            this.publisher_privilegeTextBox.Location = new System.Drawing.Point(199, 326);
+            this.publisher_privilegeTextBox.Location = new System.Drawing.Point(199, 328);
             this.publisher_privilegeTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.publisher_privilegeTextBox.Name = "publisher_privilegeTextBox";
             this.publisher_privilegeTextBox.ReadOnly = true;
@@ -365,7 +368,7 @@
             // publisher_genderTextBox
             // 
             this.publisher_genderTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.publisher_last_field_service_report_viewBindingSource, "gender", true));
-            this.publisher_genderTextBox.Location = new System.Drawing.Point(199, 288);
+            this.publisher_genderTextBox.Location = new System.Drawing.Point(199, 290);
             this.publisher_genderTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.publisher_genderTextBox.Name = "publisher_genderTextBox";
             this.publisher_genderTextBox.ReadOnly = true;
@@ -588,6 +591,7 @@
             this.cmbHourType.FormattingEnabled = true;
             this.cmbHourType.Items.AddRange(new object[] {
             "",
+            "Field Missionary",
             "Special Pioneer",
             "Regular Pioneer",
             "Auxiliary Pioneer",
@@ -735,6 +739,8 @@
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.Connection = null;
+            this.tableAdapterManager.counsel_pointTableAdapter = null;
+            this.tableAdapterManager.publisher_assignmentTableAdapter = null;
             this.tableAdapterManager.publisher_field_service_reportTableAdapter = null;
             this.tableAdapterManager.publisherTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = TMSA.TMSADataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
@@ -746,7 +752,7 @@
             // textBox1
             // 
             this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.publisher_last_field_service_report_viewBindingSource, "last_field_service_report_date", true));
-            this.textBox1.Location = new System.Drawing.Point(199, 514);
+            this.textBox1.Location = new System.Drawing.Point(201, 480);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
@@ -756,12 +762,21 @@
             // textBox2
             // 
             this.textBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.publisher_last_field_service_report_viewBindingSource, "hour_type", true));
-            this.textBox2.Location = new System.Drawing.Point(197, 402);
+            this.textBox2.Location = new System.Drawing.Point(199, 404);
             this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(237, 22);
             this.textBox2.TabIndex = 253;
+            // 
+            // publisherBindingSource
+            // 
+            this.publisherBindingSource.DataMember = "publisher";
+            this.publisherBindingSource.DataSource = this.tMSADataSet;
+            // 
+            // publisherTableAdapter
+            // 
+            this.publisherTableAdapter.ClearBeforeFill = true;
             // 
             // frmChoosePublisher
             // 
@@ -805,6 +820,7 @@
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.publisherBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -864,5 +880,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn privilegeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn publishertypeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn groupDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource publisherBindingSource;
+        private TMSADataSetTableAdapters.publisherTableAdapter publisherTableAdapter;
     }
 }

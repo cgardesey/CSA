@@ -43,17 +43,15 @@ namespace TMSA
             System.Windows.Forms.Label groupLabel;
             System.Windows.Forms.Label remarksLabel;
             System.Windows.Forms.Label label1;
+            System.Windows.Forms.Label shared_in_ministryLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFSrecords));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.tMSADataSet = new TMSA.TMSADataSet();
-            this.publisher_field_service_reportBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.publisher_field_service_reportTableAdapter = new TMSA.TMSADataSetTableAdapters.publisher_field_service_reportTableAdapter();
-            this.tableAdapterManager = new TMSA.TMSADataSetTableAdapters.TableAdapterManager();
-            this.publisherTableAdapter = new TMSA.TMSADataSetTableAdapters.publisherTableAdapter();
             this.publisher_field_service_reportBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.publisher_field_service_reportBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tMSADataSet = new TMSA.TMSADataSet();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
@@ -112,6 +110,10 @@ namespace TMSA
             this.filterDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.publisher_field_service_reportTableAdapter = new TMSA.TMSADataSetTableAdapters.publisher_field_service_reportTableAdapter();
+            this.tableAdapterManager = new TMSA.TMSADataSetTableAdapters.TableAdapterManager();
+            this.publisherTableAdapter = new TMSA.TMSADataSetTableAdapters.publisherTableAdapter();
+            this.shared_in_ministryCheckBox = new System.Windows.Forms.CheckBox();
             dateLabel = new System.Windows.Forms.Label();
             placementsLabel = new System.Windows.Forms.Label();
             videosLabel = new System.Windows.Forms.Label();
@@ -125,10 +127,11 @@ namespace TMSA
             groupLabel = new System.Windows.Forms.Label();
             remarksLabel = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.tMSADataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.publisher_field_service_reportBindingSource)).BeginInit();
+            shared_in_ministryLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.publisher_field_service_reportBindingNavigator)).BeginInit();
             this.publisher_field_service_reportBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.publisher_field_service_reportBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tMSADataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.publisher_field_service_reportDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.publisherBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.placementsNumericUpDown)).BeginInit();
@@ -151,7 +154,7 @@ namespace TMSA
             // placementsLabel
             // 
             placementsLabel.AutoSize = true;
-            placementsLabel.Location = new System.Drawing.Point(46, 307);
+            placementsLabel.Location = new System.Drawing.Point(47, 347);
             placementsLabel.Name = "placementsLabel";
             placementsLabel.Size = new System.Drawing.Size(85, 17);
             placementsLabel.TabIndex = 8;
@@ -160,7 +163,7 @@ namespace TMSA
             // videosLabel
             // 
             videosLabel.AutoSize = true;
-            videosLabel.Location = new System.Drawing.Point(46, 338);
+            videosLabel.Location = new System.Drawing.Point(47, 378);
             videosLabel.Name = "videosLabel";
             videosLabel.Size = new System.Drawing.Size(55, 17);
             videosLabel.TabIndex = 10;
@@ -169,7 +172,7 @@ namespace TMSA
             // hoursLabel
             // 
             hoursLabel.AutoSize = true;
-            hoursLabel.Location = new System.Drawing.Point(46, 369);
+            hoursLabel.Location = new System.Drawing.Point(47, 409);
             hoursLabel.Name = "hoursLabel";
             hoursLabel.Size = new System.Drawing.Size(50, 17);
             hoursLabel.TabIndex = 12;
@@ -178,7 +181,7 @@ namespace TMSA
             // return_visitsLabel
             // 
             return_visitsLabel.AutoSize = true;
-            return_visitsLabel.Location = new System.Drawing.Point(46, 401);
+            return_visitsLabel.Location = new System.Drawing.Point(47, 441);
             return_visitsLabel.Name = "return_visitsLabel";
             return_visitsLabel.Size = new System.Drawing.Size(90, 17);
             return_visitsLabel.TabIndex = 14;
@@ -187,7 +190,7 @@ namespace TMSA
             // bible_studiesLabel
             // 
             bible_studiesLabel.AutoSize = true;
-            bible_studiesLabel.Location = new System.Drawing.Point(46, 431);
+            bible_studiesLabel.Location = new System.Drawing.Point(47, 471);
             bible_studiesLabel.Name = "bible_studiesLabel";
             bible_studiesLabel.Size = new System.Drawing.Size(92, 17);
             bible_studiesLabel.TabIndex = 16;
@@ -241,7 +244,7 @@ namespace TMSA
             // remarksLabel
             // 
             remarksLabel.AutoSize = true;
-            remarksLabel.Location = new System.Drawing.Point(46, 468);
+            remarksLabel.Location = new System.Drawing.Point(47, 508);
             remarksLabel.Name = "remarksLabel";
             remarksLabel.Size = new System.Drawing.Size(68, 17);
             remarksLabel.TabIndex = 28;
@@ -256,30 +259,14 @@ namespace TMSA
             label1.TabIndex = 31;
             label1.Text = "Publisher:";
             // 
-            // tMSADataSet
+            // shared_in_ministryLabel
             // 
-            this.tMSADataSet.DataSetName = "TMSADataSet";
-            this.tMSADataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // publisher_field_service_reportBindingSource
-            // 
-            this.publisher_field_service_reportBindingSource.DataMember = "publisher_field_service_report";
-            this.publisher_field_service_reportBindingSource.DataSource = this.tMSADataSet;
-            // 
-            // publisher_field_service_reportTableAdapter
-            // 
-            this.publisher_field_service_reportTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.publisher_field_service_reportTableAdapter = this.publisher_field_service_reportTableAdapter;
-            this.tableAdapterManager.publisherTableAdapter = this.publisherTableAdapter;
-            this.tableAdapterManager.UpdateOrder = TMSA.TMSADataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // publisherTableAdapter
-            // 
-            this.publisherTableAdapter.ClearBeforeFill = true;
+            shared_in_ministryLabel.AutoSize = true;
+            shared_in_ministryLabel.Location = new System.Drawing.Point(46, 314);
+            shared_in_ministryLabel.Name = "shared_in_ministryLabel";
+            shared_in_ministryLabel.Size = new System.Drawing.Size(125, 17);
+            shared_in_ministryLabel.TabIndex = 37;
+            shared_in_ministryLabel.Text = "Shared in ministry:";
             // 
             // publisher_field_service_reportBindingNavigator
             // 
@@ -322,6 +309,16 @@ namespace TMSA
             this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorAddNewItem.Text = "Add new";
             this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
+            // 
+            // publisher_field_service_reportBindingSource
+            // 
+            this.publisher_field_service_reportBindingSource.DataMember = "publisher_field_service_report";
+            this.publisher_field_service_reportBindingSource.DataSource = this.tMSADataSet;
+            // 
+            // tMSADataSet
+            // 
+            this.tMSADataSet.DataSetName = "TMSADataSet";
+            this.tMSADataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bindingNavigatorCountItem
             // 
@@ -717,7 +714,7 @@ namespace TMSA
             // placementsNumericUpDown
             // 
             this.placementsNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.publisher_field_service_reportBindingSource, "placements", true));
-            this.placementsNumericUpDown.Location = new System.Drawing.Point(224, 306);
+            this.placementsNumericUpDown.Location = new System.Drawing.Point(225, 346);
             this.placementsNumericUpDown.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.placementsNumericUpDown.Name = "placementsNumericUpDown";
             this.placementsNumericUpDown.Size = new System.Drawing.Size(267, 22);
@@ -726,7 +723,7 @@ namespace TMSA
             // videosNumericUpDown
             // 
             this.videosNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.publisher_field_service_reportBindingSource, "videos", true));
-            this.videosNumericUpDown.Location = new System.Drawing.Point(224, 337);
+            this.videosNumericUpDown.Location = new System.Drawing.Point(225, 377);
             this.videosNumericUpDown.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.videosNumericUpDown.Name = "videosNumericUpDown";
             this.videosNumericUpDown.Size = new System.Drawing.Size(267, 22);
@@ -741,7 +738,7 @@ namespace TMSA
             0,
             0,
             131072});
-            this.hoursNumericUpDown.Location = new System.Drawing.Point(224, 369);
+            this.hoursNumericUpDown.Location = new System.Drawing.Point(225, 409);
             this.hoursNumericUpDown.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.hoursNumericUpDown.Name = "hoursNumericUpDown";
             this.hoursNumericUpDown.Size = new System.Drawing.Size(267, 22);
@@ -750,7 +747,7 @@ namespace TMSA
             // return_visitsNumericUpDown
             // 
             this.return_visitsNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.publisher_field_service_reportBindingSource, "return_visits", true));
-            this.return_visitsNumericUpDown.Location = new System.Drawing.Point(224, 399);
+            this.return_visitsNumericUpDown.Location = new System.Drawing.Point(225, 439);
             this.return_visitsNumericUpDown.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.return_visitsNumericUpDown.Name = "return_visitsNumericUpDown";
             this.return_visitsNumericUpDown.Size = new System.Drawing.Size(267, 22);
@@ -759,7 +756,7 @@ namespace TMSA
             // bible_studiesNumericUpDown
             // 
             this.bible_studiesNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.publisher_field_service_reportBindingSource, "bible_studies", true));
-            this.bible_studiesNumericUpDown.Location = new System.Drawing.Point(224, 430);
+            this.bible_studiesNumericUpDown.Location = new System.Drawing.Point(225, 470);
             this.bible_studiesNumericUpDown.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bible_studiesNumericUpDown.Name = "bible_studiesNumericUpDown";
             this.bible_studiesNumericUpDown.Size = new System.Drawing.Size(267, 22);
@@ -782,6 +779,7 @@ namespace TMSA
             this.hour_typeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.hour_typeComboBox.FormattingEnabled = true;
             this.hour_typeComboBox.Items.AddRange(new object[] {
+            "Field Missionary",
             "Special Pioneer",
             "Regular Pioneer",
             "Auxiliary Pioneer",
@@ -822,7 +820,7 @@ namespace TMSA
             // remarksTextBox
             // 
             this.remarksTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.publisher_field_service_reportBindingSource, "remarks", true));
-            this.remarksTextBox.Location = new System.Drawing.Point(224, 469);
+            this.remarksTextBox.Location = new System.Drawing.Point(225, 509);
             this.remarksTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.remarksTextBox.Multiline = true;
             this.remarksTextBox.Name = "remarksTextBox";
@@ -961,11 +959,39 @@ namespace TMSA
             this.label2.TabIndex = 0;
             this.label2.Text = "Report month:";
             // 
+            // publisher_field_service_reportTableAdapter
+            // 
+            this.publisher_field_service_reportTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.counsel_pointTableAdapter = null;
+            this.tableAdapterManager.publisher_assignmentTableAdapter = null;
+            this.tableAdapterManager.publisher_field_service_reportTableAdapter = this.publisher_field_service_reportTableAdapter;
+            this.tableAdapterManager.publisherTableAdapter = this.publisherTableAdapter;
+            this.tableAdapterManager.UpdateOrder = TMSA.TMSADataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // publisherTableAdapter
+            // 
+            this.publisherTableAdapter.ClearBeforeFill = true;
+            // 
+            // shared_in_ministryCheckBox
+            // 
+            this.shared_in_ministryCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.publisher_field_service_reportBindingSource, "shared_in_ministry", true));
+            this.shared_in_ministryCheckBox.Location = new System.Drawing.Point(225, 314);
+            this.shared_in_ministryCheckBox.Name = "shared_in_ministryCheckBox";
+            this.shared_in_ministryCheckBox.Size = new System.Drawing.Size(104, 24);
+            this.shared_in_ministryCheckBox.TabIndex = 38;
+            this.shared_in_ministryCheckBox.UseVisualStyleBackColor = true;
+            // 
             // frmFSrecords
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(980, 636);
+            this.Controls.Add(shared_in_ministryLabel);
+            this.Controls.Add(this.shared_in_ministryCheckBox);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.publisher_field_service_reportDataGridView);
             this.Controls.Add(this.tbReportDateMask);
@@ -1008,11 +1034,11 @@ namespace TMSA
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.tMSADataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.publisher_field_service_reportBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.publisher_field_service_reportBindingNavigator)).EndInit();
             this.publisher_field_service_reportBindingNavigator.ResumeLayout(false);
             this.publisher_field_service_reportBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.publisher_field_service_reportBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tMSADataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.publisher_field_service_reportDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.publisherBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.placementsNumericUpDown)).EndInit();
@@ -1095,5 +1121,6 @@ namespace TMSA
         private System.Windows.Forms.DataGridViewTextBoxColumn return_visits;
         private System.Windows.Forms.DataGridViewTextBoxColumn bible_studies;
         private System.Windows.Forms.DataGridViewTextBoxColumn remarks;
+        private System.Windows.Forms.CheckBox shared_in_ministryCheckBox;
     }
 }

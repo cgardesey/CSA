@@ -156,5 +156,11 @@ namespace TMSA
         {
             lblCongName.Text = Properties.Settings.Default.CongName;
         }
+
+        private void btnNewFSrecordsImport_Click(object sender, EventArgs e)
+        {
+            Cursor.Current = Cursors.WaitCursor;
+            Singleton.ShowNewFSRimport();
+        }
     }
 }
